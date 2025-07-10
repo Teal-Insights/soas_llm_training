@@ -1,0 +1,255 @@
+# Key Considerations: Tools, Costs, and Contexts
+
+## Learning Objectives
+
+By the end of this section, you will be able to:
+
+- **Distinguish between web interfaces and API approaches** and understand when each is appropriate
+- **Compare open-source versus frontier model options** and their trade-offs for academic research
+- **Evaluate the three major frontier model providers** (OpenAI, Anthropic, Google) for your needs
+- **Understand key technical concepts** like context windows and their practical implications
+- **Make informed decisions about tool selection** based on your research requirements and technical comfort level
+
+## Why This Matters for Your Research
+
+Before diving into specific tools, you need to understand the landscape of options available to you. Making the right choice about which tools to use can mean the difference between a frustrating experience that wastes your time and a transformative workflow that enhances your research capacity. This chapter will help you navigate the key decisions and understand why we're focusing on Google Gemini for this workshop.
+
+## Two Ways to Use LLMs: Web Interfaces vs. APIs
+
+The first major decision is how you want to interact with LLMs. There are two primary approaches:
+
+### Web Interfaces (What We'll Focus On)
+
+**What it is:** Using LLMs through a browser interface like ChatGPT, Claude, or Gemini. You type questions, upload documents, and get responses in real-time.
+
+**Benefits:**
+
+- No coding required
+- Immediate access
+- Perfect for exploratory research
+- Good for one-off tasks
+- Built-in features like document upload and citation
+
+**Limitations:**
+
+- Manual process for each query
+- Time-consuming for repetitive tasks
+- Harder to maintain consistency across large projects
+- Limited ability to process hundreds of documents systematically
+
+### APIs (Application Programming Interfaces)
+
+**What it is:** Using code to send requests to LLM services programmatically. Instead of typing in a web interface, you write scripts that automatically send queries and process responses.
+
+**Benefits:**
+
+- Can process thousands of documents automatically
+- Consistent methodology across large datasets
+- Reproducible workflows
+- Cost-effective for large-scale projects
+- Can integrate with existing data analysis pipelines
+
+**Limitations:**
+
+- Requires coding skills (Python, R, etc.)
+- More complex setup and debugging
+- Need to handle rate limits and error management
+- Steeper learning curve
+
+### Our Workshop Focus
+
+Because this workshop assumes little previous LLM experience and no coding background, we'll focus primarily on web interfaces—tools you can start using immediately. However, in our final section, we'll discuss how we used APIs to classify 18,000 Chinese lending projects, showing you what becomes possible when you're ready to scale up.
+
+## Open-Source vs. Frontier Models
+
+### Open-Source Models
+
+**What they are:** AI models whose code and weights are publicly available. Examples include Meta's Llama, Mistral, and various models from Hugging Face.
+
+**Benefits:**
+
+- **Privacy:** You can run them on your own servers
+- **Reproducibility:** Exact model versions remain available
+- **Cost:** Can be free if you have computing resources
+- **Customization:** Can fine-tune for specific tasks
+
+**Limitations:**
+
+- **Capability gap:** Generally less capable than frontier models
+- **Technical complexity:** Require significant technical skills to deploy
+- **Infrastructure costs:** Need expensive cloud computing for larger models
+- **Inconsistent quality:** Wide variation in performance
+
+::: callout-note
+## Our Experience with Open-Source Models
+
+In our Chinese lending classification project, we tested Meta's Llama 3.3 alongside frontier models. It was really bad. While open-source models are improving rapidly, they're not yet competitive with frontier models for complex research tasks.
+:::
+
+### Frontier Models
+
+**What they are:** The most advanced models from major AI companies: OpenAI (ChatGPT), Anthropic (Claude), and Google (Gemini).
+
+**Benefits:**
+
+- **Superior performance:** Best available capabilities for most tasks
+- **Ease of use:** Polished interfaces and user experience
+- **Regular updates:** Continuous improvements and new features
+- **Reliability:** More consistent and predictable outputs
+
+**Limitations:**
+
+- **Cost:** Subscription fees for full access
+- **Privacy concerns:** Your data goes to third-party companies
+- **Less control:** Can't customize or guarantee model availability
+- **Black box:** Don't know exactly how they work
+
+**For most academic researchers starting with LLMs, frontier models are the better choice.** They're simply more capable and easier to use, allowing you to focus on your research rather than wrestling with technical infrastructure.
+
+## The Three Frontier Model Providers
+
+All three major providers offer both free and paid tiers. I strongly recommend paying for at least one service—paid tiers provide better data privacy, higher usage limits, and faster access to new models.
+
+### OpenAI (ChatGPT)
+
+- **Strengths:** Deep Research tool, strong reasoning models (o3 Pro)
+- **Best for:** Complex problem-solving, comprehensive research synthesis
+
+### Anthropic (Claude)
+
+- **Strengths:** Excellent for coding and writing tasks
+- **Best for:** R/Python programming assistance, high-quality text generation
+
+### Google (Gemini)
+
+- **Strengths:** Largest context window, good citations, NotebookLM integration
+- **Best for:** Working with large documents, academic research workflows
+
+## Why We're Focusing on Google Gemini
+
+While all three providers have their strengths, Google Gemini offers several advantages particularly relevant for academic research:
+
+### 1. Massive Context Window
+
+::: callout-note
+## What is a Context Window?
+
+A context window is how much text an AI can "remember" and work with at one time. Think of it like the AI's working memory. Current context windows:
+
+- **Gemini 2.5 Pro:** 1 million tokens (roughly 750,000 words)
+- **OpenAI GPT-4:** ~200,000 tokens (roughly 150,000 words)
+- **Anthropic Claude:** ~200,000 tokens (roughly 150,000 words)
+
+**In practical terms:** Gemini can process about 10-15 typical academic papers simultaneously, while other models can handle 2-3 papers. This is transformative for literature reviews and cross-document analysis.
+:::
+
+This enormous context window means you can:
+
+- Upload multiple research papers simultaneously
+- Work with entire book chapters or reports
+- Maintain context across long conversations
+- Analyze patterns across large document collections
+
+### 2. Built-in Citation Features
+
+When you upload documents to Gemini, it automatically cites the specific portions where it finds information. This is invaluable for academic workflows where you need to trace claims back to source materials.
+
+### 3. NotebookLM Integration
+
+NotebookLM allows you to upload up to 300 documents and ask questions across the entire corpus. It provides exact text passages from your PDFs, making it excellent for exploratory analysis. In our ODI research, we used NotebookLM to analyze a decade of annual reports from Chinese policy banks—something that would have taken weeks manually.
+
+### 4. Strong Performance on Benchmarks
+
+::: callout-note
+## Understanding LLM Benchmarks
+
+LLM benchmarks are standardized tests that measure model performance across different tasks. Popular benchmarks include:
+
+- **MMLU:** Measures knowledge across academic subjects
+- **HumanEval:** Tests coding capabilities
+- **HellaSwag:** Evaluates common-sense reasoning
+
+You can track current performance at [Vellum's LLM Leaderboard](https://www.vellum.ai/llm-leaderboard).
+
+**Important caveats:**
+
+1. Benchmarks don't always capture what's useful for your specific research
+2. Goodhart's Law applies: "When a measure becomes a target, it ceases to be a good measure." Companies now optimize specifically for benchmarks, which may not reflect real-world performance.
+:::
+
+Gemini 2.5 Pro performs competitively on major benchmarks, though remember that benchmark performance doesn't always translate to usefulness for your specific research needs.
+
+## The Reality of Provider Competition
+
+Despite our focus on Gemini for this workshop, I personally pay for premium access to all three major providers. Here's why:
+
+**Models update frequently:** What's best today may not be best next month. The competitive landscape changes rapidly.
+
+**Each has unique strengths:**
+
+- I use **Claude** most often for coding (R and Python) and high-quality writing
+- I use **ChatGPT's Deep Research** for doing lengthy, high quality exploratory research
+- I use **Gemini** for working with large document collections
+
+**This will all be outdated soon:** The specific model capabilities I'm describing will likely be different by the time you read this. The field moves that fast.
+
+## Key Technical Concepts
+
+### Context Window (Revisited)
+
+Think of context window as the AI's "working memory." Larger windows allow for:
+
+- More complex conversations
+- Better understanding of document relationships
+- Ability to maintain consistency across longer projects
+
+### Tokens
+
+A rough conversion: 1 token ≈ 0.75 words in English. So 1 million tokens ≈ 750,000 words ≈ 1,500 pages of double-spaced text.
+
+### Model Versions
+
+Providers regularly release new model versions. Pay attention to:
+
+- **Performance improvements:** Better accuracy, reasoning, or specialized capabilities
+- **Cost changes:** New models may be more or less expensive
+- **Feature additions:** New capabilities like image analysis or coding tools
+
+## Making Your Choice
+
+For this workshop, we'll use Google Gemini because:
+
+1. It's excellent for document-heavy academic work
+2. The citation features support good research practices
+3. The large context window enables ambitious projects
+4. NotebookLM provides unique research capabilities
+
+However, I encourage you to experiment with all three providers. They each have strengths, and the best choice depends on your specific research needs, technical comfort level, and budget.
+
+## Cost Considerations
+
+### Free Tiers
+All providers offer free access with limitations:
+
+- Usage caps (messages per day/hour)
+- Access to older or less capable models
+- Fewer features
+
+### Paid Tiers (\$15-30/month typically)
+
+- Higher usage limits
+- Access to latest models
+- Better data privacy protections
+- Priority access during high-demand periods
+
+### API Pricing
+For programmatic use, you pay per token processed. Costs vary by model and provider, but typically range from \$0.25-15 per million tokens.
+
+## Getting Started
+
+For this workshop, you'll need a free Google account and access to Gemini. We'll walk through the setup process and begin exploring how these tools can enhance your research workflow.
+
+Remember: the goal isn't to become an expert in any particular tool, but to understand how to evaluate and use these capabilities effectively for your research. The specific tools will continue evolving, but the principles we're learning will remain relevant.
+
+In our next section, we'll move from theory to practice with hands-on prompt engineering—the skill that transforms mediocre AI outputs into genuinely useful research assistance.
+

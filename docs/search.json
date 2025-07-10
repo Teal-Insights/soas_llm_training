@@ -258,5 +258,137 @@
       "Foundations",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Understanding LLMs as Collaborative Research Assistants</span>"
     ]
+  },
+  {
+    "objectID": "foundations_considerations.html",
+    "href": "foundations_considerations.html",
+    "title": "3  Key Considerations: Tools, Costs, and Contexts",
+    "section": "",
+    "text": "3.1 Learning Objectives\nBy the end of this section, you will be able to:",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Key Considerations: Tools, Costs, and Contexts</span>"
+    ]
+  },
+  {
+    "objectID": "foundations_considerations.html#learning-objectives",
+    "href": "foundations_considerations.html#learning-objectives",
+    "title": "3  Key Considerations: Tools, Costs, and Contexts",
+    "section": "",
+    "text": "Distinguish between web interfaces and API approaches and understand when each is appropriate\nCompare open-source versus frontier model options and their trade-offs for academic research\nEvaluate the three major frontier model providers (OpenAI, Anthropic, Google) for your needs\nUnderstand key technical concepts like context windows and their practical implications\nMake informed decisions about tool selection based on your research requirements and technical comfort level",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Key Considerations: Tools, Costs, and Contexts</span>"
+    ]
+  },
+  {
+    "objectID": "foundations_considerations.html#why-this-matters-for-your-research",
+    "href": "foundations_considerations.html#why-this-matters-for-your-research",
+    "title": "3  Key Considerations: Tools, Costs, and Contexts",
+    "section": "3.2 Why This Matters for Your Research",
+    "text": "3.2 Why This Matters for Your Research\nBefore diving into specific tools, you need to understand the landscape of options available to you. Making the right choice about which tools to use can mean the difference between a frustrating experience that wastes your time and a transformative workflow that enhances your research capacity. This chapter will help you navigate the key decisions and understand why we’re focusing on Google Gemini for this workshop.",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Key Considerations: Tools, Costs, and Contexts</span>"
+    ]
+  },
+  {
+    "objectID": "foundations_considerations.html#two-ways-to-use-llms-web-interfaces-vs.-apis",
+    "href": "foundations_considerations.html#two-ways-to-use-llms-web-interfaces-vs.-apis",
+    "title": "3  Key Considerations: Tools, Costs, and Contexts",
+    "section": "3.3 Two Ways to Use LLMs: Web Interfaces vs. APIs",
+    "text": "3.3 Two Ways to Use LLMs: Web Interfaces vs. APIs\nThe first major decision is how you want to interact with LLMs. There are two primary approaches:\n\n3.3.1 Web Interfaces (What We’ll Focus On)\nWhat it is: Using LLMs through a browser interface like ChatGPT, Claude, or Gemini. You type questions, upload documents, and get responses in real-time.\nBenefits:\n\nNo coding required\nImmediate access\nPerfect for exploratory research\nGood for one-off tasks\nBuilt-in features like document upload and citation\n\nLimitations:\n\nManual process for each query\nTime-consuming for repetitive tasks\nHarder to maintain consistency across large projects\nLimited ability to process hundreds of documents systematically\n\n\n\n3.3.2 APIs (Application Programming Interfaces)\nWhat it is: Using code to send requests to LLM services programmatically. Instead of typing in a web interface, you write scripts that automatically send queries and process responses.\nBenefits:\n\nCan process thousands of documents automatically\nConsistent methodology across large datasets\nReproducible workflows\nCost-effective for large-scale projects\nCan integrate with existing data analysis pipelines\n\nLimitations:\n\nRequires coding skills (Python, R, etc.)\nMore complex setup and debugging\nNeed to handle rate limits and error management\nSteeper learning curve\n\n\n\n3.3.3 Our Workshop Focus\nBecause this workshop assumes little previous LLM experience and no coding background, we’ll focus primarily on web interfaces—tools you can start using immediately. However, in our final section, we’ll discuss how we used APIs to classify 18,000 Chinese lending projects, showing you what becomes possible when you’re ready to scale up.",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Key Considerations: Tools, Costs, and Contexts</span>"
+    ]
+  },
+  {
+    "objectID": "foundations_considerations.html#open-source-vs.-frontier-models",
+    "href": "foundations_considerations.html#open-source-vs.-frontier-models",
+    "title": "3  Key Considerations: Tools, Costs, and Contexts",
+    "section": "3.4 Open-Source vs. Frontier Models",
+    "text": "3.4 Open-Source vs. Frontier Models\n\n3.4.1 Open-Source Models\nWhat they are: AI models whose code and weights are publicly available. Examples include Meta’s Llama, Mistral, and various models from Hugging Face.\nBenefits:\n\nPrivacy: You can run them on your own servers\nReproducibility: Exact model versions remain available\nCost: Can be free if you have computing resources\nCustomization: Can fine-tune for specific tasks\n\nLimitations:\n\nCapability gap: Generally less capable than frontier models\nTechnical complexity: Require significant technical skills to deploy\nInfrastructure costs: Need expensive cloud computing for larger models\nInconsistent quality: Wide variation in performance\n\n\n\n\n\n\n\nOur Experience with Open-Source Models\n\n\n\nIn our Chinese lending classification project, we tested Meta’s Llama 3.3 alongside frontier models. It was really bad. While open-source models are improving rapidly, they’re not yet competitive with frontier models for complex research tasks.\n\n\n\n\n3.4.2 Frontier Models\nWhat they are: The most advanced models from major AI companies: OpenAI (ChatGPT), Anthropic (Claude), and Google (Gemini).\nBenefits:\n\nSuperior performance: Best available capabilities for most tasks\nEase of use: Polished interfaces and user experience\nRegular updates: Continuous improvements and new features\nReliability: More consistent and predictable outputs\n\nLimitations:\n\nCost: Subscription fees for full access\nPrivacy concerns: Your data goes to third-party companies\nLess control: Can’t customize or guarantee model availability\nBlack box: Don’t know exactly how they work\n\nFor most academic researchers starting with LLMs, frontier models are the better choice. They’re simply more capable and easier to use, allowing you to focus on your research rather than wrestling with technical infrastructure.",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Key Considerations: Tools, Costs, and Contexts</span>"
+    ]
+  },
+  {
+    "objectID": "foundations_considerations.html#the-three-frontier-model-providers",
+    "href": "foundations_considerations.html#the-three-frontier-model-providers",
+    "title": "3  Key Considerations: Tools, Costs, and Contexts",
+    "section": "3.5 The Three Frontier Model Providers",
+    "text": "3.5 The Three Frontier Model Providers\nAll three major providers offer both free and paid tiers. I strongly recommend paying for at least one service—paid tiers provide better data privacy, higher usage limits, and faster access to new models.\n\n3.5.1 OpenAI (ChatGPT)\n\nStrengths: Deep Research tool, strong reasoning models (o3 Pro)\nBest for: Complex problem-solving, comprehensive research synthesis\n\n\n\n3.5.2 Anthropic (Claude)\n\nStrengths: Excellent for coding and writing tasks\nBest for: R/Python programming assistance, high-quality text generation\n\n\n\n3.5.3 Google (Gemini)\n\nStrengths: Largest context window, good citations, NotebookLM integration\nBest for: Working with large documents, academic research workflows",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Key Considerations: Tools, Costs, and Contexts</span>"
+    ]
+  },
+  {
+    "objectID": "foundations_considerations.html#why-were-focusing-on-google-gemini",
+    "href": "foundations_considerations.html#why-were-focusing-on-google-gemini",
+    "title": "3  Key Considerations: Tools, Costs, and Contexts",
+    "section": "3.6 Why We’re Focusing on Google Gemini",
+    "text": "3.6 Why We’re Focusing on Google Gemini\nWhile all three providers have their strengths, Google Gemini offers several advantages particularly relevant for academic research:\n\n3.6.1 1. Massive Context Window\n\n\n\n\n\n\nWhat is a Context Window?\n\n\n\nA context window is how much text an AI can “remember” and work with at one time. Think of it like the AI’s working memory. Current context windows:\n\nGemini 2.5 Pro: 1 million tokens (roughly 750,000 words)\nOpenAI GPT-4: ~200,000 tokens (roughly 150,000 words)\nAnthropic Claude: ~200,000 tokens (roughly 150,000 words)\n\nIn practical terms: Gemini can process about 10-15 typical academic papers simultaneously, while other models can handle 2-3 papers. This is transformative for literature reviews and cross-document analysis.\n\n\nThis enormous context window means you can:\n\nUpload multiple research papers simultaneously\nWork with entire book chapters or reports\nMaintain context across long conversations\nAnalyze patterns across large document collections\n\n\n\n3.6.2 2. Built-in Citation Features\nWhen you upload documents to Gemini, it automatically cites the specific portions where it finds information. This is invaluable for academic workflows where you need to trace claims back to source materials.\n\n\n3.6.3 3. NotebookLM Integration\nNotebookLM allows you to upload up to 300 documents and ask questions across the entire corpus. It provides exact text passages from your PDFs, making it excellent for exploratory analysis. In our ODI research, we used NotebookLM to analyze a decade of annual reports from Chinese policy banks—something that would have taken weeks manually.\n\n\n3.6.4 4. Strong Performance on Benchmarks\n\n\n\n\n\n\nUnderstanding LLM Benchmarks\n\n\n\nLLM benchmarks are standardized tests that measure model performance across different tasks. Popular benchmarks include:\n\nMMLU: Measures knowledge across academic subjects\nHumanEval: Tests coding capabilities\nHellaSwag: Evaluates common-sense reasoning\n\nYou can track current performance at Vellum’s LLM Leaderboard.\nImportant caveats:\n\nBenchmarks don’t always capture what’s useful for your specific research\nGoodhart’s Law applies: “When a measure becomes a target, it ceases to be a good measure.” Companies now optimize specifically for benchmarks, which may not reflect real-world performance.\n\n\n\nGemini 2.5 Pro performs competitively on major benchmarks, though remember that benchmark performance doesn’t always translate to usefulness for your specific research needs.",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Key Considerations: Tools, Costs, and Contexts</span>"
+    ]
+  },
+  {
+    "objectID": "foundations_considerations.html#the-reality-of-provider-competition",
+    "href": "foundations_considerations.html#the-reality-of-provider-competition",
+    "title": "3  Key Considerations: Tools, Costs, and Contexts",
+    "section": "3.7 The Reality of Provider Competition",
+    "text": "3.7 The Reality of Provider Competition\nDespite our focus on Gemini for this workshop, I personally pay for premium access to all three major providers. Here’s why:\nModels update frequently: What’s best today may not be best next month. The competitive landscape changes rapidly.\nEach has unique strengths:\n\nI use Claude most often for coding (R and Python) and high-quality writing\nI use ChatGPT’s Deep Research for doing lengthy, high quality exploratory research\nI use Gemini for working with large document collections\n\nThis will all be outdated soon: The specific model capabilities I’m describing will likely be different by the time you read this. The field moves that fast.",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Key Considerations: Tools, Costs, and Contexts</span>"
+    ]
+  },
+  {
+    "objectID": "foundations_considerations.html#key-technical-concepts",
+    "href": "foundations_considerations.html#key-technical-concepts",
+    "title": "3  Key Considerations: Tools, Costs, and Contexts",
+    "section": "3.8 Key Technical Concepts",
+    "text": "3.8 Key Technical Concepts\n\n3.8.1 Context Window (Revisited)\nThink of context window as the AI’s “working memory.” Larger windows allow for:\n\nMore complex conversations\nBetter understanding of document relationships\nAbility to maintain consistency across longer projects\n\n\n\n3.8.2 Tokens\nA rough conversion: 1 token ≈ 0.75 words in English. So 1 million tokens ≈ 750,000 words ≈ 1,500 pages of double-spaced text.\n\n\n3.8.3 Model Versions\nProviders regularly release new model versions. Pay attention to:\n\nPerformance improvements: Better accuracy, reasoning, or specialized capabilities\nCost changes: New models may be more or less expensive\nFeature additions: New capabilities like image analysis or coding tools",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Key Considerations: Tools, Costs, and Contexts</span>"
+    ]
+  },
+  {
+    "objectID": "foundations_considerations.html#making-your-choice",
+    "href": "foundations_considerations.html#making-your-choice",
+    "title": "3  Key Considerations: Tools, Costs, and Contexts",
+    "section": "3.9 Making Your Choice",
+    "text": "3.9 Making Your Choice\nFor this workshop, we’ll use Google Gemini because:\n\nIt’s excellent for document-heavy academic work\nThe citation features support good research practices\nThe large context window enables ambitious projects\nNotebookLM provides unique research capabilities\n\nHowever, I encourage you to experiment with all three providers. They each have strengths, and the best choice depends on your specific research needs, technical comfort level, and budget.",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Key Considerations: Tools, Costs, and Contexts</span>"
+    ]
+  },
+  {
+    "objectID": "foundations_considerations.html#cost-considerations",
+    "href": "foundations_considerations.html#cost-considerations",
+    "title": "3  Key Considerations: Tools, Costs, and Contexts",
+    "section": "3.10 Cost Considerations",
+    "text": "3.10 Cost Considerations\n\n3.10.1 Free Tiers\nAll providers offer free access with limitations:\n\nUsage caps (messages per day/hour)\nAccess to older or less capable models\nFewer features\n\n\n\n3.10.2 Paid Tiers ($15-30/month typically)\n\nHigher usage limits\nAccess to latest models\nBetter data privacy protections\nPriority access during high-demand periods\n\n\n\n3.10.3 API Pricing\nFor programmatic use, you pay per token processed. Costs vary by model and provider, but typically range from $0.25-15 per million tokens.",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Key Considerations: Tools, Costs, and Contexts</span>"
+    ]
+  },
+  {
+    "objectID": "foundations_considerations.html#getting-started",
+    "href": "foundations_considerations.html#getting-started",
+    "title": "3  Key Considerations: Tools, Costs, and Contexts",
+    "section": "3.11 Getting Started",
+    "text": "3.11 Getting Started\nFor this workshop, you’ll need a free Google account and access to Gemini. We’ll walk through the setup process and begin exploring how these tools can enhance your research workflow.\nRemember: the goal isn’t to become an expert in any particular tool, but to understand how to evaluate and use these capabilities effectively for your research. The specific tools will continue evolving, but the principles we’re learning will remain relevant.\nIn our next section, we’ll move from theory to practice with hands-on prompt engineering—the skill that transforms mediocre AI outputs into genuinely useful research assistance.",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Key Considerations: Tools, Costs, and Contexts</span>"
+    ]
   }
 ]

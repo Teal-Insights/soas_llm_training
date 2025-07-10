@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>3&nbsp; Key Considerations: Tools, Costs, and Contexts – AI for the Sceptical Scholar: Practical Strategies for Using LLMs in Research</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./foundations_intro.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-29e2c20b02301cfff04dc8050bf30c7e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-7580570a2e354cd56757c689413fca0c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./foundations_intro.html">Foundations</a></li><li class="breadcrumb-item"><a href="./foundations_considerations.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Key Considerations: Tools, Costs, and Contexts</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">AI for the Sceptical Scholar: Practical Strategies for Using LLMs in Research</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">About Your Instructor</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Foundations</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./foundations_intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Understanding LLMs as Collaborative Research Assistants</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./foundations_considerations.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Key Considerations: Tools, Costs, and Contexts</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives"><span class="header-section-number">3.1</span> Learning Objectives</a></li>
+  <li><a href="#why-this-matters-for-your-research" id="toc-why-this-matters-for-your-research" class="nav-link" data-scroll-target="#why-this-matters-for-your-research"><span class="header-section-number">3.2</span> Why This Matters for Your Research</a></li>
+  <li><a href="#two-ways-to-use-llms-web-interfaces-vs.-apis" id="toc-two-ways-to-use-llms-web-interfaces-vs.-apis" class="nav-link" data-scroll-target="#two-ways-to-use-llms-web-interfaces-vs.-apis"><span class="header-section-number">3.3</span> Two Ways to Use LLMs: Web Interfaces vs.&nbsp;APIs</a>
+  <ul class="collapse">
+  <li><a href="#web-interfaces-what-well-focus-on" id="toc-web-interfaces-what-well-focus-on" class="nav-link" data-scroll-target="#web-interfaces-what-well-focus-on"><span class="header-section-number">3.3.1</span> Web Interfaces (What We’ll Focus On)</a></li>
+  <li><a href="#apis-application-programming-interfaces" id="toc-apis-application-programming-interfaces" class="nav-link" data-scroll-target="#apis-application-programming-interfaces"><span class="header-section-number">3.3.2</span> APIs (Application Programming Interfaces)</a></li>
+  <li><a href="#our-workshop-focus" id="toc-our-workshop-focus" class="nav-link" data-scroll-target="#our-workshop-focus"><span class="header-section-number">3.3.3</span> Our Workshop Focus</a></li>
+  </ul></li>
+  <li><a href="#open-source-vs.-frontier-models" id="toc-open-source-vs.-frontier-models" class="nav-link" data-scroll-target="#open-source-vs.-frontier-models"><span class="header-section-number">3.4</span> Open-Source vs.&nbsp;Frontier Models</a>
+  <ul class="collapse">
+  <li><a href="#open-source-models" id="toc-open-source-models" class="nav-link" data-scroll-target="#open-source-models"><span class="header-section-number">3.4.1</span> Open-Source Models</a></li>
+  <li><a href="#frontier-models" id="toc-frontier-models" class="nav-link" data-scroll-target="#frontier-models"><span class="header-section-number">3.4.2</span> Frontier Models</a></li>
+  </ul></li>
+  <li><a href="#the-three-frontier-model-providers" id="toc-the-three-frontier-model-providers" class="nav-link" data-scroll-target="#the-three-frontier-model-providers"><span class="header-section-number">3.5</span> The Three Frontier Model Providers</a>
+  <ul class="collapse">
+  <li><a href="#openai-chatgpt" id="toc-openai-chatgpt" class="nav-link" data-scroll-target="#openai-chatgpt"><span class="header-section-number">3.5.1</span> OpenAI (ChatGPT)</a></li>
+  <li><a href="#anthropic-claude" id="toc-anthropic-claude" class="nav-link" data-scroll-target="#anthropic-claude"><span class="header-section-number">3.5.2</span> Anthropic (Claude)</a></li>
+  <li><a href="#google-gemini" id="toc-google-gemini" class="nav-link" data-scroll-target="#google-gemini"><span class="header-section-number">3.5.3</span> Google (Gemini)</a></li>
+  </ul></li>
+  <li><a href="#why-were-focusing-on-google-gemini" id="toc-why-were-focusing-on-google-gemini" class="nav-link" data-scroll-target="#why-were-focusing-on-google-gemini"><span class="header-section-number">3.6</span> Why We’re Focusing on Google Gemini</a>
+  <ul class="collapse">
+  <li><a href="#massive-context-window" id="toc-massive-context-window" class="nav-link" data-scroll-target="#massive-context-window"><span class="header-section-number">3.6.1</span> 1. Massive Context Window</a></li>
+  <li><a href="#built-in-citation-features" id="toc-built-in-citation-features" class="nav-link" data-scroll-target="#built-in-citation-features"><span class="header-section-number">3.6.2</span> 2. Built-in Citation Features</a></li>
+  <li><a href="#notebooklm-integration" id="toc-notebooklm-integration" class="nav-link" data-scroll-target="#notebooklm-integration"><span class="header-section-number">3.6.3</span> 3. NotebookLM Integration</a></li>
+  <li><a href="#strong-performance-on-benchmarks" id="toc-strong-performance-on-benchmarks" class="nav-link" data-scroll-target="#strong-performance-on-benchmarks"><span class="header-section-number">3.6.4</span> 4. Strong Performance on Benchmarks</a></li>
+  </ul></li>
+  <li><a href="#the-reality-of-provider-competition" id="toc-the-reality-of-provider-competition" class="nav-link" data-scroll-target="#the-reality-of-provider-competition"><span class="header-section-number">3.7</span> The Reality of Provider Competition</a></li>
+  <li><a href="#key-technical-concepts" id="toc-key-technical-concepts" class="nav-link" data-scroll-target="#key-technical-concepts"><span class="header-section-number">3.8</span> Key Technical Concepts</a>
+  <ul class="collapse">
+  <li><a href="#context-window-revisited" id="toc-context-window-revisited" class="nav-link" data-scroll-target="#context-window-revisited"><span class="header-section-number">3.8.1</span> Context Window (Revisited)</a></li>
+  <li><a href="#tokens" id="toc-tokens" class="nav-link" data-scroll-target="#tokens"><span class="header-section-number">3.8.2</span> Tokens</a></li>
+  <li><a href="#model-versions" id="toc-model-versions" class="nav-link" data-scroll-target="#model-versions"><span class="header-section-number">3.8.3</span> Model Versions</a></li>
+  </ul></li>
+  <li><a href="#making-your-choice" id="toc-making-your-choice" class="nav-link" data-scroll-target="#making-your-choice"><span class="header-section-number">3.9</span> Making Your Choice</a></li>
+  <li><a href="#cost-considerations" id="toc-cost-considerations" class="nav-link" data-scroll-target="#cost-considerations"><span class="header-section-number">3.10</span> Cost Considerations</a>
+  <ul class="collapse">
+  <li><a href="#free-tiers" id="toc-free-tiers" class="nav-link" data-scroll-target="#free-tiers"><span class="header-section-number">3.10.1</span> Free Tiers</a></li>
+  <li><a href="#paid-tiers-15-30month-typically" id="toc-paid-tiers-15-30month-typically" class="nav-link" data-scroll-target="#paid-tiers-15-30month-typically"><span class="header-section-number">3.10.2</span> Paid Tiers ($15-30/month typically)</a></li>
+  <li><a href="#api-pricing" id="toc-api-pricing" class="nav-link" data-scroll-target="#api-pricing"><span class="header-section-number">3.10.3</span> API Pricing</a></li>
+  </ul></li>
+  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started"><span class="header-section-number">3.11</span> Getting Started</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./foundations_intro.html">Foundations</a></li><li class="breadcrumb-item"><a href="./foundations_considerations.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Key Considerations: Tools, Costs, and Contexts</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Key Considerations: Tools, Costs, and Contexts</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="learning-objectives" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="learning-objectives"><span class="header-section-number">3.1</span> Learning Objectives</h2>
+<p>By the end of this section, you will be able to:</p>
+<ul>
+<li><strong>Distinguish between web interfaces and API approaches</strong> and understand when each is appropriate</li>
+<li><strong>Compare open-source versus frontier model options</strong> and their trade-offs for academic research</li>
+<li><strong>Evaluate the three major frontier model providers</strong> (OpenAI, Anthropic, Google) for your needs</li>
+<li><strong>Understand key technical concepts</strong> like context windows and their practical implications</li>
+<li><strong>Make informed decisions about tool selection</strong> based on your research requirements and technical comfort level</li>
+</ul>
+</section>
+<section id="why-this-matters-for-your-research" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="why-this-matters-for-your-research"><span class="header-section-number">3.2</span> Why This Matters for Your Research</h2>
+<p>Before diving into specific tools, you need to understand the landscape of options available to you. Making the right choice about which tools to use can mean the difference between a frustrating experience that wastes your time and a transformative workflow that enhances your research capacity. This chapter will help you navigate the key decisions and understand why we’re focusing on Google Gemini for this workshop.</p>
+</section>
+<section id="two-ways-to-use-llms-web-interfaces-vs.-apis" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="two-ways-to-use-llms-web-interfaces-vs.-apis"><span class="header-section-number">3.3</span> Two Ways to Use LLMs: Web Interfaces vs.&nbsp;APIs</h2>
+<p>The first major decision is how you want to interact with LLMs. There are two primary approaches:</p>
+<section id="web-interfaces-what-well-focus-on" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="web-interfaces-what-well-focus-on"><span class="header-section-number">3.3.1</span> Web Interfaces (What We’ll Focus On)</h3>
+<p><strong>What it is:</strong> Using LLMs through a browser interface like ChatGPT, Claude, or Gemini. You type questions, upload documents, and get responses in real-time.</p>
+<p><strong>Benefits:</strong></p>
+<ul>
+<li>No coding required</li>
+<li>Immediate access</li>
+<li>Perfect for exploratory research</li>
+<li>Good for one-off tasks</li>
+<li>Built-in features like document upload and citation</li>
+</ul>
+<p><strong>Limitations:</strong></p>
+<ul>
+<li>Manual process for each query</li>
+<li>Time-consuming for repetitive tasks</li>
+<li>Harder to maintain consistency across large projects</li>
+<li>Limited ability to process hundreds of documents systematically</li>
+</ul>
+</section>
+<section id="apis-application-programming-interfaces" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="apis-application-programming-interfaces"><span class="header-section-number">3.3.2</span> APIs (Application Programming Interfaces)</h3>
+<p><strong>What it is:</strong> Using code to send requests to LLM services programmatically. Instead of typing in a web interface, you write scripts that automatically send queries and process responses.</p>
+<p><strong>Benefits:</strong></p>
+<ul>
+<li>Can process thousands of documents automatically</li>
+<li>Consistent methodology across large datasets</li>
+<li>Reproducible workflows</li>
+<li>Cost-effective for large-scale projects</li>
+<li>Can integrate with existing data analysis pipelines</li>
+</ul>
+<p><strong>Limitations:</strong></p>
+<ul>
+<li>Requires coding skills (Python, R, etc.)</li>
+<li>More complex setup and debugging</li>
+<li>Need to handle rate limits and error management</li>
+<li>Steeper learning curve</li>
+</ul>
+</section>
+<section id="our-workshop-focus" class="level3" data-number="3.3.3">
+<h3 data-number="3.3.3" class="anchored" data-anchor-id="our-workshop-focus"><span class="header-section-number">3.3.3</span> Our Workshop Focus</h3>
+<p>Because this workshop assumes little previous LLM experience and no coding background, we’ll focus primarily on web interfaces—tools you can start using immediately. However, in our final section, we’ll discuss how we used APIs to classify 18,000 Chinese lending projects, showing you what becomes possible when you’re ready to scale up.</p>
+</section>
+</section>
+<section id="open-source-vs.-frontier-models" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="open-source-vs.-frontier-models"><span class="header-section-number">3.4</span> Open-Source vs.&nbsp;Frontier Models</h2>
+<section id="open-source-models" class="level3" data-number="3.4.1">
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="open-source-models"><span class="header-section-number">3.4.1</span> Open-Source Models</h3>
+<p><strong>What they are:</strong> AI models whose code and weights are publicly available. Examples include Meta’s Llama, Mistral, and various models from Hugging Face.</p>
+<p><strong>Benefits:</strong></p>
+<ul>
+<li><strong>Privacy:</strong> You can run them on your own servers</li>
+<li><strong>Reproducibility:</strong> Exact model versions remain available</li>
+<li><strong>Cost:</strong> Can be free if you have computing resources</li>
+<li><strong>Customization:</strong> Can fine-tune for specific tasks</li>
+</ul>
+<p><strong>Limitations:</strong></p>
+<ul>
+<li><strong>Capability gap:</strong> Generally less capable than frontier models</li>
+<li><strong>Technical complexity:</strong> Require significant technical skills to deploy</li>
+<li><strong>Infrastructure costs:</strong> Need expensive cloud computing for larger models</li>
+<li><strong>Inconsistent quality:</strong> Wide variation in performance</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Our Experience with Open-Source Models
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In our Chinese lending classification project, we tested Meta’s Llama 3.3 alongside frontier models. It was really bad. While open-source models are improving rapidly, they’re not yet competitive with frontier models for complex research tasks.</p>
+</div>
+</div>
+</section>
+<section id="frontier-models" class="level3" data-number="3.4.2">
+<h3 data-number="3.4.2" class="anchored" data-anchor-id="frontier-models"><span class="header-section-number">3.4.2</span> Frontier Models</h3>
+<p><strong>What they are:</strong> The most advanced models from major AI companies: OpenAI (ChatGPT), Anthropic (Claude), and Google (Gemini).</p>
+<p><strong>Benefits:</strong></p>
+<ul>
+<li><strong>Superior performance:</strong> Best available capabilities for most tasks</li>
+<li><strong>Ease of use:</strong> Polished interfaces and user experience</li>
+<li><strong>Regular updates:</strong> Continuous improvements and new features</li>
+<li><strong>Reliability:</strong> More consistent and predictable outputs</li>
+</ul>
+<p><strong>Limitations:</strong></p>
+<ul>
+<li><strong>Cost:</strong> Subscription fees for full access</li>
+<li><strong>Privacy concerns:</strong> Your data goes to third-party companies</li>
+<li><strong>Less control:</strong> Can’t customize or guarantee model availability</li>
+<li><strong>Black box:</strong> Don’t know exactly how they work</li>
+</ul>
+<p><strong>For most academic researchers starting with LLMs, frontier models are the better choice.</strong> They’re simply more capable and easier to use, allowing you to focus on your research rather than wrestling with technical infrastructure.</p>
+</section>
+</section>
+<section id="the-three-frontier-model-providers" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="the-three-frontier-model-providers"><span class="header-section-number">3.5</span> The Three Frontier Model Providers</h2>
+<p>All three major providers offer both free and paid tiers. I strongly recommend paying for at least one service—paid tiers provide better data privacy, higher usage limits, and faster access to new models.</p>
+<section id="openai-chatgpt" class="level3" data-number="3.5.1">
+<h3 data-number="3.5.1" class="anchored" data-anchor-id="openai-chatgpt"><span class="header-section-number">3.5.1</span> OpenAI (ChatGPT)</h3>
+<ul>
+<li><strong>Strengths:</strong> Deep Research tool, strong reasoning models (o3 Pro)</li>
+<li><strong>Best for:</strong> Complex problem-solving, comprehensive research synthesis</li>
+</ul>
+</section>
+<section id="anthropic-claude" class="level3" data-number="3.5.2">
+<h3 data-number="3.5.2" class="anchored" data-anchor-id="anthropic-claude"><span class="header-section-number">3.5.2</span> Anthropic (Claude)</h3>
+<ul>
+<li><strong>Strengths:</strong> Excellent for coding and writing tasks</li>
+<li><strong>Best for:</strong> R/Python programming assistance, high-quality text generation</li>
+</ul>
+</section>
+<section id="google-gemini" class="level3" data-number="3.5.3">
+<h3 data-number="3.5.3" class="anchored" data-anchor-id="google-gemini"><span class="header-section-number">3.5.3</span> Google (Gemini)</h3>
+<ul>
+<li><strong>Strengths:</strong> Largest context window, good citations, NotebookLM integration</li>
+<li><strong>Best for:</strong> Working with large documents, academic research workflows</li>
+</ul>
+</section>
+</section>
+<section id="why-were-focusing-on-google-gemini" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="why-were-focusing-on-google-gemini"><span class="header-section-number">3.6</span> Why We’re Focusing on Google Gemini</h2>
+<p>While all three providers have their strengths, Google Gemini offers several advantages particularly relevant for academic research:</p>
+<section id="massive-context-window" class="level3" data-number="3.6.1">
+<h3 data-number="3.6.1" class="anchored" data-anchor-id="massive-context-window"><span class="header-section-number">3.6.1</span> 1. Massive Context Window</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+What is a Context Window?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A context window is how much text an AI can “remember” and work with at one time. Think of it like the AI’s working memory. Current context windows:</p>
+<ul>
+<li><strong>Gemini 2.5 Pro:</strong> 1 million tokens (roughly 750,000 words)</li>
+<li><strong>OpenAI GPT-4:</strong> ~200,000 tokens (roughly 150,000 words)</li>
+<li><strong>Anthropic Claude:</strong> ~200,000 tokens (roughly 150,000 words)</li>
+</ul>
+<p><strong>In practical terms:</strong> Gemini can process about 10-15 typical academic papers simultaneously, while other models can handle 2-3 papers. This is transformative for literature reviews and cross-document analysis.</p>
+</div>
+</div>
+<p>This enormous context window means you can:</p>
+<ul>
+<li>Upload multiple research papers simultaneously</li>
+<li>Work with entire book chapters or reports</li>
+<li>Maintain context across long conversations</li>
+<li>Analyze patterns across large document collections</li>
+</ul>
+</section>
+<section id="built-in-citation-features" class="level3" data-number="3.6.2">
+<h3 data-number="3.6.2" class="anchored" data-anchor-id="built-in-citation-features"><span class="header-section-number">3.6.2</span> 2. Built-in Citation Features</h3>
+<p>When you upload documents to Gemini, it automatically cites the specific portions where it finds information. This is invaluable for academic workflows where you need to trace claims back to source materials.</p>
+</section>
+<section id="notebooklm-integration" class="level3" data-number="3.6.3">
+<h3 data-number="3.6.3" class="anchored" data-anchor-id="notebooklm-integration"><span class="header-section-number">3.6.3</span> 3. NotebookLM Integration</h3>
+<p>NotebookLM allows you to upload up to 300 documents and ask questions across the entire corpus. It provides exact text passages from your PDFs, making it excellent for exploratory analysis. In our ODI research, we used NotebookLM to analyze a decade of annual reports from Chinese policy banks—something that would have taken weeks manually.</p>
+</section>
+<section id="strong-performance-on-benchmarks" class="level3" data-number="3.6.4">
+<h3 data-number="3.6.4" class="anchored" data-anchor-id="strong-performance-on-benchmarks"><span class="header-section-number">3.6.4</span> 4. Strong Performance on Benchmarks</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Understanding LLM Benchmarks
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>LLM benchmarks are standardized tests that measure model performance across different tasks. Popular benchmarks include:</p>
+<ul>
+<li><strong>MMLU:</strong> Measures knowledge across academic subjects</li>
+<li><strong>HumanEval:</strong> Tests coding capabilities</li>
+<li><strong>HellaSwag:</strong> Evaluates common-sense reasoning</li>
+</ul>
+<p>You can track current performance at <a href="https://www.vellum.ai/llm-leaderboard">Vellum’s LLM Leaderboard</a>.</p>
+<p><strong>Important caveats:</strong></p>
+<ol type="1">
+<li>Benchmarks don’t always capture what’s useful for your specific research</li>
+<li>Goodhart’s Law applies: “When a measure becomes a target, it ceases to be a good measure.” Companies now optimize specifically for benchmarks, which may not reflect real-world performance.</li>
+</ol>
+</div>
+</div>
+<p>Gemini 2.5 Pro performs competitively on major benchmarks, though remember that benchmark performance doesn’t always translate to usefulness for your specific research needs.</p>
+</section>
+</section>
+<section id="the-reality-of-provider-competition" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="the-reality-of-provider-competition"><span class="header-section-number">3.7</span> The Reality of Provider Competition</h2>
+<p>Despite our focus on Gemini for this workshop, I personally pay for premium access to all three major providers. Here’s why:</p>
+<p><strong>Models update frequently:</strong> What’s best today may not be best next month. The competitive landscape changes rapidly.</p>
+<p><strong>Each has unique strengths:</strong></p>
+<ul>
+<li>I use <strong>Claude</strong> most often for coding (R and Python) and high-quality writing</li>
+<li>I use <strong>ChatGPT’s Deep Research</strong> for doing lengthy, high quality exploratory research</li>
+<li>I use <strong>Gemini</strong> for working with large document collections</li>
+</ul>
+<p><strong>This will all be outdated soon:</strong> The specific model capabilities I’m describing will likely be different by the time you read this. The field moves that fast.</p>
+</section>
+<section id="key-technical-concepts" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="key-technical-concepts"><span class="header-section-number">3.8</span> Key Technical Concepts</h2>
+<section id="context-window-revisited" class="level3" data-number="3.8.1">
+<h3 data-number="3.8.1" class="anchored" data-anchor-id="context-window-revisited"><span class="header-section-number">3.8.1</span> Context Window (Revisited)</h3>
+<p>Think of context window as the AI’s “working memory.” Larger windows allow for:</p>
+<ul>
+<li>More complex conversations</li>
+<li>Better understanding of document relationships</li>
+<li>Ability to maintain consistency across longer projects</li>
+</ul>
+</section>
+<section id="tokens" class="level3" data-number="3.8.2">
+<h3 data-number="3.8.2" class="anchored" data-anchor-id="tokens"><span class="header-section-number">3.8.2</span> Tokens</h3>
+<p>A rough conversion: 1 token ≈ 0.75 words in English. So 1 million tokens ≈ 750,000 words ≈ 1,500 pages of double-spaced text.</p>
+</section>
+<section id="model-versions" class="level3" data-number="3.8.3">
+<h3 data-number="3.8.3" class="anchored" data-anchor-id="model-versions"><span class="header-section-number">3.8.3</span> Model Versions</h3>
+<p>Providers regularly release new model versions. Pay attention to:</p>
+<ul>
+<li><strong>Performance improvements:</strong> Better accuracy, reasoning, or specialized capabilities</li>
+<li><strong>Cost changes:</strong> New models may be more or less expensive</li>
+<li><strong>Feature additions:</strong> New capabilities like image analysis or coding tools</li>
+</ul>
+</section>
+</section>
+<section id="making-your-choice" class="level2" data-number="3.9">
+<h2 data-number="3.9" class="anchored" data-anchor-id="making-your-choice"><span class="header-section-number">3.9</span> Making Your Choice</h2>
+<p>For this workshop, we’ll use Google Gemini because:</p>
+<ol type="1">
+<li>It’s excellent for document-heavy academic work</li>
+<li>The citation features support good research practices</li>
+<li>The large context window enables ambitious projects</li>
+<li>NotebookLM provides unique research capabilities</li>
+</ol>
+<p>However, I encourage you to experiment with all three providers. They each have strengths, and the best choice depends on your specific research needs, technical comfort level, and budget.</p>
+</section>
+<section id="cost-considerations" class="level2" data-number="3.10">
+<h2 data-number="3.10" class="anchored" data-anchor-id="cost-considerations"><span class="header-section-number">3.10</span> Cost Considerations</h2>
+<section id="free-tiers" class="level3" data-number="3.10.1">
+<h3 data-number="3.10.1" class="anchored" data-anchor-id="free-tiers"><span class="header-section-number">3.10.1</span> Free Tiers</h3>
+<p>All providers offer free access with limitations:</p>
+<ul>
+<li>Usage caps (messages per day/hour)</li>
+<li>Access to older or less capable models</li>
+<li>Fewer features</li>
+</ul>
+</section>
+<section id="paid-tiers-15-30month-typically" class="level3" data-number="3.10.2">
+<h3 data-number="3.10.2" class="anchored" data-anchor-id="paid-tiers-15-30month-typically"><span class="header-section-number">3.10.2</span> Paid Tiers ($15-30/month typically)</h3>
+<ul>
+<li>Higher usage limits</li>
+<li>Access to latest models</li>
+<li>Better data privacy protections</li>
+<li>Priority access during high-demand periods</li>
+</ul>
+</section>
+<section id="api-pricing" class="level3" data-number="3.10.3">
+<h3 data-number="3.10.3" class="anchored" data-anchor-id="api-pricing"><span class="header-section-number">3.10.3</span> API Pricing</h3>
+<p>For programmatic use, you pay per token processed. Costs vary by model and provider, but typically range from $0.25-15 per million tokens.</p>
+</section>
+</section>
+<section id="getting-started" class="level2" data-number="3.11">
+<h2 data-number="3.11" class="anchored" data-anchor-id="getting-started"><span class="header-section-number">3.11</span> Getting Started</h2>
+<p>For this workshop, you’ll need a free Google account and access to Gemini. We’ll walk through the setup process and begin exploring how these tools can enhance your research workflow.</p>
+<p>Remember: the goal isn’t to become an expert in any particular tool, but to understand how to evaluate and use these capabilities effectively for your research. The specific tools will continue evolving, but the principles we’re learning will remain relevant.</p>
+<p>In our next section, we’ll move from theory to practice with hands-on prompt engineering—the skill that transforms mediocre AI outputs into genuinely useful research assistance.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./foundations_intro.html" class="pagination-link" aria-label="Understanding LLMs as Collaborative Research Assistants">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Understanding LLMs as Collaborative Research Assistants</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

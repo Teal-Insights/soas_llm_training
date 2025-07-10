@@ -13,8 +13,7 @@ book:
     - part: "Foundations"
       chapters:
         - foundations_intro.qmd         # Chapter 1.1
-    #     - foundations_considerations.qmd  # Chapter 1.2
-    #     - foundations_gemini.qmd        # Chapter 1.3
+        - foundations_considerations.qmd  # Chapter 1.2
     # 
     # - part: "Practical Applications"
     #   chapters:
