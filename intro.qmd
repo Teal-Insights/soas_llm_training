@@ -1,9 +1,46 @@
-# Introduction
+# About Your Instructor {#sec-about-instructor}
 
-This is a book created from markdown and executable code.
+## How I Got Here
 
-See @knuth84 for additional discussion of literate programming.
+Carlos Oya reached out after seeing a recent ODI Global paper I co-authored with Yunnan Chen called [**Greener on the other side? Mapping China's overseas co-financing and financial innovation**](https://odi.org/en/publications/greener-on-the-other-side-mapping-chinas-overseas-co-financing-and-financial-innovation/). We used a novel LLM-based approach to classify "green" Chinese lending projects—something that would have taken a large research team months to do manually.
 
-```{r}
-1 + 1
-```
+[![Source: Chen & Emery 2025](images/odi_green_lending_trends.png)](https://odi.org/en/publications/greener-on-the-other-side-mapping-chinas-overseas-co-financing-and-financial-innovation/)
+
+When we did this work, I looked for "best practices" for validating LLM findings. There weren't many. So we developed our own validation method and published both a [methodological appendix](https://odi.org/en/publications/greener-on-the-other-side-mapping-chinas-overseas-co-financing-and-financial-innovation/) and our [GitHub repository](https://github.com/Teal-Insights/odi_china_lending_llm_classification). It's not perfect, but it's something for others to build upon.
+
+::: callout-note
+## Key Numbers from Our Chinese Lending Project
+
+-   **18,000 projects** classified in 15 hours using Deepseek v3
+-   **\$1.58 total cost** vs. estimated \$22,500 for manual classification
+-   **91.8% agreement** with human raters on validation sample
+-   **First comprehensive analysis** of China's green overseas lending portfolio
+:::
+
+This experience showed me how LLMs can enhance what's possible for policy-relevant research. Two policy researchers on a tight budget accomplished what traditionally required large, grant-funded research teams.  There's a long way to go to establish best practices for the use of LLMs in policy research, so I'm trying to do my best to move the conversation forward. 
+
+## What I Do Now
+
+**Day job:** Running Teal Insights, where we help Global South finance ministries navigate complex debt sustainability and climate investment challenges. We're philanthropically funded with a mandate to build open-source tools—including LLM tools—so countries don't have to pay exorbitant fees to financial advisors.
+
+**Our approach:** Small team (US, Nigeria, Kenya) using AI tools heavily to amplify our impact in research and code development.
+
+## Other Relevant Experience
+
+-   **EM sovereign debt resarch analyst**, Morgan Stanley Investment Management 
+-   **Adjunct Lecturer**, Johns Hopkins SAIS (teaching students to do real-world data analysis on financial and sustainability data)\
+-   **Thought leadership** on sovereign debt + sustainability, World Bank
+-   **Chinese debt restructuring & flows** research, AidData
+-   **Big nerd** 🤓
+
+## Why This Workshop?
+
+::: callout-important
+## A Note on Expertise
+
+This technology is very new. Nobody is really an "expert" yet. But since we're using these tools extensively, we've learned hard lessons about how to use them well—and badly.
+
+When Carlos asked me to teach this, I figured it was a great excuse to organize my thoughts on something I discuss with skeptical, curious researchers all the time. 
+
+This is my first attempt at articulating practical guidance for academics who want to use AI responsibly. I hope it's useful, and I invite all feedback on how to make it better.
+:::

@@ -1,0 +1,163 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "AI for the Sceptical Scholar: Practical Strategies for Using LLMs in Research",
+    "section": "",
+    "text": "Preface\nThis book accompanies the workshop AI for the Skeptical Scholar: Practical Strategies for Using LLMs in Research for SOAS College of Social Sciences. In two hours, we’ll explore how this new technology—despite its limitations—can enhance your research capabilities by handling routine tasks while you focus on critical analysis and theoretical contributions.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#learning-objectives",
+    "href": "index.html#learning-objectives",
+    "title": "AI for the Sceptical Scholar: Practical Strategies for Using LLMs in Research",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nBy the end of this workshop, you will be able to:\n\nEvaluate and select appropriate LLM tools for your research needs\nDesign effective prompts that leverage your domain expertise\nUse LLMs to enhance literature reviews and cross-disciplinary understanding\nApply LLMs for coding assistance and data analysis support\nUnderstand validation approaches for LLM-generated content\nRecognize both the transformative potential and important limitations of these tools",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#who-this-workshop-is-for",
+    "href": "index.html#who-this-workshop-is-for",
+    "title": "AI for the Sceptical Scholar: Practical Strategies for Using LLMs in Research",
+    "section": "Who This Workshop Is For",
+    "text": "Who This Workshop Is For\nThis workshop is designed for experienced researchers who want to explore how LLMs might enhance their work. We assume you have:\n\nDeep expertise in your research domain\nHealthy skepticism about new technologies and their promises\nNo prior knowledge of LLMs or coding experience\nInterest in practical tools that could streamline routine research tasks\n\nYour skepticism is justified—LLMs have real limitations we’ll address directly. This workshop provides a realistic assessment of both capabilities and constraints.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#workshop-scope",
+    "href": "index.html#workshop-scope",
+    "title": "AI for the Sceptical Scholar: Practical Strategies for Using LLMs in Research",
+    "section": "Workshop Scope",
+    "text": "Workshop Scope\nArtificial Intelligence is a vast and rapidly evolving field. In two hours, we can only cover a small portion of this landscape. This workshop aims to provide you with three core concepts that will equip you with immediately useful tools and a framework for continued learning:\n\nA mental model for understanding when and how to use AI effectively\nPractical techniques for common research tasks\nValidation strategies to maintain research integrity\n\n\nWhat We Will Cover\n\nConsumer-friendly LLM interfaces you can use immediately\nHands-on practice with real research applications\nIntroduction to programmatic possibilities for larger projects\nCase studies demonstrating successful academic use\n\n\n\nWhat We Will Not Cover\n\nComprehensive discussion of AI’s social implications (though we acknowledge them)\nDetailed API programming instruction\nExhaustive review of AI startup tools\nSolutions to replace human critical thinking",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#understanding-llms-in-research-context",
+    "href": "index.html#understanding-llms-in-research-context",
+    "title": "AI for the Sceptical Scholar: Practical Strategies for Using LLMs in Research",
+    "section": "Understanding LLMs in Research Context",
+    "text": "Understanding LLMs in Research Context\nLarge Language Models represent a new category of research tool. Like any emerging technology, they come with significant limitations: training data biases, lack of contextual understanding, tendency to generate plausible-sounding but incorrect information, and important ethical considerations around consent and knowledge production.\nHowever, when used strategically and with appropriate validation, these tools can transform research workflows. By automating time-consuming routine tasks—initial literature categorization, draft translations, basic coding—LLMs free researchers to dedicate more time to what humans do best: critical analysis, theoretical development, contextual interpretation, and ethical judgment.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#about-your-instructor",
+    "href": "index.html#about-your-instructor",
+    "title": "AI for the Sceptical Scholar: Practical Strategies for Using LLMs in Research",
+    "section": "About Your Instructor",
+    "text": "About Your Instructor",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#our-two-hour-journey",
+    "href": "index.html#our-two-hour-journey",
+    "title": "AI for the Sceptical Scholar: Practical Strategies for Using LLMs in Research",
+    "section": "Our Two-Hour Journey",
+    "text": "Our Two-Hour Journey\n\nPart 1: Foundations (20 minutes)\nUnderstanding LLMs as Research Tools\n\nThe “Jagged Frontier”: Where AI excels versus where humans remain essential\nKey concepts: model capabilities, cost structures, context windows\nWhy Google Gemini for academic work (citations, extended context, NotebookLM)\n\n\n\nPart 2: Practical Applications (70 minutes)\nHands-On Tools and Techniques\n\nPrompt engineering fundamentals with practice exercises\nCreating reusable “Gems” for common research tasks\nEnhancing literature reviews across languages and disciplines\nGetting coding assistance without programming expertise\nBrief exploration of complementary tools (Perplexity, ChatGPT, Claude)\n\n\n\nPart 3: Advanced Possibilities (15 minutes)\nScaling Your Research\n\nCase study: How I classified 18,000 Chinese overseas lending projects in 15 hours (versus 1,500 hours manually).\nValidation strategy: achieving 91.8% agreement with human raters\nEnabling policy-relevant analysis: quantifying green lending patterns across the Belt and Road Initiative\nIntroduction to programmatic approaches for large-scale research\nWhen and how to consider API-based workflows\n\n\n\nPart 4: Q&A and Discussion (15 minutes)\nYour Questions and Next Steps",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#approaching-this-material",
+    "href": "index.html#approaching-this-material",
+    "title": "AI for the Sceptical Scholar: Practical Strategies for Using LLMs in Research",
+    "section": "Approaching This Material",
+    "text": "Approaching This Material\nThis workshop takes a pragmatic stance. We neither dismiss AI’s real limitations nor accept inflated claims about its capabilities. Instead, we focus on practical applications where LLMs demonstrably save time and enhance research capacity while maintaining academic standards.\nThroughout, we’ll use clear language and define technical terms as they arise. When we discuss “context windows,” we’ll explain this means how much text an AI can process at once. When we mention “hallucinations,” we’ll clarify this refers to AI’s tendency to generate false but plausible information.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#preparing-for-the-workshop",
+    "href": "index.html#preparing-for-the-workshop",
+    "title": "AI for the Sceptical Scholar: Practical Strategies for Using LLMs in Research",
+    "section": "Preparing for the Workshop",
+    "text": "Preparing for the Workshop\nYou’ll need:\n\nA free Google Gemini account (setup instructions in Appendix A)\nA research question or paper you’re currently working on\nWillingness to experiment while maintaining healthy skepticism",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#how-to-use-this-book",
+    "href": "index.html#how-to-use-this-book",
+    "title": "AI for the Sceptical Scholar: Practical Strategies for Using LLMs in Research",
+    "section": "How to Use This Book",
+    "text": "How to Use This Book\nEach chapter provides:\n\nClear explanation of concepts without unnecessary jargon\nStep-by-step instructions with visual guides\nHands-on exercises using real research scenarios\nCommon pitfalls and how to avoid them\nValidation strategies specific to each application\n\nThis book serves as both a workshop companion and a reference for future exploration. The goal is not to make you an AI expert but to provide practical tools that enhance your existing research practice.\nLet’s begin exploring how these tools can support your important work.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  About Your Instructor",
+    "section": "",
+    "text": "1.1 How I Got Here\nCarlos Oya reached out after seeing a recent ODI Global paper I co-authored with Yunnan Chen called Greener on the other side? Mapping China’s overseas co-financing and financial innovation. We used a novel LLM-based approach to classify “green” Chinese lending projects—something that would have taken a large research team months to do manually.\nWhen we did this work, I looked for “best practices” for validating LLM findings. There weren’t many. So we developed our own validation method and published both a methodological appendix and our GitHub repository. It’s not perfect, but it’s something for others to build upon.\nThis experience showed me how LLMs can enhance what’s possible for policy-relevant research. Two policy researchers on a tight budget accomplished what traditionally required large, grant-funded research teams. There’s a long way to go to establish best practices for the use of LLMs in policy research, so I’m trying to do my best to move the conversation forward.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>About Your Instructor</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#how-i-got-here",
+    "href": "intro.html#how-i-got-here",
+    "title": "1  About Your Instructor",
+    "section": "",
+    "text": "Source: Chen & Emery 2025\n\n\n\n\n\n\n\n\n\nKey Numbers from Our Chinese Lending Project\n\n\n\n\n18,000 projects classified in 15 hours using Deepseek v3\n$1.58 total cost vs. estimated $22,500 for manual classification\n91.8% agreement with human raters on validation sample\nFirst comprehensive analysis of China’s green overseas lending portfolio",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>About Your Instructor</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#what-i-do-now",
+    "href": "intro.html#what-i-do-now",
+    "title": "1  About Your Instructor",
+    "section": "1.2 What I Do Now",
+    "text": "1.2 What I Do Now\nDay job: Running Teal Insights, where we help Global South finance ministries navigate complex debt sustainability and climate investment challenges. We’re philanthropically funded with a mandate to build open-source tools—including LLM tools—so countries don’t have to pay exorbitant fees to financial advisors.\nOur approach: Small team (US, Nigeria, Kenya) using AI tools heavily to amplify our impact in research and code development.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>About Your Instructor</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#other-relevant-experience",
+    "href": "intro.html#other-relevant-experience",
+    "title": "1  About Your Instructor",
+    "section": "1.3 Other Relevant Experience",
+    "text": "1.3 Other Relevant Experience\n\nEM sovereign debt resarch analyst, Morgan Stanley Investment Management\nAdjunct Lecturer, Johns Hopkins SAIS (teaching students to do real-world data analysis on financial and sustainability data)\n\nThought leadership on sovereign debt + sustainability, World Bank\nChinese debt restructuring & flows research, AidData\nBig nerd 🤓",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>About Your Instructor</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#why-this-workshop",
+    "href": "intro.html#why-this-workshop",
+    "title": "1  About Your Instructor",
+    "section": "1.4 Why This Workshop?",
+    "text": "1.4 Why This Workshop?\n\n\n\n\n\n\nA Note on Expertise\n\n\n\nThis technology is very new. Nobody is really an “expert” yet. But since we’re using these tools extensively, we’ve learned hard lessons about how to use them well—and badly.\nWhen Carlos asked me to teach this, I figured it was a great excuse to organize my thoughts on something I discuss with skeptical, curious researchers all the time.\nThis is my first attempt at articulating practical guidance for academics who want to use AI responsibly. I hope it’s useful, and I invite all feedback on how to make it better.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>About Your Instructor</span>"
+    ]
+  },
+  {
+    "objectID": "foundations_intro.html",
+    "href": "foundations_intro.html",
+    "title": "2  Introduction",
+    "section": "",
+    "text": "Hi, let’s try this out",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  }
+]

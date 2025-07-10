@@ -1,9 +1,111 @@
 # Preface {.unnumbered}
 
-This is a Quarto book.
+This book accompanies the workshop **AI for the Skeptical Scholar: Practical Strategies for Using LLMs in Research** for SOAS College of Social Sciences. In two hours, we'll explore how this new technology—despite its limitations—can enhance your research capabilities by handling routine tasks while you focus on critical analysis and theoretical contributions.
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+## Learning Objectives
 
-```{r}
-1 + 1
-```
+By the end of this workshop, you will be able to:
+
+- Evaluate and select appropriate LLM tools for your research needs
+- Design effective prompts that leverage your domain expertise
+- Use LLMs to enhance literature reviews and cross-disciplinary understanding
+- Apply LLMs for coding assistance and data analysis support
+- Understand validation approaches for LLM-generated content
+- Recognize both the transformative potential and important limitations of these tools
+
+## Who This Workshop Is For
+
+This workshop is designed for experienced researchers who want to explore how LLMs might enhance their work. We assume you have:
+
+- Deep expertise in your research domain
+- Healthy skepticism about new technologies and their promises
+- No prior knowledge of LLMs or coding experience
+- Interest in practical tools that could streamline routine research tasks
+
+Your skepticism is justified—LLMs have real limitations we'll address directly. This workshop provides a realistic assessment of both capabilities and constraints.
+
+## Workshop Scope
+
+Artificial Intelligence is a vast and rapidly evolving field. In two hours, we can only cover a small portion of this landscape. This workshop aims to provide you with three core concepts that will equip you with immediately useful tools and a framework for continued learning:
+
+1. **A mental model** for understanding when and how to use AI effectively
+2. **Practical techniques** for common research tasks
+3. **Validation strategies** to maintain research integrity
+
+### What We Will Cover
+- Consumer-friendly LLM interfaces you can use immediately
+- Hands-on practice with real research applications
+- Introduction to programmatic possibilities for larger projects
+- Case studies demonstrating successful academic use
+
+### What We Will Not Cover
+- Comprehensive discussion of AI's social implications (though we acknowledge them)
+- Detailed API programming instruction
+- Exhaustive review of AI startup tools
+- Solutions to replace human critical thinking
+
+## Understanding LLMs in Research Context
+
+Large Language Models represent a new category of research tool. Like any emerging technology, they come with significant limitations: training data biases, lack of contextual understanding, tendency to generate plausible-sounding but incorrect information, and important ethical considerations around consent and knowledge production.
+
+However, when used strategically and with appropriate validation, these tools can transform research workflows. By automating time-consuming routine tasks—initial literature categorization, draft translations, basic coding—LLMs free researchers to dedicate more time to what humans do best: critical analysis, theoretical development, contextual interpretation, and ethical judgment.
+
+## About Your Instructor
+
+## Our Two-Hour Journey
+
+### Part 1: Foundations (20 minutes)
+**Understanding LLMs as Research Tools**
+
+- The "Jagged Frontier": Where AI excels versus where humans remain essential
+- Key concepts: model capabilities, cost structures, context windows
+- Why Google Gemini for academic work (citations, extended context, NotebookLM)
+
+### Part 2: Practical Applications (70 minutes)
+**Hands-On Tools and Techniques**
+
+- Prompt engineering fundamentals with practice exercises
+- Creating reusable "Gems" for common research tasks
+- Enhancing literature reviews across languages and disciplines
+- Getting coding assistance without programming expertise
+- Brief exploration of complementary tools (Perplexity, ChatGPT, Claude)
+
+### Part 3: Advanced Possibilities (15 minutes)
+**Scaling Your Research**
+
+- Case study: How I classified 18,000 Chinese overseas lending projects in 15 hours (versus 1,500 hours manually). 
+- Validation strategy: achieving 91.8% agreement with human raters
+- Enabling policy-relevant analysis: quantifying green lending patterns across the Belt and Road Initiative
+- Introduction to programmatic approaches for large-scale research
+- When and how to consider API-based workflows
+
+### Part 4: Q&A and Discussion (15 minutes)
+**Your Questions and Next Steps**
+
+## Approaching This Material
+
+This workshop takes a pragmatic stance. We neither dismiss AI's real limitations nor accept inflated claims about its capabilities. Instead, we focus on practical applications where LLMs demonstrably save time and enhance research capacity while maintaining academic standards.
+
+Throughout, we'll use clear language and define technical terms as they arise. When we discuss "context windows," we'll explain this means how much text an AI can process at once. When we mention "hallucinations," we'll clarify this refers to AI's tendency to generate false but plausible information.
+
+## Preparing for the Workshop
+
+You'll need:
+
+- A free Google Gemini account (setup instructions in Appendix A)
+- A research question or paper you're currently working on
+- Willingness to experiment while maintaining healthy skepticism
+
+## How to Use This Book
+
+Each chapter provides:
+
+- Clear explanation of concepts without unnecessary jargon
+- Step-by-step instructions with visual guides
+- Hands-on exercises using real research scenarios
+- Common pitfalls and how to avoid them
+- Validation strategies specific to each application
+
+This book serves as both a workshop companion and a reference for future exploration. The goal is not to make you an AI expert but to provide practical tools that enhance your existing research practice.
+
+Let's begin exploring how these tools can support your important work.
