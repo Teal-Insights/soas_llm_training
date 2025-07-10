@@ -390,5 +390,137 @@
       "Foundations",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Key Considerations: Tools, Costs, and Contexts</span>"
     ]
+  },
+  {
+    "objectID": "apps_prompting.html",
+    "href": "apps_prompting.html",
+    "title": "4  Prompt Engineering Basics",
+    "section": "",
+    "text": "4.0.1 Learning Objectives\nTentative time: 12 minutes",
+    "crumbs": [
+      "Practical Applications",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Prompt Engineering Basics</span>"
+    ]
+  },
+  {
+    "objectID": "apps_prompting.html#the-power-and-the-problem",
+    "href": "apps_prompting.html#the-power-and-the-problem",
+    "title": "4  Prompt Engineering Basics",
+    "section": "4.1 The Power and the Problem",
+    "text": "4.1 The Power and the Problem\nLarge Language Models are incredibly powerful tools, but they’re not clairvoyant. As Ethan Mollick observed in his work on “good enough prompting”:\n\n“LLMs (such as ChatGPT, Claude, or Bard) are powerful but not clairvoyant. They need sufficient information and clarity to produce useful responses.”\n\nThis insight captures a fundamental truth about working with AI: the quality of what you get out depends heavily on the quality of what you put in. But unlike Google searches where you can get away with a few keywords, LLMs work best when you treat them like a collaborative partner who needs context and clear direction.\nLet’s break down what this means practically:\n“Powerful” - LLMs can handle complex tasks that would take humans hours or days: summarizing dozens of papers, translating between languages, analyzing patterns in data, or drafting professional documents. They have access to vast knowledge and can process large amounts of text quickly.\n“But not clairvoyant” - They can’t read your mind or guess what you really need. They don’t know if you’re writing for undergraduates or policymakers, whether you need a formal or casual tone, or what specific angle matters most for your research.\n“Need sufficient information and clarity” - The more context and specific instructions you provide, the better the output. This is where prompt engineering comes in.",
+    "crumbs": [
+      "Practical Applications",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Prompt Engineering Basics</span>"
+    ]
+  },
+  {
+    "objectID": "apps_prompting.html#from-our-mental-model-to-better-prompts",
+    "href": "apps_prompting.html#from-our-mental-model-to-better-prompts",
+    "title": "4  Prompt Engineering Basics",
+    "section": "4.2 From Our Mental Model to Better Prompts",
+    "text": "4.2 From Our Mental Model to Better Prompts\nRemember our “jagged frontier” mental model from Chapter 1? LLMs excel at some tasks (like summarizing text or finding patterns) but struggle with others (like providing current information or understanding subtle context). Good prompting helps you:\n\nNavigate the jagged frontier - Direct the AI toward tasks it handles well\nProvide human expertise - Give the AI the context and knowledge it lacks\nMaintain quality control - Structure requests so you can easily evaluate the output\n\nThink of it this way: you bring the expertise and judgment, the AI brings the scale and speed. But you need to communicate effectively to make this partnership work.",
+    "crumbs": [
+      "Practical Applications",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Prompt Engineering Basics</span>"
+    ]
+  },
+  {
+    "objectID": "apps_prompting.html#the-power-of-chaining-prompts",
+    "href": "apps_prompting.html#the-power-of-chaining-prompts",
+    "title": "4  Prompt Engineering Basics",
+    "section": "4.3 The Power of Chaining Prompts",
+    "text": "4.3 The Power of Chaining Prompts\nOne advanced technique worth mentioning is prompt chaining - breaking complex tasks into sequential steps rather than asking for everything at once. This often produces better results because:\n\nEach step can be optimized for a specific task\nYou can review and refine the output before moving to the next step\nThe AI has clearer focus at each stage\nYou maintain better quality control throughout the process\n\nFor example, instead of asking “analyze this email thread and draft a response,” you might: 1. First, ask for analysis and clarification 2. Then, ask for a draft response based on that analysis\nThis approach is particularly valuable for complex or high-stakes communications where you want to ensure accuracy and appropriateness.",
+    "crumbs": [
+      "Practical Applications",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Prompt Engineering Basics</span>"
+    ]
+  },
+  {
+    "objectID": "apps_prompting.html#two-powerful-prompt-enhancers",
+    "href": "apps_prompting.html#two-powerful-prompt-enhancers",
+    "title": "4  Prompt Engineering Basics",
+    "section": "4.4 Two Powerful Prompt Enhancers",
+    "text": "4.4 Two Powerful Prompt Enhancers\nBefore we move to the templates, here are two simple additions that can dramatically improve your prompts:\n“Please ask me clarifying questions” - This encourages the AI to seek additional information rather than making assumptions. It’s surprisingly effective at producing more tailored and useful outputs.\n“Tell me when you’re unsure about something” - This helps reduce hallucinations by encouraging the AI to admit uncertainty rather than fabricating plausible-sounding answers.\nThese simple additions can save you from misleading or inappropriate responses, especially when dealing with complex or sensitive topics.",
+    "crumbs": [
+      "Practical Applications",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Prompt Engineering Basics</span>"
+    ]
+  },
+  {
+    "objectID": "apps_prompting.html#the-anatomy-of-an-effective-prompt",
+    "href": "apps_prompting.html#the-anatomy-of-an-effective-prompt",
+    "title": "4  Prompt Engineering Basics",
+    "section": "4.5 The Anatomy of an Effective Prompt",
+    "text": "4.5 The Anatomy of an Effective Prompt\nBased on research from Anthropic and other AI labs, effective prompts typically include:\n\n\n\n\n\n\nEssential Prompt Components\n\n\n\nContext - Who you are, what you’re working on, what the AI needs to know Task - What specifically you want the AI to do\nFormat - How you want the output structured Constraints - Any limitations, requirements, or things to avoid Examples - Sample inputs/outputs if helpful\n\n\nFor academic research, this might look like:\nContext: I'm a development researcher studying urban poverty in South Asia\nTask: Summarize the key findings from this paper about migration patterns\nFormat: 3-4 bullet points focusing on policy implications\nConstraints: Keep it under 200 words, use objective academic language\n[Then upload or paste the paper or abstract]",
+    "crumbs": [
+      "Practical Applications",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Prompt Engineering Basics</span>"
+    ]
+  },
+  {
+    "objectID": "apps_prompting.html#hands-on-activity-building-your-research-context",
+    "href": "apps_prompting.html#hands-on-activity-building-your-research-context",
+    "title": "4  Prompt Engineering Basics",
+    "section": "4.6 Hands-On Activity: Building Your Research Context",
+    "text": "4.6 Hands-On Activity: Building Your Research Context\nLet’s practice with something directly useful for your research. We’ll create a professional context that you can reuse across different AI conversations.\n\n4.6.1 Step 1: Create Your Professional Context\nCopy and modify this template with your own information:\n# [Your Name] - Professional Context\n\n## Domain Expertise & Background\n[Describe your main research areas, methodology preferences, and key expertise. Include your educational background and any relevant professional experience.]\n\n## Current Roles & Affiliations\n[List your current positions, institutional affiliations, and key responsibilities]\n\n## Research Focus Areas\n[Outline your main research interests and current projects]\n\n## Communication Style & Audience\n[Describe who you typically write for and how you prefer to communicate research findings]\n\n## Technical Approach\n[Mention any specific tools, methods, or analytical approaches you use]\n\n\n\n\n\n\nExample Professional Context\n\n\n\nHere’s how this might look for a researcher:\n# Teal Emery - Professional Context\n\n## Domain Expertise & Background\nI'm a research consultant specializing in sovereign debt, emerging markets, and Chinese lending to developing countries. I combine domain expertise with data science tools to turn complex information into actionable insights. I have 10+ years of experience as an emerging markets investor and analyst, including 7 years at Morgan Stanley as a sovereign research analyst covering China, Africa, the Middle East, and other emerging markets.\n\n## Current Roles & Affiliations\n- Founder & Lead Researcher at Teal Insights\n- Research Consultant at AidData\n- Fellow at Energy for Growth Hub\n- Adjunct Lecturer at Johns Hopkins SAIS\n\n## Research Focus Areas\n- Sovereign debt sustainability and restructuring\n- Chinese lending and development finance\n- Renewable energy financing in low-income countries\n- Building transparent, reproducible research tools\n\n## Communication Style & Audience\nI write for policymakers, economists, and graduate students who are intelligent but may not share my specific domain expertise. I value clarity over complexity and aim to make technical concepts accessible without oversimplification.\n\n\n\n\n4.6.2 Step 2: Test the Difference\nNow let’s see how context changes AI responses. Try these two prompts with your chosen AI tool:\nPrompt A (Without Context):\nWhat are some important research questions about social protection in developing countries?\nPrompt B (With Context):\n[Paste your professional context here]\n\nGiven my research background and expertise, what are 5 specific research questions about social protection in developing countries that would be valuable and feasible for my work? Focus on areas where my mixed-methods approach and regional expertise would be particularly valuable.\n\n\n4.6.3 Step 3: Observe and Refine\nCompare the two outputs: - Which response is more specific and useful? - Which better reflects your actual research interests? - How might you refine your context or prompt for even better results?",
+    "crumbs": [
+      "Practical Applications",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Prompt Engineering Basics</span>"
+    ]
+  },
+  {
+    "objectID": "apps_prompting.html#common-mistakes-and-how-to-fix-them",
+    "href": "apps_prompting.html#common-mistakes-and-how-to-fix-them",
+    "title": "4  Prompt Engineering Basics",
+    "section": "4.7 Common Mistakes and How to Fix Them",
+    "text": "4.7 Common Mistakes and How to Fix Them\n\n4.7.1 Mistake 1: Treating AI Like Google\nProblem: Asking factual questions without context Instead: Provide documents and ask for analysis\n❌ “What’s the poverty rate in Nigeria?” ✅ “Based on the survey data I’m sharing below, what are the key trends in poverty rates across different regions of Nigeria?”\n\n\n4.7.2 Mistake 2: Vague Requests\nProblem: “Tell me about X” or “Help me with Y” Instead: Be specific about the task and output format\n❌ “Help me with my literature review” ✅ “Summarize the main arguments from these 5 papers about microfinance, focusing on conflicting findings about impact on women’s empowerment. Format as a comparison table.”\n\n\n4.7.3 Mistake 3: No Quality Control\nProblem: Accepting AI output without verification Instead: Ask for sources, evidence, or reasoning\n❌ Just using whatever the AI produces ✅ “Show me the specific quotes from the papers that support each of these conclusions”\n\n\n4.7.4 Mistake 4: Overwhelming the AI\nProblem: Asking for too much at once Instead: Break complex tasks into steps\n❌ “Analyze this dataset, create visualizations, write a report, and suggest policy recommendations” ✅ “First, help me identify the key patterns in this dataset. Then we’ll work on visualizations.”",
+    "crumbs": [
+      "Practical Applications",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Prompt Engineering Basics</span>"
+    ]
+  },
+  {
+    "objectID": "apps_prompting.html#templates-for-common-research-tasks",
+    "href": "apps_prompting.html#templates-for-common-research-tasks",
+    "title": "4  Prompt Engineering Basics",
+    "section": "4.8 Templates for Common Research Tasks",
+    "text": "4.8 Templates for Common Research Tasks\nHere are some proven prompt templates you can adapt:\n\n4.8.1 Complex Email Thread Analysis\n[Your professional context]\n\nI need to respond to this complex email thread. Please help me by:\n1. Summarizing the key issues being discussed\n2. Identifying what questions or decisions need my input\n3. Noting any deadlines or urgent items\n4. Flagging any potential conflicts or sensitive topics\n5. Suggesting 2-3 key points for my response\n\nUpload the entire email thread below. Include any relevant background context about the project, relationships, or institutional dynamics that might help me craft an appropriate response.\n\nPlease ask me clarifying questions if anything is unclear, and tell me when you're unsure about something rather than guessing.\n\nEmail thread: [upload the full thread]\nAdditional context: [describe the project, your role, any politics or sensitivities]\nFollow-up prompt for drafting:\nBased on your analysis above, please draft a professional response email that:\n- Addresses the key points requiring my input\n- Maintains an appropriate tone for the relationships involved\n- Includes any necessary next steps or commitments\n- Is structured for busy people to read and respond to quickly (clear subject line, key points upfront, specific asks)\n- Keeps the response concise but comprehensive\n\nI'll review and edit this draft carefully before sending.\n\n\n4.8.2 Research Question Brainstorming\n[Your professional context]\n\nI want to brainstorm new research directions building on my existing work. Please upload 2-3 of my recent papers or abstracts that represent my current research focus.\n\nBased on my previous work and the additional context below, generate 6 research questions that would be:\n- Natural extensions or new directions from my existing research\n- Feasible given my established methodological expertise\n- Policy-relevant for [specific context/region where you work]\n- Novel enough to contribute meaningfully to the literature\n\nAdditional context about my interests for new research:\n- [Describe any new areas you're curious about]\n- [Mention any gaps you've noticed in your field]\n- [Note any new data sources or methods you'd like to explore]\n- [Describe any policy questions that keep coming up in your work]\n\nPlease ask me clarifying questions if you need more information about my specific interests or constraints, and tell me when you're unsure about something.\n\nFormat as a numbered list with brief explanation for each, including how it builds on my existing work.\n\n\n4.8.3 Writing Enhancement\n[Your professional context]\n\nPlease review this draft paragraph from my paper and suggest improvements for:\n- Clarity and flow\n- Academic tone appropriate for [specific journal/audience]\n- Strength of argument\n- Any unclear or weak statements\n\nTo help you provide better feedback, please upload:\n- A sample article previously published in this outlet (so you understand the style)\n- Any submission guidelines or style guidelines I should follow\n- The draft text I want you to review\n\nDraft: [paste or upload your text]",
+    "crumbs": [
+      "Practical Applications",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Prompt Engineering Basics</span>"
+    ]
+  },
+  {
+    "objectID": "apps_prompting.html#building-your-prompt-library",
+    "href": "apps_prompting.html#building-your-prompt-library",
+    "title": "4  Prompt Engineering Basics",
+    "section": "4.9 Building Your Prompt Library",
+    "text": "4.9 Building Your Prompt Library\nAs you use AI tools more, you’ll develop a personal collection of effective prompts. Consider:\n\nSaving successful prompts - Keep a document with templates that work well\nIterating and improving - Note what works and what doesn’t\nSharing with colleagues - Good prompts are valuable resources to share\nStaying organized - Group prompts by task type (analysis, writing, brainstorming)",
+    "crumbs": [
+      "Practical Applications",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Prompt Engineering Basics</span>"
+    ]
+  },
+  {
+    "objectID": "apps_prompting.html#what-you-can-do-now",
+    "href": "apps_prompting.html#what-you-can-do-now",
+    "title": "4  Prompt Engineering Basics",
+    "section": "4.10 What You Can Do Now",
+    "text": "4.10 What You Can Do Now\n\nCreate your professional context using the template above\nTest the difference context makes with a real research question\nTry one literature review prompt with a paper you’re currently reading\nSave your best prompts for future use",
+    "crumbs": [
+      "Practical Applications",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Prompt Engineering Basics</span>"
+    ]
+  },
+  {
+    "objectID": "apps_prompting.html#going-deeper",
+    "href": "apps_prompting.html#going-deeper",
+    "title": "4  Prompt Engineering Basics",
+    "section": "4.11 Going Deeper",
+    "text": "4.11 Going Deeper\nFor more advanced prompt engineering techniques, see:\n\nAnthropic’s Prompt Engineering Guide\nChapter 2.2 on creating reusable “Gems” for repeated tasks\n\nRemember: Good prompting is a skill that improves with practice. Start with these basics, then gradually experiment with more sophisticated techniques as you become comfortable with the fundamentals.\n\nUp next: Chapter 2.2 - Building Research Projects and Creating Your First Gem",
+    "crumbs": [
+      "Practical Applications",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Prompt Engineering Basics</span>"
+    ]
   }
 ]
