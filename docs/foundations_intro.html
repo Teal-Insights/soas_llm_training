@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>2&nbsp; Introduction – AI for the Sceptical Scholar: Practical Strategies for Using LLMs in Research</title>
+<title>2&nbsp; Understanding LLMs as Collaborative Research Assistants – AI for the Sceptical Scholar: Practical Strategies for Using LLMs in Research</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -80,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./foundations_intro.html">Foundations</a></li><li class="breadcrumb-item"><a href="./foundations_intro.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./foundations_intro.html">Foundations</a></li><li class="breadcrumb-item"><a href="./foundations_intro.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Understanding LLMs as Collaborative Research Assistants</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -129,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./foundations_intro.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Understanding LLMs as Collaborative Research Assistants</span></span></a>
   </div>
 </li>
       </ul>
@@ -139,15 +139,38 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives"><span class="header-section-number">2.1</span> Learning Objectives</a></li>
+  <li><a href="#why-this-matters-for-your-research" id="toc-why-this-matters-for-your-research" class="nav-link" data-scroll-target="#why-this-matters-for-your-research"><span class="header-section-number">2.2</span> Why This Matters for Your Research</a></li>
+  <li><a href="#a-new-way-to-think-about-ai-collaboration" id="toc-a-new-way-to-think-about-ai-collaboration" class="nav-link" data-scroll-target="#a-new-way-to-think-about-ai-collaboration"><span class="header-section-number">2.3</span> A New Way to Think About AI Collaboration</a></li>
+  <li><a href="#the-jagged-frontier-understanding-ais-uneven-capabilities" id="toc-the-jagged-frontier-understanding-ais-uneven-capabilities" class="nav-link" data-scroll-target="#the-jagged-frontier-understanding-ais-uneven-capabilities"><span class="header-section-number">2.4</span> The Jagged Frontier: Understanding AI’s Uneven Capabilities</a></li>
+  <li><a href="#what-llms-do-well-vs.-what-they-dont" id="toc-what-llms-do-well-vs.-what-they-dont" class="nav-link" data-scroll-target="#what-llms-do-well-vs.-what-they-dont"><span class="header-section-number">2.5</span> What LLMs Do Well vs.&nbsp;What They Don’t</a>
+  <ul class="collapse">
+  <li><a href="#ai-strengths" id="toc-ai-strengths" class="nav-link" data-scroll-target="#ai-strengths"><span class="header-section-number">2.5.1</span> AI Strengths</a></li>
+  <li><a href="#ai-limitations" id="toc-ai-limitations" class="nav-link" data-scroll-target="#ai-limitations"><span class="header-section-number">2.5.2</span> AI Limitations</a></li>
+  </ul></li>
+  <li><a href="#the-collaborative-model-you-provide-expertise-ai-provides-scale" id="toc-the-collaborative-model-you-provide-expertise-ai-provides-scale" class="nav-link" data-scroll-target="#the-collaborative-model-you-provide-expertise-ai-provides-scale"><span class="header-section-number">2.6</span> The Collaborative Model: You Provide Expertise, AI Provides Scale</a></li>
+  <li><a href="#triaging-tasks-along-the-frontier" id="toc-triaging-tasks-along-the-frontier" class="nav-link" data-scroll-target="#triaging-tasks-along-the-frontier"><span class="header-section-number">2.7</span> Triaging Tasks Along the Frontier</a>
+  <ul class="collapse">
+  <li><a href="#human-only-tasks" id="toc-human-only-tasks" class="nav-link" data-scroll-target="#human-only-tasks"><span class="header-section-number">2.7.1</span> Human-Only Tasks</a></li>
+  <li><a href="#collaborative-tasks-near-the-frontier" id="toc-collaborative-tasks-near-the-frontier" class="nav-link" data-scroll-target="#collaborative-tasks-near-the-frontier"><span class="header-section-number">2.7.2</span> Collaborative Tasks (Near the Frontier)</a></li>
+  <li><a href="#ai-assisted-tasks-inside-the-frontier" id="toc-ai-assisted-tasks-inside-the-frontier" class="nav-link" data-scroll-target="#ai-assisted-tasks-inside-the-frontier"><span class="header-section-number">2.7.3</span> AI-Assisted Tasks (Inside the Frontier)</a></li>
+  </ul></li>
+  <li><a href="#finding-your-own-jagged-frontier" id="toc-finding-your-own-jagged-frontier" class="nav-link" data-scroll-target="#finding-your-own-jagged-frontier"><span class="header-section-number">2.8</span> Finding Your Own Jagged Frontier</a></li>
+  <li><a href="#key-principles-for-success" id="toc-key-principles-for-success" class="nav-link" data-scroll-target="#key-principles-for-success"><span class="header-section-number">2.9</span> Key Principles for Success</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./foundations_intro.html">Foundations</a></li><li class="breadcrumb-item"><a href="./foundations_intro.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./foundations_intro.html">Foundations</a></li><li class="breadcrumb-item"><a href="./foundations_intro.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Understanding LLMs as Collaborative Research Assistants</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Understanding LLMs as Collaborative Research Assistants</span></h1>
 </div>
 
 
@@ -164,9 +187,186 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Hi, let’s try this out</p>
+<section id="learning-objectives" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="learning-objectives"><span class="header-section-number">2.1</span> Learning Objectives</h2>
+<p>By the end of this section, you will be able to:</p>
+<ul>
+<li><strong>Develop a mental model</strong> for understanding AI as a collaborative research tool rather than a replacement for human expertise</li>
+<li><strong>Understand the “jagged frontier” concept</strong> and use it to predict where AI will excel versus where it will struggle</li>
+<li><strong>Triage research tasks responsibly</strong> by categorizing them as human-only, collaborative, or AI-assisted based on the frontier</li>
+<li><strong>Recognize AI’s key limitations</strong> (hallucination, bias, missing context) and plan accordingly</li>
+<li><strong>Begin exploring your own jagged frontier</strong> through systematic experimentation with low-stakes tasks</li>
+</ul>
+</section>
+<section id="why-this-matters-for-your-research" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="why-this-matters-for-your-research"><span class="header-section-number">2.2</span> Why This Matters for Your Research</h2>
+<p>Before diving into the technical details, let’s be clear about why you might want to learn to work with AI: these tools can dramatically expand what’s possible for individual researchers and small teams. When used effectively, AI can handle routine tasks that typically consume enormous amounts of time—literature searches, initial coding, translation, summarization—freeing you to focus on what only you can do: critical analysis, theoretical development, fieldwork insights, and interpretation.</p>
+<p>The researchers I know who’ve learned to work well with AI aren’t replacing their expertise; they’re amplifying it. They’re tackling more ambitious projects, exploring research questions they previously couldn’t afford the time to pursue, and spending more of their energy on the intellectually rewarding aspects of research rather than the drudgery.</p>
+</section>
+<section id="a-new-way-to-think-about-ai-collaboration" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="a-new-way-to-think-about-ai-collaboration"><span class="header-section-number">2.3</span> A New Way to Think About AI Collaboration</h2>
+<p>Think of Large Language Models not as magical oracles or human replacements, but as sophisticated research assistants with a unique set of strengths and blind spots. <a href="https://www.oneusefulthing.org/p/getting-started-with-ai-good-enough">Ethan Mollick suggests</a> a particularly useful analogy:</p>
+<blockquote class="blockquote">
+<p><strong>treat AI like an infinitely patient new coworker who forgets everything you tell them each new conversation, one that comes highly recommended but whose actual abilities are not that clear.</strong></p>
+</blockquote>
+<p>This analogy helps us understand how to work with AI effectively:</p>
+<p><strong>Human-like aspects:</strong></p>
+<ul>
+<li><strong>New on the job:</strong> Needs clear instructions and guidance, may not understand your specific context</li>
+<li><strong>Coworker relationship:</strong> Works best through collaboration and back-and-forth dialogue</li>
+</ul>
+<p><strong>Non-human aspects:</strong></p>
+<ul>
+<li><strong>Infinite patience:</strong> Never gets frustrated with repetitive requests or extensive revisions</li>
+<li><strong>Complete forgetfulness:</strong> Starts fresh in each conversation with no memory of previous interactions</li>
+</ul>
+<p>Unlike traditional software that follows predictable rules, LLMs work more like collaborating with a capable but quirky colleague who can be creative and insightful, but may also confidently present plausible-sounding information that’s completely wrong.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Building on Ethan Mollick’s Work
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This chapter builds heavily on the work of Ethan Mollick, particularly his concept of the “jagged frontier” and his research on human-AI collaboration. I’ve found his insights invaluable in my own journey learning to work with AI. I highly recommend reading his book <a href="https://www.penguinrandomhouse.com/books/741805/co-intelligence-by-ethan-mollick/"><em>Co-Intelligence</em></a> and following his Substack <a href="https://www.oneusefulthing.org/">“One Useful Thing”</a> for deeper insights into working effectively with AI.</p>
+</div>
+</div>
+</section>
+<section id="the-jagged-frontier-understanding-ais-uneven-capabilities" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="the-jagged-frontier-understanding-ais-uneven-capabilities"><span class="header-section-number">2.4</span> The Jagged Frontier: Understanding AI’s Uneven Capabilities</h2>
+<p>The most important concept for working with LLMs is what Mollick (&amp; esteemed co-authors) calls the <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4573321"><strong>“jagged frontier”</strong> of AI capabilities</a>. Imagine a fortress wall with towers and battlements jutting out at irregular points. Some parts of the wall extend far into the countryside, while others fold back toward the center. This wall represents AI’s capabilities—everything inside the wall represents tasks AI can handle well, while everything outside represents tasks where AI struggles.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4573321"><img src="images/jagged_frontier.png" class="img-fluid figure-img" alt="Jagged Frontier of AI Capabilities"></a></p>
+<figcaption>Jagged Frontier of AI Capabilities</figcaption>
+</figure>
+</div>
+<p>The challenge is that this wall is invisible. Tasks that seem equally difficult to humans often fall on opposite sides of the frontier. For example:</p>
+<p><strong>Inside the Frontier (AI excels):</strong></p>
+<ul>
+<li>Summarizing academic papers and identifying key themes</li>
+<li>Creating first drafts of literature reviews</li>
+<li>Translating research documents between major languages</li>
+<li>Generating research questions and hypotheses to explore</li>
+<li>Coding assistance in most major languages (R, Python, STATA, etc..)</li>
+<li>Writing and formatting citations and bibliographies</li>
+</ul>
+<p><strong>Outside the Frontier (AI struggles):</strong></p>
+<ul>
+<li>Grasping context that isn’t explicitly stated</li>
+<li>Making ethical judgments about research implications</li>
+<li>Humor. Seriously, try it. It’s all dad joke vibes</li>
+</ul>
+<p>This unpredictability means you cannot assume that because AI handles one complex task well, it will handle a seemingly simpler related task with equal competence.</p>
+</section>
+<section id="what-llms-do-well-vs.-what-they-dont" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="what-llms-do-well-vs.-what-they-dont"><span class="header-section-number">2.5</span> What LLMs Do Well vs.&nbsp;What They Don’t</h2>
+<section id="ai-strengths" class="level3" data-number="2.5.1">
+<h3 data-number="2.5.1" class="anchored" data-anchor-id="ai-strengths"><span class="header-section-number">2.5.1</span> AI Strengths</h3>
+<p><strong>Scale and Speed:</strong> LLMs can process vast amounts of text in seconds. Need to identify key themes across 50 research papers? AI can help you get started in minutes rather than weeks.</p>
+<p><strong>Pattern Recognition:</strong> AI excels at identifying patterns across large datasets of text, finding connections you might miss, and synthesizing information from multiple sources.</p>
+<p><strong>First-Draft Generation:</strong> Whether it’s grant applications, literature reviews, or research summaries, AI can create useful first drafts that you can then refine with your expertise.</p>
+<p><strong>Language Tasks:</strong> Translation, summarization, and style adaptation are genuine AI strengths that can save researchers enormous amounts of time.</p>
+</section>
+<section id="ai-limitations" class="level3" data-number="2.5.2">
+<h3 data-number="2.5.2" class="anchored" data-anchor-id="ai-limitations"><span class="header-section-number">2.5.2</span> AI Limitations</h3>
+<p><strong>Hallucination:</strong> LLMs confidently generate plausible-sounding but false information. They might cite papers that don’t exist, create realistic-sounding statistics, or confidently state “facts” they’ve essentially made up.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+What is Hallucination?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>“Hallucination” refers to when AI generates plausible-sounding but factually incorrect information. This isn’t a bug—it’s how these models work. They predict what text should come next based on patterns, not facts. A hallucinated research paper might have a realistic title, believable authors, and a publication year that makes sense, but the paper simply doesn’t exist.</p>
+</div>
+</div>
+<p><strong>Cultural and Geographic Bias:</strong> LLMs are trained predominantly on text from wealthy countries in the Global North, often in English. They reflect the biases in that data and may default to Western-centric perspectives on development, governance, or social issues.</p>
+<p><strong>Missing Context:</strong> AI only knows what’s explicitly written down. It misses the unspoken context that you understand from fieldwork—the power dynamics in a room, historical tensions between communities, or the significance of what isn’t being said.</p>
+<p><strong>Lack of True Understanding:</strong> When I read IMF documents, boring bureaucratic language often hides spicy geopolitical tensions that you can detect if you understand the context. AI reads the words but misses the subtext entirely.</p>
+</section>
+</section>
+<section id="the-collaborative-model-you-provide-expertise-ai-provides-scale" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="the-collaborative-model-you-provide-expertise-ai-provides-scale"><span class="header-section-number">2.6</span> The Collaborative Model: You Provide Expertise, AI Provides Scale</h2>
+<p>The most effective approach treats AI as a collaborator rather than a replacement. Here’s how to think about the division of labor:</p>
+<p><strong>Your Unique Value:</strong></p>
+<ul>
+<li>Domain expertise and contextual understanding</li>
+<li>Critical analysis and theoretical frameworks</li>
+<li>Ethical judgment and interpretation</li>
+<li>Understanding of implicit meanings and power dynamics</li>
+<li>Ability to validate and verify AI outputs</li>
+</ul>
+<p><strong>AI’s Unique Value:</strong></p>
+<ul>
+<li>Processing large volumes of text quickly</li>
+<li>Identifying patterns across many documents</li>
+<li>Generating first drafts and creative alternatives</li>
+<li>Handling routine, time-consuming tasks</li>
+<li>Providing different perspectives to consider</li>
+</ul>
+</section>
+<section id="triaging-tasks-along-the-frontier" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="triaging-tasks-along-the-frontier"><span class="header-section-number">2.7</span> Triaging Tasks Along the Frontier</h2>
+<p>Use the jagged frontier concept to categorize your research tasks:</p>
+<section id="human-only-tasks" class="level3" data-number="2.7.1">
+<h3 data-number="2.7.1" class="anchored" data-anchor-id="human-only-tasks"><span class="header-section-number">2.7.1</span> Human-Only Tasks</h3>
+<p>Tasks where AI is unreliable or where human judgment is essential:</p>
+<ul>
+<li>Final interpretation of sensitive field data</li>
+<li>Ethical analysis of research implications</li>
+<li>Understanding implicit cultural dynamics</li>
+<li>Making final decisions about research direction</li>
+</ul>
+</section>
+<section id="collaborative-tasks-near-the-frontier" class="level3" data-number="2.7.2">
+<h3 data-number="2.7.2" class="anchored" data-anchor-id="collaborative-tasks-near-the-frontier"><span class="header-section-number">2.7.2</span> Collaborative Tasks (Near the Frontier)</h3>
+<p>Tasks where AI can help but requires careful human oversight:</p>
+<ul>
+<li>Literature reviews (AI helps find patterns, you verify and interpret)</li>
+<li>Data analysis (AI helps with initial coding, you validate themes)</li>
+<li>Cross-language work (AI provides translations, you check accuracy)</li>
+<li>Grant writing (AI creates drafts, you ensure accuracy and voice)</li>
+</ul>
+</section>
+<section id="ai-assisted-tasks-inside-the-frontier" class="level3" data-number="2.7.3">
+<h3 data-number="2.7.3" class="anchored" data-anchor-id="ai-assisted-tasks-inside-the-frontier"><span class="header-section-number">2.7.3</span> AI-Assisted Tasks (Inside the Frontier)</h3>
+<p>Tasks you can safely delegate with light oversight:</p>
+<ul>
+<li>First-pass summarization of documents</li>
+<li>Formatting and citation cleanup</li>
+<li>Translation of straightforward technical content</li>
+<li>Creating multiple versions of the same content for different audiences</li>
+</ul>
+</section>
+</section>
+<section id="finding-your-own-jagged-frontier" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="finding-your-own-jagged-frontier"><span class="header-section-number">2.8</span> Finding Your Own Jagged Frontier</h2>
+<p>The jagged frontier varies between individuals, research domains, and even specific projects. You need to discover it yourself through experimentation. Here’s how:</p>
+<p><strong>Start with your own work:</strong> Begin by testing AI on your own papers and research. You’ll quickly spot when it gets things wrong because you know the material intimately.</p>
+<p><strong>Begin with low-stakes tasks:</strong> Try AI first on tasks where errors won’t matter much—reformatting text, creating bullet point summaries, or generating initial ideas.</p>
+<p><strong>Test systematically:</strong> When you find a task AI handles well, try similar but slightly different tasks to map the boundaries of its capabilities.</p>
+<p><strong>Stay updated:</strong> The frontier is expanding rapidly but unevenly. AI that was terrible at math six months ago may now be excellent due to integrated calculation tools. Assume the AI you’re working with today is the worst AI you’ll ever use.</p>
+</section>
+<section id="key-principles-for-success" class="level2" data-number="2.9">
+<h2 data-number="2.9" class="anchored" data-anchor-id="key-principles-for-success"><span class="header-section-number">2.9</span> Key Principles for Success</h2>
+<ol type="1">
+<li><strong>Always verify:</strong> Never trust AI output without checking, especially for facts, citations, or quantitative claims.</li>
+<li><strong>Use your expertise:</strong> Work with AI on topics where you have deep knowledge so you can catch errors and guide the process effectively.</li>
+<li><strong>Embrace iteration:</strong> AI works best through conversation and refinement, not one-shot requests.</li>
+<li><strong>Maintain critical thinking:</strong> AI should amplify your analytical capabilities, not replace them.</li>
+<li><strong>Document your discoveries:</strong> Keep track of what works and what doesn’t for your specific research context.</li>
+</ol>
+<p>The goal isn’t to become an AI expert—it’s to become more effective at research by understanding how to collaborate with these powerful but imperfect tools. In the next section, we’ll explore the practical considerations of choosing and using specific AI systems for academic work.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

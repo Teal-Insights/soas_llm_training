@@ -152,12 +152,111 @@
   {
     "objectID": "foundations_intro.html",
     "href": "foundations_intro.html",
-    "title": "2  Introduction",
+    "title": "2  Understanding LLMs as Collaborative Research Assistants",
     "section": "",
-    "text": "Hi, let’s try this out",
+    "text": "2.1 Learning Objectives\nBy the end of this section, you will be able to:",
     "crumbs": [
       "Foundations",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Understanding LLMs as Collaborative Research Assistants</span>"
+    ]
+  },
+  {
+    "objectID": "foundations_intro.html#learning-objectives",
+    "href": "foundations_intro.html#learning-objectives",
+    "title": "2  Understanding LLMs as Collaborative Research Assistants",
+    "section": "",
+    "text": "Develop a mental model for understanding AI as a collaborative research tool rather than a replacement for human expertise\nUnderstand the “jagged frontier” concept and use it to predict where AI will excel versus where it will struggle\nTriage research tasks responsibly by categorizing them as human-only, collaborative, or AI-assisted based on the frontier\nRecognize AI’s key limitations (hallucination, bias, missing context) and plan accordingly\nBegin exploring your own jagged frontier through systematic experimentation with low-stakes tasks",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Understanding LLMs as Collaborative Research Assistants</span>"
+    ]
+  },
+  {
+    "objectID": "foundations_intro.html#why-this-matters-for-your-research",
+    "href": "foundations_intro.html#why-this-matters-for-your-research",
+    "title": "2  Understanding LLMs as Collaborative Research Assistants",
+    "section": "2.2 Why This Matters for Your Research",
+    "text": "2.2 Why This Matters for Your Research\nBefore diving into the technical details, let’s be clear about why you might want to learn to work with AI: these tools can dramatically expand what’s possible for individual researchers and small teams. When used effectively, AI can handle routine tasks that typically consume enormous amounts of time—literature searches, initial coding, translation, summarization—freeing you to focus on what only you can do: critical analysis, theoretical development, fieldwork insights, and interpretation.\nThe researchers I know who’ve learned to work well with AI aren’t replacing their expertise; they’re amplifying it. They’re tackling more ambitious projects, exploring research questions they previously couldn’t afford the time to pursue, and spending more of their energy on the intellectually rewarding aspects of research rather than the drudgery.",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Understanding LLMs as Collaborative Research Assistants</span>"
+    ]
+  },
+  {
+    "objectID": "foundations_intro.html#a-new-way-to-think-about-ai-collaboration",
+    "href": "foundations_intro.html#a-new-way-to-think-about-ai-collaboration",
+    "title": "2  Understanding LLMs as Collaborative Research Assistants",
+    "section": "2.3 A New Way to Think About AI Collaboration",
+    "text": "2.3 A New Way to Think About AI Collaboration\nThink of Large Language Models not as magical oracles or human replacements, but as sophisticated research assistants with a unique set of strengths and blind spots. Ethan Mollick suggests a particularly useful analogy:\n\ntreat AI like an infinitely patient new coworker who forgets everything you tell them each new conversation, one that comes highly recommended but whose actual abilities are not that clear.\n\nThis analogy helps us understand how to work with AI effectively:\nHuman-like aspects:\n\nNew on the job: Needs clear instructions and guidance, may not understand your specific context\nCoworker relationship: Works best through collaboration and back-and-forth dialogue\n\nNon-human aspects:\n\nInfinite patience: Never gets frustrated with repetitive requests or extensive revisions\nComplete forgetfulness: Starts fresh in each conversation with no memory of previous interactions\n\nUnlike traditional software that follows predictable rules, LLMs work more like collaborating with a capable but quirky colleague who can be creative and insightful, but may also confidently present plausible-sounding information that’s completely wrong.\n\n\n\n\n\n\nBuilding on Ethan Mollick’s Work\n\n\n\nThis chapter builds heavily on the work of Ethan Mollick, particularly his concept of the “jagged frontier” and his research on human-AI collaboration. I’ve found his insights invaluable in my own journey learning to work with AI. I highly recommend reading his book Co-Intelligence and following his Substack “One Useful Thing” for deeper insights into working effectively with AI.",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Understanding LLMs as Collaborative Research Assistants</span>"
+    ]
+  },
+  {
+    "objectID": "foundations_intro.html#the-jagged-frontier-understanding-ais-uneven-capabilities",
+    "href": "foundations_intro.html#the-jagged-frontier-understanding-ais-uneven-capabilities",
+    "title": "2  Understanding LLMs as Collaborative Research Assistants",
+    "section": "2.4 The Jagged Frontier: Understanding AI’s Uneven Capabilities",
+    "text": "2.4 The Jagged Frontier: Understanding AI’s Uneven Capabilities\nThe most important concept for working with LLMs is what Mollick (& esteemed co-authors) calls the “jagged frontier” of AI capabilities. Imagine a fortress wall with towers and battlements jutting out at irregular points. Some parts of the wall extend far into the countryside, while others fold back toward the center. This wall represents AI’s capabilities—everything inside the wall represents tasks AI can handle well, while everything outside represents tasks where AI struggles.\n\n\n\nJagged Frontier of AI Capabilities\n\n\nThe challenge is that this wall is invisible. Tasks that seem equally difficult to humans often fall on opposite sides of the frontier. For example:\nInside the Frontier (AI excels):\n\nSummarizing academic papers and identifying key themes\nCreating first drafts of literature reviews\nTranslating research documents between major languages\nGenerating research questions and hypotheses to explore\nCoding assistance in most major languages (R, Python, STATA, etc..)\nWriting and formatting citations and bibliographies\n\nOutside the Frontier (AI struggles):\n\nGrasping context that isn’t explicitly stated\nMaking ethical judgments about research implications\nHumor. Seriously, try it. It’s all dad joke vibes\n\nThis unpredictability means you cannot assume that because AI handles one complex task well, it will handle a seemingly simpler related task with equal competence.",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Understanding LLMs as Collaborative Research Assistants</span>"
+    ]
+  },
+  {
+    "objectID": "foundations_intro.html#what-llms-do-well-vs.-what-they-dont",
+    "href": "foundations_intro.html#what-llms-do-well-vs.-what-they-dont",
+    "title": "2  Understanding LLMs as Collaborative Research Assistants",
+    "section": "2.5 What LLMs Do Well vs. What They Don’t",
+    "text": "2.5 What LLMs Do Well vs. What They Don’t\n\n2.5.1 AI Strengths\nScale and Speed: LLMs can process vast amounts of text in seconds. Need to identify key themes across 50 research papers? AI can help you get started in minutes rather than weeks.\nPattern Recognition: AI excels at identifying patterns across large datasets of text, finding connections you might miss, and synthesizing information from multiple sources.\nFirst-Draft Generation: Whether it’s grant applications, literature reviews, or research summaries, AI can create useful first drafts that you can then refine with your expertise.\nLanguage Tasks: Translation, summarization, and style adaptation are genuine AI strengths that can save researchers enormous amounts of time.\n\n\n2.5.2 AI Limitations\nHallucination: LLMs confidently generate plausible-sounding but false information. They might cite papers that don’t exist, create realistic-sounding statistics, or confidently state “facts” they’ve essentially made up.\n\n\n\n\n\n\nWhat is Hallucination?\n\n\n\n“Hallucination” refers to when AI generates plausible-sounding but factually incorrect information. This isn’t a bug—it’s how these models work. They predict what text should come next based on patterns, not facts. A hallucinated research paper might have a realistic title, believable authors, and a publication year that makes sense, but the paper simply doesn’t exist.\n\n\nCultural and Geographic Bias: LLMs are trained predominantly on text from wealthy countries in the Global North, often in English. They reflect the biases in that data and may default to Western-centric perspectives on development, governance, or social issues.\nMissing Context: AI only knows what’s explicitly written down. It misses the unspoken context that you understand from fieldwork—the power dynamics in a room, historical tensions between communities, or the significance of what isn’t being said.\nLack of True Understanding: When I read IMF documents, boring bureaucratic language often hides spicy geopolitical tensions that you can detect if you understand the context. AI reads the words but misses the subtext entirely.",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Understanding LLMs as Collaborative Research Assistants</span>"
+    ]
+  },
+  {
+    "objectID": "foundations_intro.html#the-collaborative-model-you-provide-expertise-ai-provides-scale",
+    "href": "foundations_intro.html#the-collaborative-model-you-provide-expertise-ai-provides-scale",
+    "title": "2  Understanding LLMs as Collaborative Research Assistants",
+    "section": "2.6 The Collaborative Model: You Provide Expertise, AI Provides Scale",
+    "text": "2.6 The Collaborative Model: You Provide Expertise, AI Provides Scale\nThe most effective approach treats AI as a collaborator rather than a replacement. Here’s how to think about the division of labor:\nYour Unique Value:\n\nDomain expertise and contextual understanding\nCritical analysis and theoretical frameworks\nEthical judgment and interpretation\nUnderstanding of implicit meanings and power dynamics\nAbility to validate and verify AI outputs\n\nAI’s Unique Value:\n\nProcessing large volumes of text quickly\nIdentifying patterns across many documents\nGenerating first drafts and creative alternatives\nHandling routine, time-consuming tasks\nProviding different perspectives to consider",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Understanding LLMs as Collaborative Research Assistants</span>"
+    ]
+  },
+  {
+    "objectID": "foundations_intro.html#triaging-tasks-along-the-frontier",
+    "href": "foundations_intro.html#triaging-tasks-along-the-frontier",
+    "title": "2  Understanding LLMs as Collaborative Research Assistants",
+    "section": "2.7 Triaging Tasks Along the Frontier",
+    "text": "2.7 Triaging Tasks Along the Frontier\nUse the jagged frontier concept to categorize your research tasks:\n\n2.7.1 Human-Only Tasks\nTasks where AI is unreliable or where human judgment is essential:\n\nFinal interpretation of sensitive field data\nEthical analysis of research implications\nUnderstanding implicit cultural dynamics\nMaking final decisions about research direction\n\n\n\n2.7.2 Collaborative Tasks (Near the Frontier)\nTasks where AI can help but requires careful human oversight:\n\nLiterature reviews (AI helps find patterns, you verify and interpret)\nData analysis (AI helps with initial coding, you validate themes)\nCross-language work (AI provides translations, you check accuracy)\nGrant writing (AI creates drafts, you ensure accuracy and voice)\n\n\n\n2.7.3 AI-Assisted Tasks (Inside the Frontier)\nTasks you can safely delegate with light oversight:\n\nFirst-pass summarization of documents\nFormatting and citation cleanup\nTranslation of straightforward technical content\nCreating multiple versions of the same content for different audiences",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Understanding LLMs as Collaborative Research Assistants</span>"
+    ]
+  },
+  {
+    "objectID": "foundations_intro.html#finding-your-own-jagged-frontier",
+    "href": "foundations_intro.html#finding-your-own-jagged-frontier",
+    "title": "2  Understanding LLMs as Collaborative Research Assistants",
+    "section": "2.8 Finding Your Own Jagged Frontier",
+    "text": "2.8 Finding Your Own Jagged Frontier\nThe jagged frontier varies between individuals, research domains, and even specific projects. You need to discover it yourself through experimentation. Here’s how:\nStart with your own work: Begin by testing AI on your own papers and research. You’ll quickly spot when it gets things wrong because you know the material intimately.\nBegin with low-stakes tasks: Try AI first on tasks where errors won’t matter much—reformatting text, creating bullet point summaries, or generating initial ideas.\nTest systematically: When you find a task AI handles well, try similar but slightly different tasks to map the boundaries of its capabilities.\nStay updated: The frontier is expanding rapidly but unevenly. AI that was terrible at math six months ago may now be excellent due to integrated calculation tools. Assume the AI you’re working with today is the worst AI you’ll ever use.",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Understanding LLMs as Collaborative Research Assistants</span>"
+    ]
+  },
+  {
+    "objectID": "foundations_intro.html#key-principles-for-success",
+    "href": "foundations_intro.html#key-principles-for-success",
+    "title": "2  Understanding LLMs as Collaborative Research Assistants",
+    "section": "2.9 Key Principles for Success",
+    "text": "2.9 Key Principles for Success\n\nAlways verify: Never trust AI output without checking, especially for facts, citations, or quantitative claims.\nUse your expertise: Work with AI on topics where you have deep knowledge so you can catch errors and guide the process effectively.\nEmbrace iteration: AI works best through conversation and refinement, not one-shot requests.\nMaintain critical thinking: AI should amplify your analytical capabilities, not replace them.\nDocument your discoveries: Keep track of what works and what doesn’t for your specific research context.\n\nThe goal isn’t to become an AI expert—it’s to become more effective at research by understanding how to collaborate with these powerful but imperfect tools. In the next section, we’ll explore the practical considerations of choosing and using specific AI systems for academic work.",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Understanding LLMs as Collaborative Research Assistants</span>"
     ]
   }
 ]

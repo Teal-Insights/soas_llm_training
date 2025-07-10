@@ -1,3 +1,169 @@
-# Introduction
+# Understanding LLMs as Collaborative Research Assistants
 
-Hi, let's try this out
+## Learning Objectives
+
+By the end of this section, you will be able to:
+
+-   **Develop a mental model** for understanding AI as a collaborative research tool rather than a replacement for human expertise
+-   **Understand the "jagged frontier" concept** and use it to predict where AI will excel versus where it will struggle
+-   **Triage research tasks responsibly** by categorizing them as human-only, collaborative, or AI-assisted based on the frontier
+-   **Recognize AI's key limitations** (hallucination, bias, missing context) and plan accordingly
+-   **Begin exploring your own jagged frontier** through systematic experimentation with low-stakes tasks
+
+## Why This Matters for Your Research
+
+Before diving into the technical details, let's be clear about why you might want to learn to work with AI: these tools can dramatically expand what's possible for individual researchers and small teams. When used effectively, AI can handle routine tasks that typically consume enormous amounts of time—literature searches, initial coding, translation, summarization—freeing you to focus on what only you can do: critical analysis, theoretical development, fieldwork insights, and interpretation.
+
+The researchers I know who've learned to work well with AI aren't replacing their expertise; they're amplifying it. They're tackling more ambitious projects, exploring research questions they previously couldn't afford the time to pursue, and spending more of their energy on the intellectually rewarding aspects of research rather than the drudgery.
+
+## A New Way to Think About AI Collaboration
+
+Think of Large Language Models not as magical oracles or human replacements, but as sophisticated research assistants with a unique set of strengths and blind spots. [Ethan Mollick suggests](https://www.oneusefulthing.org/p/getting-started-with-ai-good-enough) a particularly useful analogy:
+
+> **treat AI like an infinitely patient new coworker who forgets everything you tell them each new conversation, one that comes highly recommended but whose actual abilities are not that clear.**
+
+This analogy helps us understand how to work with AI effectively:
+
+**Human-like aspects:**
+
+-   **New on the job:** Needs clear instructions and guidance, may not understand your specific context
+-   **Coworker relationship:** Works best through collaboration and back-and-forth dialogue
+
+**Non-human aspects:**
+
+-   **Infinite patience:** Never gets frustrated with repetitive requests or extensive revisions
+-   **Complete forgetfulness:** Starts fresh in each conversation with no memory of previous interactions
+
+Unlike traditional software that follows predictable rules, LLMs work more like collaborating with a capable but quirky colleague who can be creative and insightful, but may also confidently present plausible-sounding information that's completely wrong.
+
+::: callout-note
+## Building on Ethan Mollick's Work
+
+This chapter builds heavily on the work of Ethan Mollick, particularly his concept of the "jagged frontier" and his research on human-AI collaboration. I've found his insights invaluable in my own journey learning to work with AI. I highly recommend reading his book [*Co-Intelligence*](https://www.penguinrandomhouse.com/books/741805/co-intelligence-by-ethan-mollick/) and following his Substack ["One Useful Thing"](https://www.oneusefulthing.org/) for deeper insights into working effectively with AI.
+:::
+
+## The Jagged Frontier: Understanding AI's Uneven Capabilities
+
+The most important concept for working with LLMs is what Mollick (& esteemed co-authors) calls the [**"jagged frontier"** of AI capabilities](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4573321). Imagine a fortress wall with towers and battlements jutting out at irregular points. Some parts of the wall extend far into the countryside, while others fold back toward the center. This wall represents AI's capabilities—everything inside the wall represents tasks AI can handle well, while everything outside represents tasks where AI struggles.
+
+[![Jagged Frontier of AI Capabilities](images/jagged_frontier.png)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4573321)
+
+The challenge is that this wall is invisible. Tasks that seem equally difficult to humans often fall on opposite sides of the frontier. For example:
+
+**Inside the Frontier (AI excels):**
+
+-   Summarizing academic papers and identifying key themes
+-   Creating first drafts of literature reviews
+-   Translating research documents between major languages
+-   Generating research questions and hypotheses to explore
+-   Coding assistance in most major languages (R, Python, STATA, etc..)
+-   Writing and formatting citations and bibliographies
+
+**Outside the Frontier (AI struggles):**
+
+-   Grasping context that isn't explicitly stated
+-   Making ethical judgments about research implications
+-   Humor. Seriously, try it. It's all dad joke vibes
+
+This unpredictability means you cannot assume that because AI handles one complex task well, it will handle a seemingly simpler related task with equal competence.
+
+## What LLMs Do Well vs. What They Don't
+
+### AI Strengths
+
+**Scale and Speed:** LLMs can process vast amounts of text in seconds. Need to identify key themes across 50 research papers? AI can help you get started in minutes rather than weeks.
+
+**Pattern Recognition:** AI excels at identifying patterns across large datasets of text, finding connections you might miss, and synthesizing information from multiple sources.
+
+**First-Draft Generation:** Whether it's grant applications, literature reviews, or research summaries, AI can create useful first drafts that you can then refine with your expertise.
+
+**Language Tasks:** Translation, summarization, and style adaptation are genuine AI strengths that can save researchers enormous amounts of time.
+
+### AI Limitations
+
+**Hallucination:** LLMs confidently generate plausible-sounding but false information. They might cite papers that don't exist, create realistic-sounding statistics, or confidently state "facts" they've essentially made up.
+
+::: callout-warning
+## What is Hallucination?
+
+"Hallucination" refers to when AI generates plausible-sounding but factually incorrect information. This isn't a bug—it's how these models work. They predict what text should come next based on patterns, not facts. A hallucinated research paper might have a realistic title, believable authors, and a publication year that makes sense, but the paper simply doesn't exist.
+:::
+
+**Cultural and Geographic Bias:** LLMs are trained predominantly on text from wealthy countries in the Global North, often in English. They reflect the biases in that data and may default to Western-centric perspectives on development, governance, or social issues.
+
+**Missing Context:** AI only knows what's explicitly written down. It misses the unspoken context that you understand from fieldwork—the power dynamics in a room, historical tensions between communities, or the significance of what isn't being said.
+
+**Lack of True Understanding:** When I read IMF documents, boring bureaucratic language often hides spicy geopolitical tensions that you can detect if you understand the context. AI reads the words but misses the subtext entirely.
+
+## The Collaborative Model: You Provide Expertise, AI Provides Scale
+
+The most effective approach treats AI as a collaborator rather than a replacement. Here's how to think about the division of labor:
+
+**Your Unique Value:**
+
+-   Domain expertise and contextual understanding
+-   Critical analysis and theoretical frameworks
+-   Ethical judgment and interpretation
+-   Understanding of implicit meanings and power dynamics
+-   Ability to validate and verify AI outputs
+
+**AI's Unique Value:**
+
+-   Processing large volumes of text quickly
+-   Identifying patterns across many documents
+-   Generating first drafts and creative alternatives
+-   Handling routine, time-consuming tasks
+-   Providing different perspectives to consider
+
+## Triaging Tasks Along the Frontier
+
+Use the jagged frontier concept to categorize your research tasks:
+
+### Human-Only Tasks
+
+Tasks where AI is unreliable or where human judgment is essential:
+
+-   Final interpretation of sensitive field data
+-   Ethical analysis of research implications
+-   Understanding implicit cultural dynamics
+-   Making final decisions about research direction
+
+### Collaborative Tasks (Near the Frontier)
+
+Tasks where AI can help but requires careful human oversight:
+
+-   Literature reviews (AI helps find patterns, you verify and interpret)
+-   Data analysis (AI helps with initial coding, you validate themes)
+-   Cross-language work (AI provides translations, you check accuracy)
+-   Grant writing (AI creates drafts, you ensure accuracy and voice)
+
+### AI-Assisted Tasks (Inside the Frontier)
+
+Tasks you can safely delegate with light oversight:
+
+-   First-pass summarization of documents
+-   Formatting and citation cleanup
+-   Translation of straightforward technical content
+-   Creating multiple versions of the same content for different audiences
+
+## Finding Your Own Jagged Frontier
+
+The jagged frontier varies between individuals, research domains, and even specific projects. You need to discover it yourself through experimentation. Here's how:
+
+**Start with your own work:** Begin by testing AI on your own papers and research. You'll quickly spot when it gets things wrong because you know the material intimately.
+
+**Begin with low-stakes tasks:** Try AI first on tasks where errors won't matter much—reformatting text, creating bullet point summaries, or generating initial ideas.
+
+**Test systematically:** When you find a task AI handles well, try similar but slightly different tasks to map the boundaries of its capabilities.
+
+**Stay updated:** The frontier is expanding rapidly but unevenly. AI that was terrible at math six months ago may now be excellent due to integrated calculation tools. Assume the AI you're working with today is the worst AI you'll ever use.
+
+## Key Principles for Success
+
+1.  **Always verify:** Never trust AI output without checking, especially for facts, citations, or quantitative claims.
+2.  **Use your expertise:** Work with AI on topics where you have deep knowledge so you can catch errors and guide the process effectively.
+3.  **Embrace iteration:** AI works best through conversation and refinement, not one-shot requests.
+4.  **Maintain critical thinking:** AI should amplify your analytical capabilities, not replace them.
+5.  **Document your discoveries:** Keep track of what works and what doesn't for your specific research context.
+
+The goal isn't to become an AI expert—it's to become more effective at research by understanding how to collaborate with these powerful but imperfect tools. In the next section, we'll explore the practical considerations of choosing and using specific AI systems for academic work.
