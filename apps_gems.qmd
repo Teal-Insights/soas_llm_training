@@ -1,0 +1,333 @@
+# Creating Custom Research Assistants: Your First Gem
+
+*Tentative time: 12 minutes*
+
+## Learning Objectives
+
+By the end of this section, you will be able to:
+
+- **Understand Gems as saved research assistants** and how they differ from regular prompts
+- **Create a reusable Gem** that incorporates your professional context for better AI interactions
+- **Design Gems for common research tasks** like literature reviews, grant writing, and data analysis
+- **Apply the same concepts** to Claude Projects and ChatGPT Custom GPTs
+- **Build a personal library of research tools** that improve over time
+
+## What Are Gems and Why They Matter
+
+Think of a Gem as a specialized research assistant that you've trained for specific tasks. Instead of starting from scratch each time you need help with literature reviews or grant applications, you can create a Gem that already knows your research context, preferred style, and common requirements.
+
+::: callout-note
+## Gems Across Platforms
+
+Google calls them "Gems," but the concept exists across all major AI platforms:
+
+- **Google Gemini:** Gems
+- **Claude:** Projects  
+- **ChatGPT:** Custom GPTs
+
+The functionality is essentially the same—you're creating a specialized version of the AI with specific instructions and context.
+:::
+
+**Why Gems are valuable:**
+
+- **Consistency:** Your Gem applies the same high-quality instructions every time
+- **Efficiency:** No need to re-enter your professional context or detailed instructions
+- **Specialization:** Each Gem can be optimized for specific research tasks
+- **Sharing:** You can share useful Gems with colleagues (though be mindful of any sensitive context)
+
+## The Power of Context: Your Professional Gem
+
+Remember the professional context template from our prompting chapter? This is perfect for your first Gem. When you embed your research background, expertise, and communication style into a Gem, every interaction becomes more targeted and useful.
+
+### Creating Your Professional Context Gem
+
+Let's walk through creating a Gem that incorporates your professional context:
+
+**Step 1: Access Gem Creation**
+
+- Go to [gemini.google.com](https://gemini.google.com)
+- On the left sidebar, click "Explore Gems"
+- Click "New Gem"
+
+**Step 2: Name Your Gem**
+Give it a clear, descriptive name like "Research Assistant - [Your Name]" or "My Academic Context"
+
+**Step 3: Write Your Instructions**
+Use this template, filling in your specific details:
+
+```markdown
+# Professional Research Assistant Instructions
+
+## About the Researcher
+[Your name] is a researcher specializing in [your main research areas]. [Brief background including education, current position, and key expertise areas].
+
+## Current Roles & Affiliations
+- [List your current positions and institutional affiliations]
+- [Any relevant professional experiences]
+
+## Research Focus Areas
+- [Your main research interests]
+- [Current projects or areas of investigation]
+- [Methodological approaches you prefer]
+
+## Communication Style & Audience
+I typically write for [describe your audience - policymakers, academics, graduate students, etc.]. I value [your communication preferences - clarity over complexity, accessible language, etc.].
+
+## Technical Approach
+[Mention any specific tools, software, or analytical methods you use regularly]
+
+## How to Assist Me
+When I ask for help:
+1. **Draw on my expertise**: Remember that I have deep knowledge in my field, so you can use more sophisticated concepts and terminology where appropriate
+2. **Match my communication style**: Write in a way that fits how I typically communicate with my audience
+3. **Ask clarifying questions**: If you need more context about my specific needs or constraints, please ask
+4. **Provide sources when possible**: I value being able to trace information back to original sources
+5. **Be honest about limitations**: Tell me when you're uncertain about something rather than guessing
+
+## Areas Where I Most Need Help
+- [List 2-3 specific areas where AI assistance would be most valuable to your work]
+- [Examples: literature synthesis, initial data analysis, grant writing, translation, etc.]
+
+Always remember: You're here to amplify my expertise, not replace it. Help me do more ambitious research by handling routine tasks while I focus on analysis, interpretation, and critical thinking.
+```
+
+**Step 4: Test Your Gem**
+Use the preview panel to test your Gem with a question like:
+"What are some promising research directions building on my current work?"
+
+**Step 5: Save and Refine**
+Click "Save" and then continue using your Gem for various research tasks. You can always edit the instructions to improve them based on what you learn.
+
+## Essential Gems for Research Workflows
+
+Once you have your professional context Gem, consider creating specialized Gems for common research tasks:
+
+### Literature Review Gem
+
+Perfect for analyzing papers, finding patterns, and identifying gaps:
+
+```markdown
+# Literature Review Specialist
+
+You are an expert research assistant specializing in literature reviews and academic analysis.
+
+## Your Role
+Help me efficiently analyze academic papers, identify key themes, find research gaps, and synthesize findings across multiple sources.
+
+## Key Capabilities
+- Summarize papers focusing on methodology, findings, and implications
+- Identify patterns and contradictions across multiple studies
+- Suggest research gaps and future directions
+- Help with citation analysis and reference management
+- Compare and contrast different theoretical approaches
+
+## Output Format
+- Use clear section headers
+- Provide specific page numbers or quotes when analyzing uploaded papers
+- Include methodological details when relevant
+- Highlight conflicting findings or debates in the literature
+- Always ask for clarification if the research question or focus is unclear
+
+## Quality Standards
+- Maintain academic rigor in analysis
+- Distinguish between authors' claims and empirical findings
+- Note limitations and methodological concerns
+- Provide balanced assessment of different perspectives
+```
+
+### Grant Writing Gem
+
+Specialized for funding applications and project proposals:
+
+```markdown
+# Grant Writing Assistant
+
+You are an expert in academic grant writing and research proposal development.
+
+## Your Role
+Help me develop compelling, well-structured grant proposals that clearly communicate research value and feasibility.
+
+## Key Capabilities
+- Develop clear problem statements and research questions
+- Structure proposals with logical flow and compelling narrative
+- Identify potential funding sources and tailor applications accordingly
+- Strengthen methodology sections with appropriate detail
+- Create realistic timelines and budget justifications
+- Ensure compliance with funder requirements
+
+## Output Format
+- Use active voice and clear, accessible language
+- Include specific sections as requested (abstract, aims, methodology, etc.)
+- Provide alternative phrasings for key concepts
+- Suggest evidence to support claims
+- Flag areas needing additional development
+
+## Quality Standards
+- Balance ambition with feasibility
+- Ensure methodology matches research questions
+- Provide clear value proposition for funders
+- Include realistic assessment of challenges and mitigation strategies
+```
+
+### Data Analysis Gem
+
+For help with statistical analysis and interpretation:
+
+```markdown
+# Data Analysis Assistant
+
+You are an expert in research methodology and statistical analysis.
+
+## Your Role
+Help me design analysis strategies, interpret results, and troubleshoot analytical problems.
+
+## Key Capabilities
+- Suggest appropriate statistical methods for research questions
+- Help interpret statistical outputs and findings
+- Identify potential confounding variables or methodological concerns
+- Assist with data visualization strategies
+- Provide guidance on sample size and power analysis
+- Help with coding and data management tasks
+
+## Output Format
+- Explain statistical concepts in accessible language
+- Provide step-by-step analysis guidance
+- Include assumptions and limitations of suggested methods
+- Offer multiple approaches when appropriate
+- Link methodology to research questions
+
+## Quality Standards
+- Ensure statistical approaches match data type and research design
+- Emphasize importance of checking assumptions
+- Encourage transparency in reporting methods and limitations
+- Promote reproducible research practices
+```
+
+## Advanced Gem Strategies
+
+### Uploading Reference Materials
+
+You can upload files to your Gems to provide additional context:
+
+- **Style guides** from your target journals or publishers
+- **Sample papers** that represent the quality and style you're aiming for
+- **Institutional guidelines** for grants or reports
+- **Data dictionaries** or codebooks for your projects
+
+### Iterative Improvement
+
+Your Gems should evolve with your research:
+
+1. **Track what works**: Note when a Gem produces particularly helpful outputs
+2. **Refine instructions**: Update your Gems based on what you learn about effective prompting
+3. **Add new capabilities**: Expand your Gems' roles as you discover new use cases
+4. **Create specialized versions**: Develop task-specific variations of your main Gems
+
+### Sharing and Collaboration
+
+::: callout-tip
+## Beyond AI: Templates for Human Research Assistants
+
+These same detailed instruction templates work brilliantly for human research assistants too. At Teal Insights, we use similar structured briefs when working with our research team across Nigeria, Kenya, and the US. 
+
+Creating clear, detailed instructions helps ensure:
+
+- **Consistent quality** across different team members
+- **Efficient onboarding** for new researchers
+- **Standardized approaches** to literature reviews and analysis
+- **Clear expectations** for deliverables and format
+
+Whether you're working with AI or human assistants, taking time to articulate your requirements clearly pays dividends in output quality.
+:::
+
+::: callout-warning
+## Privacy Considerations
+
+Be cautious about sharing Gems that contain sensitive information about your research, personal details, or institutional affiliations. Consider creating "public" versions of your Gems with generic instructions for sharing with colleagues.
+:::
+
+You can share Gems with research collaborators to ensure consistent AI assistance across your team. This is particularly valuable for:
+
+- **Multi-author projects**: Ensuring consistent style and approach
+- **Research groups**: Sharing effective prompting strategies
+- **Institutional best practices**: Developing standard AI tools for your department
+
+## Building Your Gem Library
+
+As you become more comfortable with Gems, consider developing a comprehensive library:
+
+**Core Research Gems:**
+
+- Professional context (your main research assistant)
+- Literature review specialist
+- Grant writing assistant
+- Data analysis helper
+
+**Specialized Gems:**
+
+- Conference presentation creator
+- Policy brief writer
+- Teaching material developer
+- Cross-disciplinary translator
+
+**Workflow Gems:**
+
+- Email drafting assistant
+- Meeting note analyzer
+- Project timeline creator
+- Bibliography manager
+
+## Hands-On Activity: Create Your First Gem
+
+Let's practice by creating your professional context Gem:
+
+1. **Open Gemini** and navigate to Gems
+2. **Create a new Gem** using the template above
+3. **Fill in your specific details** (research areas, expertise, communication style)
+4. **Test your Gem** with a research question you're currently working on
+5. **Refine the instructions** based on the quality of the response
+
+Then, if time permits, create a second Gem for a specific research task you do regularly.
+
+## What Can Go Wrong (and How to Fix It)
+
+### Common Issues:
+
+**Too generic:** Gem instructions that are too broad produce mediocre results
+**→ Solution:** Be specific about your research context and preferred outputs
+
+**Too rigid:** Overly detailed instructions that don't allow for flexibility
+**→ Solution:** Provide clear guidance while leaving room for the AI to adapt to different queries
+
+**Outdated context:** Gems that don't reflect your current research focus
+**→ Solution:** Regularly review and update your Gems as your research evolves
+
+**Forgetting to save:** Working with a Gem in preview mode without saving
+**→ Solution:** Always click "Save" after creating or editing a Gem
+
+## Integration with Your Research Workflow
+
+Gems work best when they become part of your regular research routine:
+
+- **Daily literature review**: Use your Literature Review Gem for new papers
+- **Weekly planning**: Use your Professional Context Gem for project prioritization
+- **Grant deadlines**: Use your Grant Writing Gem for proposal development
+- **Data analysis sessions**: Use your Data Analysis Gem for statistical guidance
+
+## What You Can Do Now
+
+1. **Create your Professional Context Gem** using the template provided
+2. **Test it with a current research question** to see how context improves responses
+3. **Identify 2-3 routine research tasks** that would benefit from specialized Gems
+4. **Create one task-specific Gem** for your most common research need
+5. **Share your best Gems** with colleagues (being mindful of privacy)
+
+## Going Deeper
+
+The same principles apply to Claude Projects and ChatGPT Custom GPTs. Once you master Gems, you can create similar specialized assistants across all major AI platforms, giving you flexible options for different research needs.
+
+Remember: the goal isn't to create perfect Gems immediately, but to build a library of increasingly useful research tools that evolve with your work. Start simple, iterate based on what you learn, and gradually develop more sophisticated specialized assistants.
+
+---
+
+*Up next: Chapter 2.3 - Literature Review Enhancement Techniques*
