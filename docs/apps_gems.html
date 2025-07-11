@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>apps_gems</title>
+<title>5&nbsp; Creating Custom Research Assistants: Your First Gem – AI for the Skeptical Scholar: Practical Strategies for Using LLMs in Research</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -57,34 +57,224 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="apps_gems_files/libs/clipboard/clipboard.min.js"></script>
-<script src="apps_gems_files/libs/quarto-html/quarto.js"></script>
-<script src="apps_gems_files/libs/quarto-html/popper.min.js"></script>
-<script src="apps_gems_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="apps_gems_files/libs/quarto-html/anchor.min.js"></script>
-<link href="apps_gems_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="apps_gems_files/libs/quarto-html/quarto-syntax-highlighting-29e2c20b02301cfff04dc8050bf30c7e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="apps_gems_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="apps_gems_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="apps_gems_files/libs/bootstrap/bootstrap-e19dc0c07aeef78048e587c3f1edba7a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./apps_lit_review.html" rel="next">
+<link href="./apps_prompting.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-29e2c20b02301cfff04dc8050bf30c7e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-7580570a2e354cd56757c689413fca0c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
 
 
 </head>
 
-<body class="fullcontent">
+<body class="nav-sidebar floating">
 
-<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./apps_prompting.html">Practical Applications</a></li><li class="breadcrumb-item"><a href="./apps_gems.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Creating Custom Research Assistants: Your First Gem</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">AI for the Skeptical Scholar: Practical Strategies for Using LLMs in Research</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">About Your Instructor</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Foundations</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./foundations_intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Understanding LLMs as Collaborative Research Assistants</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./foundations_considerations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Key Considerations: Tools, Costs, and Contexts</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Practical Applications</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./apps_prompting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Prompt Engineering Basics</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./apps_gems.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Creating Custom Research Assistants: Your First Gem</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./apps_lit_review.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Literature Review Enhancement: Widening Your Net</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./apps_other_tools.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Advanced Tools: NotebookLM and Deep Research</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives"><span class="header-section-number">5.1</span> Learning Objectives</a></li>
+  <li><a href="#what-are-gems-and-why-they-matter" id="toc-what-are-gems-and-why-they-matter" class="nav-link" data-scroll-target="#what-are-gems-and-why-they-matter"><span class="header-section-number">5.2</span> What Are Gems and Why They Matter</a></li>
+  <li><a href="#the-power-of-context-your-professional-gem" id="toc-the-power-of-context-your-professional-gem" class="nav-link" data-scroll-target="#the-power-of-context-your-professional-gem"><span class="header-section-number">5.3</span> The Power of Context: Your Professional Gem</a>
+  <ul class="collapse">
+  <li><a href="#creating-your-professional-context-gem" id="toc-creating-your-professional-context-gem" class="nav-link" data-scroll-target="#creating-your-professional-context-gem"><span class="header-section-number">5.3.1</span> Creating Your Professional Context Gem</a></li>
+  </ul></li>
+  <li><a href="#essential-gems-for-research-workflows" id="toc-essential-gems-for-research-workflows" class="nav-link" data-scroll-target="#essential-gems-for-research-workflows"><span class="header-section-number">5.4</span> Essential Gems for Research Workflows</a>
+  <ul class="collapse">
+  <li><a href="#literature-review-gem" id="toc-literature-review-gem" class="nav-link" data-scroll-target="#literature-review-gem"><span class="header-section-number">5.4.1</span> Literature Review Gem</a></li>
+  <li><a href="#grant-writing-gem" id="toc-grant-writing-gem" class="nav-link" data-scroll-target="#grant-writing-gem"><span class="header-section-number">5.4.2</span> Grant Writing Gem</a></li>
+  <li><a href="#data-analysis-gem" id="toc-data-analysis-gem" class="nav-link" data-scroll-target="#data-analysis-gem"><span class="header-section-number">5.4.3</span> Data Analysis Gem</a></li>
+  </ul></li>
+  <li><a href="#advanced-gem-strategies" id="toc-advanced-gem-strategies" class="nav-link" data-scroll-target="#advanced-gem-strategies"><span class="header-section-number">5.5</span> Advanced Gem Strategies</a>
+  <ul class="collapse">
+  <li><a href="#uploading-reference-materials" id="toc-uploading-reference-materials" class="nav-link" data-scroll-target="#uploading-reference-materials"><span class="header-section-number">5.5.1</span> Uploading Reference Materials</a></li>
+  <li><a href="#iterative-improvement" id="toc-iterative-improvement" class="nav-link" data-scroll-target="#iterative-improvement"><span class="header-section-number">5.5.2</span> Iterative Improvement</a></li>
+  <li><a href="#sharing-and-collaboration" id="toc-sharing-and-collaboration" class="nav-link" data-scroll-target="#sharing-and-collaboration"><span class="header-section-number">5.5.3</span> Sharing and Collaboration</a></li>
+  </ul></li>
+  <li><a href="#building-your-gem-library" id="toc-building-your-gem-library" class="nav-link" data-scroll-target="#building-your-gem-library"><span class="header-section-number">5.6</span> Building Your Gem Library</a></li>
+  <li><a href="#hands-on-activity-create-your-first-gem" id="toc-hands-on-activity-create-your-first-gem" class="nav-link" data-scroll-target="#hands-on-activity-create-your-first-gem"><span class="header-section-number">5.7</span> Hands-On Activity: Create Your First Gem</a></li>
+  <li><a href="#what-can-go-wrong-and-how-to-fix-it" id="toc-what-can-go-wrong-and-how-to-fix-it" class="nav-link" data-scroll-target="#what-can-go-wrong-and-how-to-fix-it"><span class="header-section-number">5.8</span> What Can Go Wrong (and How to Fix It)</a>
+  <ul class="collapse">
+  <li><a href="#common-issues" id="toc-common-issues" class="nav-link" data-scroll-target="#common-issues"><span class="header-section-number">5.8.1</span> Common Issues:</a></li>
+  </ul></li>
+  <li><a href="#integration-with-your-research-workflow" id="toc-integration-with-your-research-workflow" class="nav-link" data-scroll-target="#integration-with-your-research-workflow"><span class="header-section-number">5.9</span> Integration with Your Research Workflow</a></li>
+  <li><a href="#what-you-can-do-now" id="toc-what-you-can-do-now" class="nav-link" data-scroll-target="#what-you-can-do-now"><span class="header-section-number">5.10</span> What You Can Do Now</a></li>
+  <li><a href="#going-deeper" id="toc-going-deeper" class="nav-link" data-scroll-target="#going-deeper"><span class="header-section-number">5.11</span> Going Deeper</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
 
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./apps_prompting.html">Practical Applications</a></li><li class="breadcrumb-item"><a href="./apps_gems.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Creating Custom Research Assistants: Your First Gem</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Creating Custom Research Assistants: Your First Gem</span></h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="creating-custom-research-assistants-your-first-gem" class="level1">
-<h1>Creating Custom Research Assistants: Your First Gem</h1>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
 <p><em>Tentative time: 12 minutes</em></p>
-<section id="learning-objectives" class="level2">
-<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
+<section id="learning-objectives" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="learning-objectives"><span class="header-section-number">5.1</span> Learning Objectives</h2>
 <p>By the end of this section, you will be able to:</p>
 <ul>
 <li><strong>Understand Gems as saved research assistants</strong> and how they differ from regular prompts</li>
@@ -94,8 +284,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Build a personal library of research tools</strong> that improve over time</li>
 </ul>
 </section>
-<section id="what-are-gems-and-why-they-matter" class="level2">
-<h2 class="anchored" data-anchor-id="what-are-gems-and-why-they-matter">What Are Gems and Why They Matter</h2>
+<section id="what-are-gems-and-why-they-matter" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="what-are-gems-and-why-they-matter"><span class="header-section-number">5.2</span> What Are Gems and Why They Matter</h2>
 <p>Think of a Gem as a specialized research assistant that you’ve trained for specific tasks. Instead of starting from scratch each time you need help with literature reviews or grant applications, you can create a Gem that already knows your research context, preferred style, and common requirements.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -125,11 +315,11 @@ Gems Across Platforms
 <li><strong>Sharing:</strong> You can share useful Gems with colleagues (though be mindful of any sensitive context)</li>
 </ul>
 </section>
-<section id="the-power-of-context-your-professional-gem" class="level2">
-<h2 class="anchored" data-anchor-id="the-power-of-context-your-professional-gem">The Power of Context: Your Professional Gem</h2>
+<section id="the-power-of-context-your-professional-gem" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="the-power-of-context-your-professional-gem"><span class="header-section-number">5.3</span> The Power of Context: Your Professional Gem</h2>
 <p>Remember the professional context template from our prompting chapter? This is perfect for your first Gem. When you embed your research background, expertise, and communication style into a Gem, every interaction becomes more targeted and useful.</p>
-<section id="creating-your-professional-context-gem" class="level3">
-<h3 class="anchored" data-anchor-id="creating-your-professional-context-gem">Creating Your Professional Context Gem</h3>
+<section id="creating-your-professional-context-gem" class="level3" data-number="5.3.1">
+<h3 data-number="5.3.1" class="anchored" data-anchor-id="creating-your-professional-context-gem"><span class="header-section-number">5.3.1</span> Creating Your Professional Context Gem</h3>
 <p>Let’s walk through creating a Gem that incorporates your professional context:</p>
 <p><strong>Step 1: Access Gem Creation</strong></p>
 <ul>
@@ -176,11 +366,11 @@ Gems Across Platforms
 <p><strong>Step 5: Save and Refine</strong> Click “Save” and then continue using your Gem for various research tasks. You can always edit the instructions to improve them based on what you learn.</p>
 </section>
 </section>
-<section id="essential-gems-for-research-workflows" class="level2">
-<h2 class="anchored" data-anchor-id="essential-gems-for-research-workflows">Essential Gems for Research Workflows</h2>
+<section id="essential-gems-for-research-workflows" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="essential-gems-for-research-workflows"><span class="header-section-number">5.4</span> Essential Gems for Research Workflows</h2>
 <p>Once you have your professional context Gem, consider creating specialized Gems for common research tasks:</p>
-<section id="literature-review-gem" class="level3">
-<h3 class="anchored" data-anchor-id="literature-review-gem">Literature Review Gem</h3>
+<section id="literature-review-gem" class="level3" data-number="5.4.1">
+<h3 data-number="5.4.1" class="anchored" data-anchor-id="literature-review-gem"><span class="header-section-number">5.4.1</span> Literature Review Gem</h3>
 <p>Perfect for analyzing papers, finding patterns, and identifying gaps:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Literature Review Specialist</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -209,8 +399,8 @@ Gems Across Platforms
 <span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Note limitations and methodological concerns</span>
 <span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Provide balanced assessment of different perspectives</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="grant-writing-gem" class="level3">
-<h3 class="anchored" data-anchor-id="grant-writing-gem">Grant Writing Gem</h3>
+<section id="grant-writing-gem" class="level3" data-number="5.4.2">
+<h3 data-number="5.4.2" class="anchored" data-anchor-id="grant-writing-gem"><span class="header-section-number">5.4.2</span> Grant Writing Gem</h3>
 <p>Specialized for funding applications and project proposals:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Grant Writing Assistant</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -240,8 +430,8 @@ Gems Across Platforms
 <span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Provide clear value proposition for funders</span>
 <span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Include realistic assessment of challenges and mitigation strategies</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="data-analysis-gem" class="level3">
-<h3 class="anchored" data-anchor-id="data-analysis-gem">Data Analysis Gem</h3>
+<section id="data-analysis-gem" class="level3" data-number="5.4.3">
+<h3 data-number="5.4.3" class="anchored" data-anchor-id="data-analysis-gem"><span class="header-section-number">5.4.3</span> Data Analysis Gem</h3>
 <p>For help with statistical analysis and interpretation:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Data Analysis Assistant</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -272,10 +462,10 @@ Gems Across Platforms
 <span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Promote reproducible research practices</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
-<section id="advanced-gem-strategies" class="level2">
-<h2 class="anchored" data-anchor-id="advanced-gem-strategies">Advanced Gem Strategies</h2>
-<section id="uploading-reference-materials" class="level3">
-<h3 class="anchored" data-anchor-id="uploading-reference-materials">Uploading Reference Materials</h3>
+<section id="advanced-gem-strategies" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="advanced-gem-strategies"><span class="header-section-number">5.5</span> Advanced Gem Strategies</h2>
+<section id="uploading-reference-materials" class="level3" data-number="5.5.1">
+<h3 data-number="5.5.1" class="anchored" data-anchor-id="uploading-reference-materials"><span class="header-section-number">5.5.1</span> Uploading Reference Materials</h3>
 <p>You can upload files to your Gems to provide additional context:</p>
 <ul>
 <li><strong>Style guides</strong> from your target journals or publishers</li>
@@ -284,8 +474,8 @@ Gems Across Platforms
 <li><strong>Data dictionaries</strong> or codebooks for your projects</li>
 </ul>
 </section>
-<section id="iterative-improvement" class="level3">
-<h3 class="anchored" data-anchor-id="iterative-improvement">Iterative Improvement</h3>
+<section id="iterative-improvement" class="level3" data-number="5.5.2">
+<h3 data-number="5.5.2" class="anchored" data-anchor-id="iterative-improvement"><span class="header-section-number">5.5.2</span> Iterative Improvement</h3>
 <p>Your Gems should evolve with your research:</p>
 <ol type="1">
 <li><strong>Track what works</strong>: Note when a Gem produces particularly helpful outputs</li>
@@ -294,8 +484,8 @@ Gems Across Platforms
 <li><strong>Create specialized versions</strong>: Develop task-specific variations of your main Gems</li>
 </ol>
 </section>
-<section id="sharing-and-collaboration" class="level3">
-<h3 class="anchored" data-anchor-id="sharing-and-collaboration">Sharing and Collaboration</h3>
+<section id="sharing-and-collaboration" class="level3" data-number="5.5.3">
+<h3 data-number="5.5.3" class="anchored" data-anchor-id="sharing-and-collaboration"><span class="header-section-number">5.5.3</span> Sharing and Collaboration</h3>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -338,8 +528,8 @@ Privacy Considerations
 </ul>
 </section>
 </section>
-<section id="building-your-gem-library" class="level2">
-<h2 class="anchored" data-anchor-id="building-your-gem-library">Building Your Gem Library</h2>
+<section id="building-your-gem-library" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="building-your-gem-library"><span class="header-section-number">5.6</span> Building Your Gem Library</h2>
 <p>As you become more comfortable with Gems, consider developing a comprehensive library:</p>
 <p><strong>Core Research Gems:</strong></p>
 <ul>
@@ -363,8 +553,8 @@ Privacy Considerations
 <li>Bibliography manager</li>
 </ul>
 </section>
-<section id="hands-on-activity-create-your-first-gem" class="level2">
-<h2 class="anchored" data-anchor-id="hands-on-activity-create-your-first-gem">Hands-On Activity: Create Your First Gem</h2>
+<section id="hands-on-activity-create-your-first-gem" class="level2" data-number="5.7">
+<h2 data-number="5.7" class="anchored" data-anchor-id="hands-on-activity-create-your-first-gem"><span class="header-section-number">5.7</span> Hands-On Activity: Create Your First Gem</h2>
 <p>Let’s practice by creating your professional context Gem:</p>
 <ol type="1">
 <li><strong>Open Gemini</strong> and navigate to Gems</li>
@@ -375,18 +565,18 @@ Privacy Considerations
 </ol>
 <p>Then, if time permits, create a second Gem for a specific research task you do regularly.</p>
 </section>
-<section id="what-can-go-wrong-and-how-to-fix-it" class="level2">
-<h2 class="anchored" data-anchor-id="what-can-go-wrong-and-how-to-fix-it">What Can Go Wrong (and How to Fix It)</h2>
-<section id="common-issues" class="level3">
-<h3 class="anchored" data-anchor-id="common-issues">Common Issues:</h3>
+<section id="what-can-go-wrong-and-how-to-fix-it" class="level2" data-number="5.8">
+<h2 data-number="5.8" class="anchored" data-anchor-id="what-can-go-wrong-and-how-to-fix-it"><span class="header-section-number">5.8</span> What Can Go Wrong (and How to Fix It)</h2>
+<section id="common-issues" class="level3" data-number="5.8.1">
+<h3 data-number="5.8.1" class="anchored" data-anchor-id="common-issues"><span class="header-section-number">5.8.1</span> Common Issues:</h3>
 <p><strong>Too generic:</strong> Gem instructions that are too broad produce mediocre results <strong>→ Solution:</strong> Be specific about your research context and preferred outputs</p>
 <p><strong>Too rigid:</strong> Overly detailed instructions that don’t allow for flexibility <strong>→ Solution:</strong> Provide clear guidance while leaving room for the AI to adapt to different queries</p>
 <p><strong>Outdated context:</strong> Gems that don’t reflect your current research focus <strong>→ Solution:</strong> Regularly review and update your Gems as your research evolves</p>
 <p><strong>Forgetting to save:</strong> Working with a Gem in preview mode without saving <strong>→ Solution:</strong> Always click “Save” after creating or editing a Gem</p>
 </section>
 </section>
-<section id="integration-with-your-research-workflow" class="level2">
-<h2 class="anchored" data-anchor-id="integration-with-your-research-workflow">Integration with Your Research Workflow</h2>
+<section id="integration-with-your-research-workflow" class="level2" data-number="5.9">
+<h2 data-number="5.9" class="anchored" data-anchor-id="integration-with-your-research-workflow"><span class="header-section-number">5.9</span> Integration with Your Research Workflow</h2>
 <p>Gems work best when they become part of your regular research routine:</p>
 <ul>
 <li><strong>Daily literature review</strong>: Use your Literature Review Gem for new papers</li>
@@ -395,8 +585,8 @@ Privacy Considerations
 <li><strong>Data analysis sessions</strong>: Use your Data Analysis Gem for statistical guidance</li>
 </ul>
 </section>
-<section id="what-you-can-do-now" class="level2">
-<h2 class="anchored" data-anchor-id="what-you-can-do-now">What You Can Do Now</h2>
+<section id="what-you-can-do-now" class="level2" data-number="5.10">
+<h2 data-number="5.10" class="anchored" data-anchor-id="what-you-can-do-now"><span class="header-section-number">5.10</span> What You Can Do Now</h2>
 <ol type="1">
 <li><strong>Create your Professional Context Gem</strong> using the template provided</li>
 <li><strong>Test it with a current research question</strong> to see how context improves responses</li>
@@ -405,17 +595,17 @@ Privacy Considerations
 <li><strong>Share your best Gems</strong> with colleagues (being mindful of privacy)</li>
 </ol>
 </section>
-<section id="going-deeper" class="level2">
-<h2 class="anchored" data-anchor-id="going-deeper">Going Deeper</h2>
+<section id="going-deeper" class="level2" data-number="5.11">
+<h2 data-number="5.11" class="anchored" data-anchor-id="going-deeper"><span class="header-section-number">5.11</span> Going Deeper</h2>
 <p>The same principles apply to Claude Projects and ChatGPT Custom GPTs. Once you master Gems, you can create similar specialized assistants across all major AI platforms, giving you flexible options for different research needs.</p>
 <p>Remember: the goal isn’t to create perfect Gems immediately, but to build a library of increasingly useful research tools that evolve with your work. Start simple, iterate based on what you learn, and gradually develop more sophisticated specialized assistants.</p>
 <hr>
-<p><em>Up next: Chapter 2.3 - Literature Review Enhancement Techniques</em></p>
-</section>
+<p><em>Up next Literature Review Enhancement Techniques</em></p>
+
+
 </section>
 
-</main>
-<!-- /main column -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -833,6 +1023,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./apps_prompting.html" class="pagination-link" aria-label="Prompt Engineering Basics">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Prompt Engineering Basics</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./apps_lit_review.html" class="pagination-link" aria-label="Literature Review Enhancement: Widening Your Net">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Literature Review Enhancement: Widening Your Net</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 
 

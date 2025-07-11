@@ -330,4 +330,4 @@ Remember: the goal isn't to create perfect Gems immediately, but to build a libr
 
 ---
 
-*Up next: Chapter 2.3 - Literature Review Enhancement Techniques*
+*Up next Literature Review Enhancement Techniques*

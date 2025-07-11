@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>6&nbsp; Literature Review Enhancement: Widening Your Net – AI for the Skeptical Scholar: Practical Strategies for Using LLMs in Research</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./apps_other_tools.html" rel="next">
+<link href="./apps_gems.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-29e2c20b02301cfff04dc8050bf30c7e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-7580570a2e354cd56757c689413fca0c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./apps_prompting.html">Practical Applications</a></li><li class="breadcrumb-item"><a href="./apps_lit_review.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Literature Review Enhancement: Widening Your Net</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">AI for the Skeptical Scholar: Practical Strategies for Using LLMs in Research</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">About Your Instructor</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Foundations</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./foundations_intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Understanding LLMs as Collaborative Research Assistants</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./foundations_considerations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Key Considerations: Tools, Costs, and Contexts</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Practical Applications</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./apps_prompting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Prompt Engineering Basics</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./apps_gems.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Creating Custom Research Assistants: Your First Gem</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./apps_lit_review.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Literature Review Enhancement: Widening Your Net</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./apps_other_tools.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Advanced Tools: NotebookLM and Deep Research</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives"><span class="header-section-number">6.1</span> Learning Objectives</a></li>
+  <li><a href="#why-this-matters-the-information-deluge-problem" id="toc-why-this-matters-the-information-deluge-problem" class="nav-link" data-scroll-target="#why-this-matters-the-information-deluge-problem"><span class="header-section-number">6.2</span> Why This Matters: The Information Deluge Problem</a></li>
+  <li><a href="#the-jagged-frontier-where-llms-excel-at-literature-processing" id="toc-the-jagged-frontier-where-llms-excel-at-literature-processing" class="nav-link" data-scroll-target="#the-jagged-frontier-where-llms-excel-at-literature-processing"><span class="header-section-number">6.3</span> The Jagged Frontier: Where LLMs Excel at Literature Processing</a></li>
+  <li><a href="#the-scale-advantage-time-mathematics" id="toc-the-scale-advantage-time-mathematics" class="nav-link" data-scroll-target="#the-scale-advantage-time-mathematics"><span class="header-section-number">6.4</span> The Scale Advantage: Time Mathematics</a></li>
+  <li><a href="#my-personal-literature-workflow" id="toc-my-personal-literature-workflow" class="nav-link" data-scroll-target="#my-personal-literature-workflow"><span class="header-section-number">6.5</span> My Personal Literature Workflow</a></li>
+  <li><a href="#customizing-for-your-research-domain" id="toc-customizing-for-your-research-domain" class="nav-link" data-scroll-target="#customizing-for-your-research-domain"><span class="header-section-number">6.6</span> Customizing for Your Research Domain</a>
+  <ul class="collapse">
+  <li><a href="#for-social-science-research" id="toc-for-social-science-research" class="nav-link" data-scroll-target="#for-social-science-research"><span class="header-section-number">6.6.1</span> For Social Science Research</a></li>
+  <li><a href="#for-policy-research" id="toc-for-policy-research" class="nav-link" data-scroll-target="#for-policy-research"><span class="header-section-number">6.6.2</span> For Policy Research</a></li>
+  <li><a href="#creating-your-custom-gem" id="toc-creating-your-custom-gem" class="nav-link" data-scroll-target="#creating-your-custom-gem"><span class="header-section-number">6.6.3</span> Creating Your Custom Gem</a></li>
+  </ul></li>
+  <li><a href="#translation-two-types-of-bridge-building" id="toc-translation-two-types-of-bridge-building" class="nav-link" data-scroll-target="#translation-two-types-of-bridge-building"><span class="header-section-number">6.7</span> Translation: Two Types of Bridge-Building</a>
+  <ul class="collapse">
+  <li><a href="#language-translation" id="toc-language-translation" class="nav-link" data-scroll-target="#language-translation"><span class="header-section-number">6.7.1</span> 1. Language Translation</a></li>
+  <li><a href="#cross-disciplinary-translation" id="toc-cross-disciplinary-translation" class="nav-link" data-scroll-target="#cross-disciplinary-translation"><span class="header-section-number">6.7.2</span> 2. Cross-Disciplinary Translation</a></li>
+  </ul></li>
+  <li><a href="#hands-on-activity-your-literature-funnel" id="toc-hands-on-activity-your-literature-funnel" class="nav-link" data-scroll-target="#hands-on-activity-your-literature-funnel"><span class="header-section-number">6.8</span> Hands-On Activity: Your Literature Funnel</a></li>
+  <li><a href="#common-pitfalls-and-how-to-avoid-them" id="toc-common-pitfalls-and-how-to-avoid-them" class="nav-link" data-scroll-target="#common-pitfalls-and-how-to-avoid-them"><span class="header-section-number">6.9</span> Common Pitfalls and How to Avoid Them</a>
+  <ul class="collapse">
+  <li><a href="#pitfall-1-trusting-without-verification" id="toc-pitfall-1-trusting-without-verification" class="nav-link" data-scroll-target="#pitfall-1-trusting-without-verification"><span class="header-section-number">6.9.1</span> Pitfall 1: Trusting Without Verification</a></li>
+  <li><a href="#pitfall-2-missing-subtle-arguments" id="toc-pitfall-2-missing-subtle-arguments" class="nav-link" data-scroll-target="#pitfall-2-missing-subtle-arguments"><span class="header-section-number">6.9.2</span> Pitfall 2: Missing Subtle Arguments</a></li>
+  <li><a href="#pitfall-3-translation-overconfidence" id="toc-pitfall-3-translation-overconfidence" class="nav-link" data-scroll-target="#pitfall-3-translation-overconfidence"><span class="header-section-number">6.9.3</span> Pitfall 3: Translation Overconfidence</a></li>
+  <li><a href="#pitfall-4-generic-prompts" id="toc-pitfall-4-generic-prompts" class="nav-link" data-scroll-target="#pitfall-4-generic-prompts"><span class="header-section-number">6.9.4</span> Pitfall 4: Generic Prompts</a></li>
+  </ul></li>
+  <li><a href="#what-you-can-do-now" id="toc-what-you-can-do-now" class="nav-link" data-scroll-target="#what-you-can-do-now"><span class="header-section-number">6.10</span> What You Can Do Now</a></li>
+  <li><a href="#the-bigger-picture" id="toc-the-bigger-picture" class="nav-link" data-scroll-target="#the-bigger-picture"><span class="header-section-number">6.11</span> The Bigger Picture</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./apps_prompting.html">Practical Applications</a></li><li class="breadcrumb-item"><a href="./apps_lit_review.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Literature Review Enhancement: Widening Your Net</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Literature Review Enhancement: Widening Your Net</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><em>Tentative time: 15 minutes</em></p>
+<section id="learning-objectives" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="learning-objectives"><span class="header-section-number">6.1</span> Learning Objectives</h2>
+<p>By the end of this section, you will be able to:</p>
+<ul>
+<li><strong>Apply the jagged frontier concept</strong> to understand where LLMs excel in literature processing</li>
+<li><strong>Use LLMs as an efficient funnel</strong> to identify papers worth reading in detail</li>
+<li><strong>Create structured summaries</strong> that capture the information you need from academic papers</li>
+<li><strong>Translate content between languages</strong> to include more diverse sources in your research</li>
+<li><strong>Bridge disciplinary boundaries</strong> by translating between different academic jargons</li>
+<li><strong>Customize your approach</strong> for your specific research domain and needs</li>
+</ul>
+</section>
+<section id="why-this-matters-the-information-deluge-problem" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="why-this-matters-the-information-deluge-problem"><span class="header-section-number">6.2</span> Why This Matters: The Information Deluge Problem</h2>
+<p>There’s an explosion of research being published. Even within narrow subfields, keeping up with the literature is becoming impossible. The volume of academic publishing has grown dramatically in recent decades, with researchers facing an ever-expanding universe of potentially relevant papers.</p>
+<p>You have a job, a family, and a life outside of research. You can’t read everything that looks interesting. But you also can’t afford to miss important developments in your field or related areas that might inform your work.</p>
+<p>This is where LLMs can be transformative—not by replacing careful reading and analysis, but by serving as an intelligent filter that helps you identify what deserves your limited time and attention.</p>
+</section>
+<section id="the-jagged-frontier-where-llms-excel-at-literature-processing" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="the-jagged-frontier-where-llms-excel-at-literature-processing"><span class="header-section-number">6.3</span> The Jagged Frontier: Where LLMs Excel at Literature Processing</h2>
+<p>Let’s apply our jagged frontier concept to literature review tasks:</p>
+<p><strong>Inside the Frontier (LLMs excel):</strong> - Creating structured summaries of complex texts - Identifying key arguments and findings - Extracting specific information (methodology, data sources, conclusions) - Translating between languages for initial understanding - Bridging disciplinary jargon differences - Finding patterns across multiple documents</p>
+<p><strong>Outside the Frontier (LLMs struggle):</strong> - Understanding implicit context and unwritten assumptions - Grasping subtle theoretical nuances - Recognizing what’s missing or what contradicts domain knowledge - Making critical judgments about research quality - Understanding the political or social subtext of academic work</p>
+</section>
+<section id="the-scale-advantage-time-mathematics" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="the-scale-advantage-time-mathematics"><span class="header-section-number">6.4</span> The Scale Advantage: Time Mathematics</h2>
+<p>Let’s do some back-of-the-envelope math to understand the scale advantage:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Reading Time Reality Check
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Typical reading speeds for complex academic text:</strong></p>
+<ul>
+<li>Average reading speed: 200-250 words per minute</li>
+<li>Academic paper reading (with comprehension): 100-150 words per minute</li>
+<li>Typical academic paper: 6,000-8,000 words</li>
+<li>100-page report: ~25,000-30,000 words</li>
+</ul>
+<p><strong>Time calculations:</strong></p>
+<ul>
+<li>Single academic paper: 40-80 minutes to read thoroughly</li>
+<li>100-page report: 3-5 hours of focused reading</li>
+<li>Weekly literature review (10 papers): 7-13 hours</li>
+</ul>
+<p><strong>LLM processing:</strong></p>
+<ul>
+<li>Structured summary of any paper: 30-60 seconds</li>
+<li>Analysis of 100-page report: 2-3 minutes</li>
+<li>Pattern analysis across 10 papers: 5-10 minutes</li>
+</ul>
+</div>
+</div>
+<p>This isn’t about replacing careful reading—it’s about helping you decide what merits that careful reading. LLMs can process the volume while you focus your expertise on the papers that matter most.</p>
+</section>
+<section id="my-personal-literature-workflow" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="my-personal-literature-workflow"><span class="header-section-number">6.5</span> My Personal Literature Workflow</h2>
+<p>Here’s the strategy I’ve developed and refined over the past year:</p>
+<p>As a practitioner rather than an academic, I read a very broad array of materials: academic papers, IMF country reports, legislation, think tank papers, national policy documents, and more. Since these documents don’t all have “methodologies” or “research questions,” I keep my prompts broadly applicable and don’t want to switch between document types for first-order filtering.</p>
+<p><strong>Step 1: Initial Filtering</strong> When I encounter potentially relevant documents, I use this prompt:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Consider adding your personal context prompt here for better results</span><span class="co">]</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>Please provide the full citation information for this document at the top, then create a detailed structured summary of this entire document, including any appendices. </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>I need to understand:</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The main argument or purpose</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Key findings or conclusions</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Important data, evidence, or examples</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Any policy implications or practical applications</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Who the intended audience appears to be</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>Format this as a structured summary with clear headings.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Step 2: Section-by-Section Analysis</strong> For documents that pass the initial filter, I use:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Please create a detailed structured summary of each section of this document, including any appendices. For each section, tell me:</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>What the section covers</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Key points or findings</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Any specific data, evidence, or examples mentioned</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>How it relates to the overall argument</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>Format this as a structured summary with clear headings.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This helps me understand exactly where to find specific information I need.</p>
+<p><strong>Results:</strong></p>
+<ul>
+<li>95% of documents: The summary gives me what I need for peripheral understanding</li>
+<li>5% of documents: Worth reading in detail, and I know exactly which sections to focus on</li>
+<li>My research assistants create these summaries and add them to our shared database</li>
+</ul>
+</section>
+<section id="customizing-for-your-research-domain" class="level2" data-number="6.6">
+<h2 data-number="6.6" class="anchored" data-anchor-id="customizing-for-your-research-domain"><span class="header-section-number">6.6</span> Customizing for Your Research Domain</h2>
+<p>The generic prompts above work well, but you can customize them for your specific field and needs:</p>
+<section id="for-social-science-research" class="level3" data-number="6.6.1">
+<h3 data-number="6.6.1" class="anchored" data-anchor-id="for-social-science-research"><span class="header-section-number">6.6.1</span> For Social Science Research</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Add your personal context prompt here if working individually, or brief context if sharing with others</span><span class="co">]</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>You are analyzing a social science paper. Please create a structured summary that includes:</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>**Citation Information:**</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Full citation in <span class="co">[</span><span class="ot">your preferred format</span><span class="co">]</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>DOI or other permanent identifier</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Publication venue and impact factor if available</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>**Research Context:**</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Geographic and temporal scope</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Research domain (economics, sociology, political science, etc.)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Target population or units of analysis</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Theoretical framework employed</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>**Methodology:**</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Research design (experimental, observational, qualitative, mixed methods)</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Data collection methods and sources</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Sample size and selection criteria</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Analytical approach and tools used</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>**Key Findings:**</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Main empirical results</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Statistical significance and effect sizes where relevant</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Unexpected or counterintuitive findings</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Robustness checks or sensitivity analyses</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>**Broader Implications:**</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Theoretical contributions</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Policy recommendations</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Practical applications</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Limitations acknowledged by authors</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>**Critical Assessment:**</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Methodological strengths and weaknesses</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Potential biases in approach</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Generalizability concerns</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Areas for future research</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>Include specific page numbers for key findings so I can locate them quickly.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="for-policy-research" class="level3" data-number="6.6.2">
+<h3 data-number="6.6.2" class="anchored" data-anchor-id="for-policy-research"><span class="header-section-number">6.6.2</span> For Policy Research</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Add your personal context prompt here if working individually, or brief context if sharing with others</span><span class="co">]</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>Analyze this policy paper with focus on:</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>**Citation Information:**</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Full citation in <span class="co">[</span><span class="ot">your preferred format</span><span class="co">]</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Publication type (working paper, policy brief, journal article, etc.)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Institutional affiliation of authors</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>**Policy Problem:**</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Issue definition and scope</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Stakeholders affected</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Current policy landscape</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>**Evidence Base:**</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>What research/data informs the analysis</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Quality and recency of evidence</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Any evidence gaps acknowledged</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>**Recommendations:**</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Specific policy proposals</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Implementation mechanisms</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Resource requirements</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Timeline considerations</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>**Political Economy:**</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Potential supporters and opponents</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Implementation challenges</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Unintended consequences discussed</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>Highlight any quantitative estimates (costs, benefits, impacts) with page numbers.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="creating-your-custom-gem" class="level3" data-number="6.6.3">
+<h3 data-number="6.6.3" class="anchored" data-anchor-id="creating-your-custom-gem"><span class="header-section-number">6.6.3</span> Creating Your Custom Gem</h3>
+<p>Once you’ve refined prompts that work well for your field, create a Gem (or Claude Project) to standardize this process:</p>
+<ol type="1">
+<li><strong>Name it clearly:</strong> “Literature Review Assistant - [Your Field]”</li>
+<li><strong>Include your research context</strong> (your expertise, current projects, typical paper types)</li>
+<li><strong>Embed your refined prompts</strong> as the default approach</li>
+<li><strong>Add specific formatting preferences</strong> (citation style, section headings, etc.)</li>
+</ol>
+</section>
+</section>
+<section id="translation-two-types-of-bridge-building" class="level2" data-number="6.7">
+<h2 data-number="6.7" class="anchored" data-anchor-id="translation-two-types-of-bridge-building"><span class="header-section-number">6.7</span> Translation: Two Types of Bridge-Building</h2>
+<p>LLMs excel at two types of translation that can dramatically expand your research scope:</p>
+<section id="language-translation" class="level3" data-number="6.7.1">
+<h3 data-number="6.7.1" class="anchored" data-anchor-id="language-translation"><span class="header-section-number">6.7.1</span> 1. Language Translation</h3>
+<p><strong>The Opportunity:</strong> Much important research is published in languages other than English. LLMs can provide initial translations that help you identify which papers merit professional translation.</p>
+<p><strong>The Reality Check:</strong> LLM translation quality reflects training data availability. For major languages (Spanish, French, German, Chinese, Arabic), quality is generally good. For less common languages, quality varies significantly.</p>
+<p><strong>Practical Prompt:</strong></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>Please translate this <span class="co">[</span><span class="ot">source language</span><span class="co">]</span> paper into English, then provide:</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>A 3-sentence summary of the main argument</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>The key empirical findings</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Any methodology that seems novel or interesting</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Whether this appears relevant to <span class="co">[</span><span class="ot">your research area</span><span class="co">]</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>You can work with either the full paper or just the abstract - both options work well with current LLMs.</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Upload paper or paste abstract</span><span class="co">]</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>If you're uncertain about any translation, please flag those sections.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Best Practices:</strong></p>
+<ul>
+<li>Upload full papers when possible - LLMs can handle them easily</li>
+<li>Start with abstracts for quick relevance assessment if you have many papers</li>
+<li>For core sources, get professional translation</li>
+<li>Be aware of cultural context that might be lost in translation</li>
+<li>Check technical terms against discipline-specific glossaries</li>
+</ul>
+</section>
+<section id="cross-disciplinary-translation" class="level3" data-number="6.7.2">
+<h3 data-number="6.7.2" class="anchored" data-anchor-id="cross-disciplinary-translation"><span class="header-section-number">6.7.2</span> 2. Cross-Disciplinary Translation</h3>
+<p><strong>The Challenge:</strong> Academic jargon is efficient within disciplines but creates barriers between them. Important insights often remain trapped within narrow subdisciplines.</p>
+<p><strong>The Solution:</strong> LLMs can translate between academic jargons, helping you access insights from related fields.</p>
+<p><strong>Example Prompt:</strong></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Consider adding your personal context prompt here for better results</span><span class="co">]</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>This paper is written for <span class="co">[</span><span class="ot">source discipline</span><span class="co">]</span> scholars using technical terminology that may not be familiar to <span class="co">[</span><span class="ot">target discipline</span><span class="co">]</span> researchers. </span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>Please:</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Identify the key concepts and findings</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Explain them in plain language</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Suggest how these insights might apply to <span class="co">[</span><span class="ot">target discipline</span><span class="co">]</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Highlight any methodological approaches that could be adapted</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>Focus on practical applications and avoid oversimplification of complex ideas.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Real-World Application:</strong> As a practitioner rather than an academic, I regularly need to understand and communicate across disciplines. I’m not a software engineer, but I need to speak intelligibly to software engineers to build open-source tools. I’m not a PhD economist, but I need to understand and evaluate complex economic models. I’m not a climate scientist, but I need to understand their findings to assess practical implications for the countries I advise.</p>
+<p>LLMs help me bridge these gaps by translating complex concepts into language I can understand, while preserving the essential insights. This enables me to: - Understand the intuitions from different fields - Identify relevant methodologies from other disciplines - Communicate effectively with diverse expert communities - Build interdisciplinary solutions to complex problems</p>
+</section>
+</section>
+<section id="hands-on-activity-your-literature-funnel" class="level2" data-number="6.8">
+<h2 data-number="6.8" class="anchored" data-anchor-id="hands-on-activity-your-literature-funnel"><span class="header-section-number">6.8</span> Hands-On Activity: Your Literature Funnel</h2>
+<p>Let’s practice building your personal literature workflow:</p>
+<p><strong>Step 1: Choose Your Papers</strong> Select 3 papers: one you know well, one you’re curious about, and one from a related but different field.</p>
+<p><strong>Step 2: Apply the Funnel</strong> Use the basic structured summary prompt on all three papers.</p>
+<p><strong>Step 3: Customize</strong> Based on the results, refine your prompt to better capture what you need for your research.</p>
+<p><strong>Step 4: Test Translation</strong> If you have access to papers in other languages or from other disciplines, try the translation approaches.</p>
+<p><strong>Step 5: Create Your Gem</strong> Build a reusable prompt that incorporates your refinements.</p>
+</section>
+<section id="common-pitfalls-and-how-to-avoid-them" class="level2" data-number="6.9">
+<h2 data-number="6.9" class="anchored" data-anchor-id="common-pitfalls-and-how-to-avoid-them"><span class="header-section-number">6.9</span> Common Pitfalls and How to Avoid Them</h2>
+<section id="pitfall-1-trusting-without-verification" class="level3" data-number="6.9.1">
+<h3 data-number="6.9.1" class="anchored" data-anchor-id="pitfall-1-trusting-without-verification"><span class="header-section-number">6.9.1</span> Pitfall 1: Trusting Without Verification</h3>
+<ul>
+<li><strong>Problem:</strong> Accepting LLM summaries without checking against the original</li>
+<li><strong>Solution:</strong> Always verify key claims, especially quantitative findings</li>
+</ul>
+</section>
+<section id="pitfall-2-missing-subtle-arguments" class="level3" data-number="6.9.2">
+<h3 data-number="6.9.2" class="anchored" data-anchor-id="pitfall-2-missing-subtle-arguments"><span class="header-section-number">6.9.2</span> Pitfall 2: Missing Subtle Arguments</h3>
+<ul>
+<li><strong>Problem:</strong> LLMs can miss theoretical nuances or implicit arguments</li>
+<li><strong>Solution:</strong> Use summaries to identify promising papers, then read the key sections yourself</li>
+</ul>
+</section>
+<section id="pitfall-3-translation-overconfidence" class="level3" data-number="6.9.3">
+<h3 data-number="6.9.3" class="anchored" data-anchor-id="pitfall-3-translation-overconfidence"><span class="header-section-number">6.9.3</span> Pitfall 3: Translation Overconfidence</h3>
+<ul>
+<li><strong>Problem:</strong> Assuming translations capture all important meaning</li>
+<li><strong>Solution:</strong> Get professional translation for sources central to your argument</li>
+</ul>
+</section>
+<section id="pitfall-4-generic-prompts" class="level3" data-number="6.9.4">
+<h3 data-number="6.9.4" class="anchored" data-anchor-id="pitfall-4-generic-prompts"><span class="header-section-number">6.9.4</span> Pitfall 4: Generic Prompts</h3>
+<ul>
+<li><strong>Problem:</strong> Using one-size-fits-all prompts that miss field-specific insights</li>
+<li><strong>Solution:</strong> Customize prompts for your discipline and research questions</li>
+</ul>
+</section>
+</section>
+<section id="what-you-can-do-now" class="level2" data-number="6.10">
+<h2 data-number="6.10" class="anchored" data-anchor-id="what-you-can-do-now"><span class="header-section-number">6.10</span> What You Can Do Now</h2>
+<ol type="1">
+<li><strong>Test the basic workflow</strong> with 3 papers of different types</li>
+<li><strong>Create your customized prompt</strong> based on your field’s specific needs</li>
+<li><strong>Build your Literature Review Gem</strong> with your refined approach</li>
+<li><strong>Try cross-disciplinary translation</strong> on a paper from a related field</li>
+<li><strong>Start your literature database</strong> with structured summaries</li>
+</ol>
+</section>
+<section id="the-bigger-picture" class="level2" data-number="6.11">
+<h2 data-number="6.11" class="anchored" data-anchor-id="the-bigger-picture"><span class="header-section-number">6.11</span> The Bigger Picture</h2>
+<p>This approach transforms literature review from a bottleneck into an advantage. Instead of being limited to papers you can physically read, you can:</p>
+<ul>
+<li><strong>Cast a wider net</strong> across languages and disciplines</li>
+<li><strong>Identify patterns</strong> across large bodies of literature</li>
+<li><strong>Focus your expertise</strong> on the most promising sources</li>
+<li><strong>Stay current</strong> with rapidly evolving fields</li>
+<li><strong>Enable ambitious projects</strong> that require broad literature synthesis</li>
+</ul>
+<p>Remember: LLMs are your research assistants, not your replacements. They handle the volume so you can focus on insight, analysis, and critical judgment.</p>
+<p>The goal isn’t to read less—it’s to read better. By using AI to filter and organize, you can spend more time on the deep, careful reading that produces real insights.</p>
+<hr>
+<p><em>Up next: Advanced Tools - NotebookLM and Deep Research</em></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./apps_gems.html" class="pagination-link" aria-label="Creating Custom Research Assistants: Your First Gem">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Creating Custom Research Assistants: Your First Gem</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./apps_other_tools.html" class="pagination-link" aria-label="Advanced Tools: NotebookLM and Deep Research">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Advanced Tools: NotebookLM and Deep Research</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

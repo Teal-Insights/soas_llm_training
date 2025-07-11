@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>7&nbsp; Advanced Tools: NotebookLM and Deep Research – AI for the Skeptical Scholar: Practical Strategies for Using LLMs in Research</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./apps_lit_review.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-29e2c20b02301cfff04dc8050bf30c7e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-7580570a2e354cd56757c689413fca0c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./apps_prompting.html">Practical Applications</a></li><li class="breadcrumb-item"><a href="./apps_other_tools.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Advanced Tools: NotebookLM and Deep Research</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">AI for the Skeptical Scholar: Practical Strategies for Using LLMs in Research</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">About Your Instructor</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Foundations</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./foundations_intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Understanding LLMs as Collaborative Research Assistants</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./foundations_considerations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Key Considerations: Tools, Costs, and Contexts</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Practical Applications</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./apps_prompting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Prompt Engineering Basics</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./apps_gems.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Creating Custom Research Assistants: Your First Gem</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./apps_lit_review.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Literature Review Enhancement: Widening Your Net</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./apps_other_tools.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Advanced Tools: NotebookLM and Deep Research</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives"><span class="header-section-number">7.1</span> Learning Objectives</a></li>
+  <li><a href="#why-these-tools-matter" id="toc-why-these-tools-matter" class="nav-link" data-scroll-target="#why-these-tools-matter"><span class="header-section-number">7.2</span> Why These Tools Matter</a></li>
+  <li><a href="#notebooklm-your-multi-document-research-assistant" id="toc-notebooklm-your-multi-document-research-assistant" class="nav-link" data-scroll-target="#notebooklm-your-multi-document-research-assistant"><span class="header-section-number">7.3</span> NotebookLM: Your Multi-Document Research Assistant</a>
+  <ul class="collapse">
+  <li><a href="#what-is-notebooklm" id="toc-what-is-notebooklm" class="nav-link" data-scroll-target="#what-is-notebooklm"><span class="header-section-number">7.3.1</span> What Is NotebookLM?</a></li>
+  <li><a href="#the-technology-behind-it-rag-explained" id="toc-the-technology-behind-it-rag-explained" class="nav-link" data-scroll-target="#the-technology-behind-it-rag-explained"><span class="header-section-number">7.3.2</span> The Technology Behind It: RAG Explained</a></li>
+  <li><a href="#practical-notebooklm-workflow" id="toc-practical-notebooklm-workflow" class="nav-link" data-scroll-target="#practical-notebooklm-workflow"><span class="header-section-number">7.3.3</span> Practical NotebookLM Workflow</a></li>
+  <li><a href="#real-world-example-chinese-development-finance" id="toc-real-world-example-chinese-development-finance" class="nav-link" data-scroll-target="#real-world-example-chinese-development-finance"><span class="header-section-number">7.3.4</span> Real-World Example: Chinese Development Finance</a></li>
+  <li><a href="#best-practices-for-notebooklm" id="toc-best-practices-for-notebooklm" class="nav-link" data-scroll-target="#best-practices-for-notebooklm"><span class="header-section-number">7.3.5</span> Best Practices for NotebookLM</a></li>
+  </ul></li>
+  <li><a href="#deep-research-tools-ai-powered-research-assistants" id="toc-deep-research-tools-ai-powered-research-assistants" class="nav-link" data-scroll-target="#deep-research-tools-ai-powered-research-assistants"><span class="header-section-number">7.4</span> Deep Research Tools: AI-Powered Research Assistants</a>
+  <ul class="collapse">
+  <li><a href="#what-are-deep-research-tools" id="toc-what-are-deep-research-tools" class="nav-link" data-scroll-target="#what-are-deep-research-tools"><span class="header-section-number">7.4.1</span> What Are Deep Research Tools?</a></li>
+  <li><a href="#how-deep-research-works" id="toc-how-deep-research-works" class="nav-link" data-scroll-target="#how-deep-research-works"><span class="header-section-number">7.4.2</span> How Deep Research Works</a></li>
+  <li><a href="#practical-example-research-query" id="toc-practical-example-research-query" class="nav-link" data-scroll-target="#practical-example-research-query"><span class="header-section-number">7.4.3</span> Practical Example: Research Query</a></li>
+  <li><a href="#limitations-and-caveats" id="toc-limitations-and-caveats" class="nav-link" data-scroll-target="#limitations-and-caveats"><span class="header-section-number">7.4.4</span> Limitations and Caveats</a></li>
+  <li><a href="#my-deep-research-workflow" id="toc-my-deep-research-workflow" class="nav-link" data-scroll-target="#my-deep-research-workflow"><span class="header-section-number">7.4.5</span> My Deep Research Workflow</a></li>
+  <li><a href="#realistic-expectations" id="toc-realistic-expectations" class="nav-link" data-scroll-target="#realistic-expectations"><span class="header-section-number">7.4.6</span> Realistic Expectations</a></li>
+  <li><a href="#beyond-academic-research" id="toc-beyond-academic-research" class="nav-link" data-scroll-target="#beyond-academic-research"><span class="header-section-number">7.4.7</span> Beyond Academic Research</a></li>
+  </ul></li>
+  <li><a href="#integrating-advanced-tools-into-your-workflow" id="toc-integrating-advanced-tools-into-your-workflow" class="nav-link" data-scroll-target="#integrating-advanced-tools-into-your-workflow"><span class="header-section-number">7.5</span> Integrating Advanced Tools into Your Workflow</a>
+  <ul class="collapse">
+  <li><a href="#the-strategic-approach" id="toc-the-strategic-approach" class="nav-link" data-scroll-target="#the-strategic-approach"><span class="header-section-number">7.5.1</span> The Strategic Approach</a></li>
+  <li><a href="#building-your-advanced-research-workflow" id="toc-building-your-advanced-research-workflow" class="nav-link" data-scroll-target="#building-your-advanced-research-workflow"><span class="header-section-number">7.5.2</span> Building Your Advanced Research Workflow</a></li>
+  </ul></li>
+  <li><a href="#hands-on-activity-advanced-research-project" id="toc-hands-on-activity-advanced-research-project" class="nav-link" data-scroll-target="#hands-on-activity-advanced-research-project"><span class="header-section-number">7.6</span> Hands-On Activity: Advanced Research Project</a></li>
+  <li><a href="#what-you-can-do-now" id="toc-what-you-can-do-now" class="nav-link" data-scroll-target="#what-you-can-do-now"><span class="header-section-number">7.7</span> What You Can Do Now</a></li>
+  <li><a href="#the-research-frontier" id="toc-the-research-frontier" class="nav-link" data-scroll-target="#the-research-frontier"><span class="header-section-number">7.8</span> The Research Frontier</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./apps_prompting.html">Practical Applications</a></li><li class="breadcrumb-item"><a href="./apps_other_tools.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Advanced Tools: NotebookLM and Deep Research</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Advanced Tools: NotebookLM and Deep Research</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><em>Tentative time: 12 minutes</em></p>
+<section id="learning-objectives" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="learning-objectives"><span class="header-section-number">7.1</span> Learning Objectives</h2>
+<p>By the end of this section, you will be able to:</p>
+<ul>
+<li><strong>Understand RAG technology</strong> and how it enables analysis of large document collections</li>
+<li><strong>Use NotebookLM effectively</strong> for multi-document analysis with proper citations</li>
+<li><strong>Leverage Deep Research tools</strong> for comprehensive exploratory research</li>
+<li><strong>Recognize the limitations</strong> of current AI research tools and plan accordingly</li>
+<li><strong>Integrate advanced tools</strong> into your research workflow strategically</li>
+</ul>
+</section>
+<section id="why-these-tools-matter" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="why-these-tools-matter"><span class="header-section-number">7.2</span> Why These Tools Matter</h2>
+<p>The literature review techniques we just covered work well for individual papers or small sets of documents. But what about when you need to analyze patterns across dozens or hundreds of documents? Or when you want to do comprehensive exploratory research on a new topic?</p>
+<p>This is where advanced AI tools become transformative. They’re not just faster—they enable entirely new kinds of research that were previously impossible for individual researchers or small teams.</p>
+</section>
+<section id="notebooklm-your-multi-document-research-assistant" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="notebooklm-your-multi-document-research-assistant"><span class="header-section-number">7.3</span> NotebookLM: Your Multi-Document Research Assistant</h2>
+<section id="what-is-notebooklm" class="level3" data-number="7.3.1">
+<h3 data-number="7.3.1" class="anchored" data-anchor-id="what-is-notebooklm"><span class="header-section-number">7.3.1</span> What Is NotebookLM?</h3>
+<p>NotebookLM is Google’s specialized tool for working with large document collections. Unlike regular chatbots that rely on their training data, NotebookLM creates a custom knowledge base from documents you upload.</p>
+<p><strong>Key Capabilities:</strong></p>
+<ul>
+<li>Upload up to 300 documents (PDFs, Word docs, web pages, etc.)</li>
+<li>Ask questions across your entire document collection</li>
+<li>Get answers with specific citations to source material</li>
+<li>Click citations to see the exact text that supports each claim</li>
+<li>Create structured summaries of patterns across documents</li>
+</ul>
+</section>
+<section id="the-technology-behind-it-rag-explained" class="level3" data-number="7.3.2">
+<h3 data-number="7.3.2" class="anchored" data-anchor-id="the-technology-behind-it-rag-explained"><span class="header-section-number">7.3.2</span> The Technology Behind It: RAG Explained</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+What is RAG?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>RAG stands for “Retrieval Augmented Generation.” Here’s how it works in simple terms:</p>
+<p><strong>Step 1: Document Chunking</strong> Your documents are broken into smaller chunks (usually a few paragraphs each).</p>
+<p><strong>Step 2: Vector Mapping</strong> Each chunk is converted into a mathematical representation called a “vector” that captures its meaning. Think of this as creating a map where similar content clusters together.</p>
+<p><strong>Step 3: Semantic Search</strong> When you ask a question, the system finds the chunks most relevant to your question by looking for similar vectors.</p>
+<p><strong>Step 4: Context Assembly</strong> The most relevant chunks are assembled and fed to the LLM as context for generating your answer.</p>
+<p><strong>Step 5: Citation Generation</strong> The system keeps track of which chunks came from which documents, enabling precise citations.</p>
+<p><strong>Why This Matters:</strong> Vector search finds content based on meaning, not just exact word matches. This is a huge advantage over traditional “Control + F” searching, which only finds specific phrases. The AI can find relevant passages even when different terminology is used.</p>
+<p>This allows you to work with document collections far larger than any LLM’s context window while maintaining traceability to source material.</p>
+</div>
+</div>
+</section>
+<section id="practical-notebooklm-workflow" class="level3" data-number="7.3.3">
+<h3 data-number="7.3.3" class="anchored" data-anchor-id="practical-notebooklm-workflow"><span class="header-section-number">7.3.3</span> Practical NotebookLM Workflow</h3>
+<p><strong>Step 1: Document Collection</strong></p>
+<p>Upload your research materials:</p>
+<ul>
+<li>Academic papers</li>
+<li>Policy reports</li>
+<li>Government documents</li>
+<li>News articles</li>
+<li>Your own notes and drafts</li>
+</ul>
+<p><strong>Step 2: Initial Exploration</strong></p>
+<p>Start with broad questions to understand your collection:</p>
+<ul>
+<li>“What are the main themes across these documents?”</li>
+<li>“Where do these authors disagree on key issues?”</li>
+<li>“What methodologies are being used to study this topic?”</li>
+</ul>
+<p><strong>Step 3: Focused Analysis</strong></p>
+<p>Dive deeper into specific aspects:</p>
+<ul>
+<li>“How do different authors define [key concept]?”</li>
+<li>“What evidence is presented for [specific claim]?”</li>
+<li>“Which documents discuss [specific methodology]?”</li>
+</ul>
+<p><strong>Step 4: Pattern Recognition</strong></p>
+<p>Look for connections and gaps:</p>
+<ul>
+<li>“Are there any contradictions in findings across studies?”</li>
+<li>“What research questions remain unanswered?”</li>
+<li>“How has thinking on this topic evolved over time?”</li>
+</ul>
+<p><strong>Step 5: Verification</strong></p>
+<p>Always click through citations to verify context and accuracy.</p>
+</section>
+<section id="real-world-example-chinese-development-finance" class="level3" data-number="7.3.4">
+<h3 data-number="7.3.4" class="anchored" data-anchor-id="real-world-example-chinese-development-finance"><span class="header-section-number">7.3.4</span> Real-World Example: Chinese Development Finance</h3>
+<p>In our recent ODI research, we were trying to understand a shift in China’s overseas lending from policy banks to state-owned commercial banks. We analyzed the financial statements of the policy banks and wanted to complement this quantitative analysis with their own explanations via annual reports.</p>
+<p>Here’s what we uploaded to NotebookLM:</p>
+<ul>
+<li>10 years of China Development Bank and Export-Import Bank of China annual reports (containing text in both English and Mandarin - while we assume these are good translations, there might be subtle differences that are interesting)</li>
+</ul>
+<p><strong>Our approach:</strong> We used NotebookLM for exploratory analysis rather than relying on its outputs directly. When our financial analysis revealed losses at China ExIM in 2017, we could easily ask how this was explained in the annual reports. We explored how both banks discussed key topics like green lending, risk management, and overseas lending losses.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://notebooklm.google.com/"><img src="images/notebooklm.png" class="img-fluid figure-img" alt="Shows NotebookLM search, the results, and the original text it pulls from"></a></p>
+<figcaption>NotebookLM</figcaption>
+</figure>
+</div>
+<p><strong>Key advantages:</strong></p>
+<ul>
+<li><strong>Faster than manual search:</strong> Dramatically quicker than “Control + F” searching across documents</li>
+<li><strong>Semantic understanding:</strong> Vector search finds meaning, not just exact phrases</li>
+<li><strong>Cross-institutional analysis:</strong> Having reports from both institutions together helped us distinguish between institution-specific issues and broader policy changes</li>
+<li><strong>Multilingual capability:</strong> The system could search in both English and Mandarin (my co-author speaks Mandarin, I do not)</li>
+</ul>
+<p><strong>Our workflow:</strong></p>
+<ol type="1">
+<li>Upload all annual reports to NotebookLM</li>
+<li>Ask exploratory questions about patterns and changes over time</li>
+<li>Use NotebookLM results to identify which reports and sections to examine closely</li>
+<li>Verify findings by reading the original source material</li>
+<li>Incorporate insights into our broader financial analysis</li>
+</ol>
+<p><strong>Results:</strong> NotebookLM pointed us toward the right primary sources rather than providing our final analysis. This saved enormous time while maintaining research integrity through verification against original documents.</p>
+</section>
+<section id="best-practices-for-notebooklm" class="level3" data-number="7.3.5">
+<h3 data-number="7.3.5" class="anchored" data-anchor-id="best-practices-for-notebooklm"><span class="header-section-number">7.3.5</span> Best Practices for NotebookLM</h3>
+<p><strong>Document Preparation:</strong></p>
+<ul>
+<li>Use clear, descriptive file names</li>
+<li>Include document metadata (author, date, type)</li>
+<li>Consider organizing by theme or time period</li>
+<li>Remove documents that aren’t directly relevant</li>
+</ul>
+<p><strong>Questioning Strategy:</strong></p>
+<ul>
+<li>Start broad, then narrow down</li>
+<li>Ask follow-up questions based on initial results</li>
+<li>Use specific terminology from your field</li>
+<li>Ask for comparisons and contrasts</li>
+</ul>
+<p><strong>Citation Verification:</strong></p>
+<ul>
+<li>Always click through citations to verify context</li>
+<li>Check that quotes aren’t taken out of context</li>
+<li>Verify quantitative claims against source documents</li>
+<li>Be especially careful with technical or nuanced arguments</li>
+</ul>
+</section>
+</section>
+<section id="deep-research-tools-ai-powered-research-assistants" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="deep-research-tools-ai-powered-research-assistants"><span class="header-section-number">7.4</span> Deep Research Tools: AI-Powered Research Assistants</h2>
+<section id="what-are-deep-research-tools" class="level3" data-number="7.4.1">
+<h3 data-number="7.4.1" class="anchored" data-anchor-id="what-are-deep-research-tools"><span class="header-section-number">7.4.1</span> What Are Deep Research Tools?</h3>
+<p>Deep Research tools are AI systems that can conduct comprehensive research projects autonomously. You ask a question, and they spend 15-20 minutes researching the topic, then provide detailed reports that can be 15-30 pages long.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Understanding AI Agents and Agentic Workflows
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Deep Research tools represent one of the first major successes in “agentic workflows” - AI systems that can pursue goals autonomously rather than just responding to single queries.</p>
+<p><strong>What makes something “agentic”:</strong></p>
+<ul>
+<li><strong>Goal-oriented:</strong> Given a research question, the system formulates its own plan</li>
+<li><strong>Autonomous execution:</strong> It conducts multiple searches and analysis steps without human guidance</li>
+<li><strong>Adaptive behavior:</strong> It adjusts its approach based on what it finds</li>
+<li><strong>Tool use:</strong> It can access external resources and synthesize information from multiple sources</li>
+</ul>
+<p><strong>Why this matters:</strong> Traditional chatbots respond to individual prompts. Agents can tackle complex, multi-step projects that previously required human coordination and decision-making. Deep Research is one of the clearest examples of this capability working at a practical level.</p>
+<p>The technology is evolving rapidly. As Ethan Mollick explains in <a href="https://www.oneusefulthing.org/p/the-end-of-search-the-beginning-of">“The End of Search, The Beginning of Research”</a>, we’re seeing the convergence of “Reasoners” (AI that can think through problems step-by-step) and “Agents” (AI that can take autonomous action). This combination is creating new possibilities for research assistance.</p>
+</div>
+</div>
+<p><strong>Available Tools:</strong></p>
+<ul>
+<li><strong>ChatGPT Deep Research</strong> (OpenAI) - Currently produces the most sophisticated analysis</li>
+<li><strong>Claude Research</strong> (Anthropic) - Newer tool with shorter outputs, still developing</li>
+<li><strong>Gemini Deep Research</strong> (Google) - Very long and detailed outputs, sometimes overwhelming</li>
+<li><strong>Perplexity Pro</strong> - Uses DeepSeek’s R1 model, good middle ground between depth and accessibility</li>
+</ul>
+<p><em>Note: This landscape is changing rapidly. Tool capabilities and availability shift frequently.</em></p>
+</section>
+<section id="how-deep-research-works" class="level3" data-number="7.4.2">
+<h3 data-number="7.4.2" class="anchored" data-anchor-id="how-deep-research-works"><span class="header-section-number">7.4.2</span> How Deep Research Works</h3>
+<p><strong>Step 1: Query Clarification</strong> The system often asks clarifying questions to understand what you’re really looking for.</p>
+<p><strong>Step 2: Research Planning</strong> It creates a research plan with specific subtopics to investigate.</p>
+<p><strong>Step 3: Systematic Search</strong> It conducts multiple searches across different sources and angles.</p>
+<p><strong>Step 4: Synthesis</strong> It analyzes findings and creates a comprehensive report.</p>
+<p><strong>Step 5: Fact-Checking</strong> It attempts to verify claims across multiple sources.</p>
+</section>
+<section id="practical-example-research-query" class="level3" data-number="7.4.3">
+<h3 data-number="7.4.3" class="anchored" data-anchor-id="practical-example-research-query"><span class="header-section-number">7.4.3</span> Practical Example: Research Query</h3>
+<p><strong>Question:</strong> “What are the main barriers to renewable energy adoption in Sub-Saharan Africa, and what policy interventions have shown promise?”</p>
+<p><strong>Deep Research Process:</strong></p>
+<ol type="1">
+<li><strong>Clarification:</strong> “Should I focus on specific technologies or countries?”</li>
+<li><strong>Research Plan:</strong> Infrastructure, financing, policy frameworks, case studies</li>
+<li><strong>Systematic Search:</strong> Academic literature, policy reports, development bank analyses</li>
+<li><strong>Synthesis:</strong> 20-page report with executive summary, detailed analysis, and recommendations</li>
+</ol>
+<p><strong>Typical Output Quality:</strong></p>
+<ul>
+<li>Comprehensive coverage of major issues</li>
+<li>Multiple perspectives and sources</li>
+<li>Quantitative data where available</li>
+</ul>
+</section>
+<section id="limitations-and-caveats" class="level3" data-number="7.4.4">
+<h3 data-number="7.4.4" class="anchored" data-anchor-id="limitations-and-caveats"><span class="header-section-number">7.4.4</span> Limitations and Caveats</h3>
+<p><strong>Data Access Limitations:</strong></p>
+<ul>
+<li>Primarily accesses publicly available information</li>
+<li>Limited access to subscription academic databases</li>
+<li>May miss recent developments or specialized sources</li>
+<li>Regional bias toward English-language sources</li>
+</ul>
+<p><strong>Quality Variations:</strong></p>
+<ul>
+<li>Can be confidently wrong about specific facts</li>
+<li>May oversimplify complex issues</li>
+<li>Sometimes misses important nuances</li>
+<li>Can struggle with rapidly evolving topics</li>
+</ul>
+<p><strong>Licensing Issues:</strong></p>
+<ul>
+<li>Unclear what content deals exist with publishers</li>
+<li>This space is changing rapidly</li>
+<li>Academic database access remains limited</li>
+<li>Always verify claims against authoritative sources</li>
+</ul>
+</section>
+<section id="my-deep-research-workflow" class="level3" data-number="7.4.5">
+<h3 data-number="7.4.5" class="anchored" data-anchor-id="my-deep-research-workflow"><span class="header-section-number">7.4.5</span> My Deep Research Workflow</h3>
+<p><strong>Step 1: Start with Known Topics</strong> Test the system’s performance on topics where you have expertise to calibrate the “jagged frontier.”</p>
+<p><strong>Step 2: Use for Exploration</strong> Let it identify areas and sources you might not have considered.</p>
+<p><strong>Step 3: Verify Key Claims</strong> Fact-check important assertions, especially quantitative ones.</p>
+<p><strong>Step 4: Follow Up on Sources</strong> Use the research as a roadmap to find primary sources.</p>
+<p><strong>Step 5: Integration</strong> Combine AI research with your domain expertise and additional sources.</p>
+</section>
+<section id="realistic-expectations" class="level3" data-number="7.4.6">
+<h3 data-number="7.4.6" class="anchored" data-anchor-id="realistic-expectations"><span class="header-section-number">7.4.6</span> Realistic Expectations</h3>
+<p><strong>What I’ve Found Impressive:</strong></p>
+<ul>
+<li>Comprehensive coverage of complex topics</li>
+<li>Synthesis across multiple sources and perspectives</li>
+<li>Identification of contradictions and debates</li>
+<li>Quality equivalent to what I’d expect from a skilled research assistant after a week of work</li>
+</ul>
+<p><strong>What I’ve Found Concerning:</strong></p>
+<ul>
+<li>Occasional confident assertions of false “facts”</li>
+<li>Sometimes misses crucial recent developments</li>
+<li>Can perpetuate biases present in training data</li>
+<li>May oversimplify politically sensitive issues</li>
+</ul>
+</section>
+<section id="beyond-academic-research" class="level3" data-number="7.4.7">
+<h3 data-number="7.4.7" class="anchored" data-anchor-id="beyond-academic-research"><span class="header-section-number">7.4.7</span> Beyond Academic Research</h3>
+<p>Deep Research tools aren’t just for scholarly work. I’ve found them helpful for many aspects of daily life that previously would have required a capable personal assistant or “chief of staff”:</p>
+<ul>
+<li><strong>Meeting preparation:</strong> Understanding the backgrounds and expertise of people I’ll be meeting with (I used it to better understand the participants in this webinar!)</li>
+<li><strong>Trip planning:</strong> Both professional and personal travel, from finding child-friendly attractions along road trip routes to understanding local customs and logistics</li>
+<li><strong>Practical problem-solving:</strong> From figuring out how to stop woodpeckers from damaging my house to researching complex household decisions</li>
+<li><strong>Professional briefings:</strong> Getting up to speed on new sectors, regulations, or policy developments before important conversations</li>
+</ul>
+<p>This represents a democratization of research capability that was previously available only to those with dedicated staff support.</p>
+</section>
+</section>
+<section id="integrating-advanced-tools-into-your-workflow" class="level2" data-number="7.5">
+<h2 data-number="7.5" class="anchored" data-anchor-id="integrating-advanced-tools-into-your-workflow"><span class="header-section-number">7.5</span> Integrating Advanced Tools into Your Workflow</h2>
+<section id="the-strategic-approach" class="level3" data-number="7.5.1">
+<h3 data-number="7.5.1" class="anchored" data-anchor-id="the-strategic-approach"><span class="header-section-number">7.5.1</span> The Strategic Approach</h3>
+<p><strong>Use NotebookLM when:</strong></p>
+<ul>
+<li>You have a collection of relevant documents</li>
+<li>You need to find patterns across multiple sources</li>
+<li>You want to verify claims against specific texts</li>
+<li>You’re doing literature synthesis or comparative analysis</li>
+</ul>
+<p><strong>Use Deep Research when:</strong></p>
+<ul>
+<li>You’re starting research on a new topic</li>
+<li>You need broad coverage of an issue</li>
+<li>You want to identify key debates and perspectives</li>
+<li>You’re looking for policy examples or case studies</li>
+</ul>
+<p><strong>Always Remember:</strong></p>
+<ul>
+<li>These are tools for widening your net, not replacing judgment</li>
+<li>Verify important claims against authoritative sources</li>
+<li>Use your domain expertise to assess quality and relevance</li>
+<li>Combine AI research with traditional scholarly methods</li>
+</ul>
+</section>
+<section id="building-your-advanced-research-workflow" class="level3" data-number="7.5.2">
+<h3 data-number="7.5.2" class="anchored" data-anchor-id="building-your-advanced-research-workflow"><span class="header-section-number">7.5.2</span> Building Your Advanced Research Workflow</h3>
+<p><strong>Phase 1: Exploration</strong></p>
+<ul>
+<li>Use Deep Research for initial topic mapping</li>
+<li>Upload key documents to NotebookLM</li>
+<li>Identify major themes and debates</li>
+</ul>
+<p><strong>Phase 2: Analysis</strong></p>
+<ul>
+<li>Use NotebookLM to analyze patterns across documents</li>
+<li>Verify key claims from Deep Research</li>
+<li>Identify gaps and contradictions</li>
+</ul>
+<p><strong>Phase 3: Synthesis</strong></p>
+<ul>
+<li>Combine AI insights with your domain knowledge</li>
+<li>Conduct focused searches for missing perspectives</li>
+<li>Create your own analytical framework</li>
+</ul>
+<p><strong>Phase 4: Verification</strong></p>
+<ul>
+<li>Fact-check quantitative claims</li>
+<li>Verify citations and sources</li>
+<li>Ensure balanced representation of viewpoints</li>
+</ul>
+</section>
+</section>
+<section id="hands-on-activity-advanced-research-project" class="level2" data-number="7.6">
+<h2 data-number="7.6" class="anchored" data-anchor-id="hands-on-activity-advanced-research-project"><span class="header-section-number">7.6</span> Hands-On Activity: Advanced Research Project</h2>
+<p>Let’s practice using these tools together:</p>
+<p><strong>Step 1: Choose Your Research Question</strong> Select a topic you’re curious about but don’t know deeply.</p>
+<p><strong>Step 2: Deep Research Phase</strong> Use a Deep Research tool to get broad coverage of your topic.</p>
+<p><strong>Step 3: Document Collection</strong> Based on the Deep Research output, find 5-10 relevant documents to upload to NotebookLM.</p>
+<p><strong>Step 4: Focused Analysis</strong> Use NotebookLM to dig deeper into specific aspects highlighted in the Deep Research.</p>
+<p><strong>Step 5: Critical Assessment</strong> Evaluate the quality and consistency of insights across both tools.</p>
+</section>
+<section id="what-you-can-do-now" class="level2" data-number="7.7">
+<h2 data-number="7.7" class="anchored" data-anchor-id="what-you-can-do-now"><span class="header-section-number">7.7</span> What You Can Do Now</h2>
+<ol type="1">
+<li><strong>Test NotebookLM</strong> with a small collection of documents from your current research</li>
+<li><strong>Try Deep Research</strong> on a topic you know well to calibrate its performance</li>
+<li><strong>Develop your verification workflow</strong> for checking AI-generated claims</li>
+<li><strong>Identify your research domains</strong> where these tools could be most valuable</li>
+<li><strong>Create your advanced research protocol</strong> combining both tools strategically</li>
+</ol>
+</section>
+<section id="the-research-frontier" class="level2" data-number="7.8">
+<h2 data-number="7.8" class="anchored" data-anchor-id="the-research-frontier"><span class="header-section-number">7.8</span> The Research Frontier</h2>
+<p>These tools represent the current frontier of AI-assisted research. They’re not perfect, but they’re powerful enough to transform what’s possible for individual researchers and small teams.</p>
+<p>The key is approaching them strategically:</p>
+<ul>
+<li>Use them to expand your scope, not replace your judgment</li>
+<li>Verify important claims through traditional scholarly methods</li>
+<li>Combine AI insights with your domain expertise</li>
+<li>Stay critical and maintain academic standards</li>
+</ul>
+<p>As these tools continue to evolve, researchers who learn to use them effectively will have significant advantages in conducting comprehensive, policy-relevant research.</p>
+<hr>
+<p><em>Up next: Coding Assistance and Data Analysis</em></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./apps_lit_review.html" class="pagination-link" aria-label="Literature Review Enhancement: Widening Your Net">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Literature Review Enhancement: Widening Your Net</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

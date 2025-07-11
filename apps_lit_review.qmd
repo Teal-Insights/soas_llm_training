@@ -1,0 +1,345 @@
+# Literature Review Enhancement: Widening Your Net
+
+*Tentative time: 15 minutes*
+
+## Learning Objectives
+
+By the end of this section, you will be able to:
+
+- **Apply the jagged frontier concept** to understand where LLMs excel in literature processing
+- **Use LLMs as an efficient funnel** to identify papers worth reading in detail
+- **Create structured summaries** that capture the information you need from academic papers
+- **Translate content between languages** to include more diverse sources in your research
+- **Bridge disciplinary boundaries** by translating between different academic jargons
+- **Customize your approach** for your specific research domain and needs
+
+## Why This Matters: The Information Deluge Problem
+
+There's an explosion of research being published. Even within narrow subfields, keeping up with the literature is becoming impossible. The volume of academic publishing has grown dramatically in recent decades, with researchers facing an ever-expanding universe of potentially relevant papers.
+
+You have a job, a family, and a life outside of research. You can't read everything that looks interesting. But you also can't afford to miss important developments in your field or related areas that might inform your work.
+
+This is where LLMs can be transformative—not by replacing careful reading and analysis, but by serving as an intelligent filter that helps you identify what deserves your limited time and attention.
+
+## The Jagged Frontier: Where LLMs Excel at Literature Processing
+
+Let's apply our jagged frontier concept to literature review tasks:
+
+**Inside the Frontier (LLMs excel):**
+- Creating structured summaries of complex texts
+- Identifying key arguments and findings
+- Extracting specific information (methodology, data sources, conclusions)
+- Translating between languages for initial understanding
+- Bridging disciplinary jargon differences
+- Finding patterns across multiple documents
+
+**Outside the Frontier (LLMs struggle):**
+- Understanding implicit context and unwritten assumptions
+- Grasping subtle theoretical nuances
+- Recognizing what's missing or what contradicts domain knowledge
+- Making critical judgments about research quality
+- Understanding the political or social subtext of academic work
+
+## The Scale Advantage: Time Mathematics
+
+Let's do some back-of-the-envelope math to understand the scale advantage:
+
+::: callout-note
+## Reading Time Reality Check
+
+**Typical reading speeds for complex academic text:**
+
+- Average reading speed: 200-250 words per minute
+- Academic paper reading (with comprehension): 100-150 words per minute
+- Typical academic paper: 6,000-8,000 words
+- 100-page report: ~25,000-30,000 words
+
+**Time calculations:**
+
+- Single academic paper: 40-80 minutes to read thoroughly
+- 100-page report: 3-5 hours of focused reading
+- Weekly literature review (10 papers): 7-13 hours
+
+**LLM processing:**
+
+- Structured summary of any paper: 30-60 seconds
+- Analysis of 100-page report: 2-3 minutes
+- Pattern analysis across 10 papers: 5-10 minutes
+:::
+
+This isn't about replacing careful reading—it's about helping you decide what merits that careful reading. LLMs can process the volume while you focus your expertise on the papers that matter most.
+
+## My Personal Literature Workflow
+
+Here's the strategy I've developed and refined over the past year:
+
+As a practitioner rather than an academic, I read a very broad array of materials: academic papers, IMF country reports, legislation, think tank papers, national policy documents, and more. Since these documents don't all have "methodologies" or "research questions," I keep my prompts broadly applicable and don't want to switch between document types for first-order filtering.
+
+**Step 1: Initial Filtering**
+When I encounter potentially relevant documents, I use this prompt:
+
+```markdown
+[Consider adding your personal context prompt here for better results]
+
+Please provide the full citation information for this document at the top, then create a detailed structured summary of this entire document, including any appendices. 
+
+I need to understand:
+- The main argument or purpose
+- Key findings or conclusions
+- Important data, evidence, or examples
+- Any policy implications or practical applications
+- Who the intended audience appears to be
+
+Format this as a structured summary with clear headings.
+```
+
+**Step 2: Section-by-Section Analysis**
+For documents that pass the initial filter, I use:
+
+```markdown
+Please create a detailed structured summary of each section of this document, including any appendices. For each section, tell me:
+- What the section covers
+- Key points or findings
+- Any specific data, evidence, or examples mentioned
+- How it relates to the overall argument
+
+Format this as a structured summary with clear headings.
+```
+This helps me understand exactly where to find specific information I need.
+
+**Results:**
+
+- 95% of documents: The summary gives me what I need for peripheral understanding
+- 5% of documents: Worth reading in detail, and I know exactly which sections to focus on
+- My research assistants create these summaries and add them to our shared database
+
+## Customizing for Your Research Domain
+
+The generic prompts above work well, but you can customize them for your specific field and needs:
+
+### For Social Science Research
+
+```markdown
+[Add your personal context prompt here if working individually, or brief context if sharing with others]
+
+You are analyzing a social science paper. Please create a structured summary that includes:
+
+**Citation Information:**
+- Full citation in [your preferred format]
+- DOI or other permanent identifier
+- Publication venue and impact factor if available
+
+**Research Context:**
+- Geographic and temporal scope
+- Research domain (economics, sociology, political science, etc.)
+- Target population or units of analysis
+- Theoretical framework employed
+
+**Methodology:**
+- Research design (experimental, observational, qualitative, mixed methods)
+- Data collection methods and sources
+- Sample size and selection criteria
+- Analytical approach and tools used
+
+**Key Findings:**
+- Main empirical results
+- Statistical significance and effect sizes where relevant
+- Unexpected or counterintuitive findings
+- Robustness checks or sensitivity analyses
+
+**Broader Implications:**
+- Theoretical contributions
+- Policy recommendations
+- Practical applications
+- Limitations acknowledged by authors
+
+**Critical Assessment:**
+- Methodological strengths and weaknesses
+- Potential biases in approach
+- Generalizability concerns
+- Areas for future research
+
+Include specific page numbers for key findings so I can locate them quickly.
+```
+
+### For Policy Research
+
+```markdown
+[Add your personal context prompt here if working individually, or brief context if sharing with others]
+
+Analyze this policy paper with focus on:
+
+**Citation Information:**
+- Full citation in [your preferred format]
+- Publication type (working paper, policy brief, journal article, etc.)
+- Institutional affiliation of authors
+
+**Policy Problem:**
+- Issue definition and scope
+- Stakeholders affected
+- Current policy landscape
+
+**Evidence Base:**
+- What research/data informs the analysis
+- Quality and recency of evidence
+- Any evidence gaps acknowledged
+
+**Recommendations:**
+- Specific policy proposals
+- Implementation mechanisms
+- Resource requirements
+- Timeline considerations
+
+**Political Economy:**
+- Potential supporters and opponents
+- Implementation challenges
+- Unintended consequences discussed
+
+Highlight any quantitative estimates (costs, benefits, impacts) with page numbers.
+```
+
+### Creating Your Custom Gem
+
+Once you've refined prompts that work well for your field, create a Gem (or Claude Project) to standardize this process:
+
+1. **Name it clearly:** "Literature Review Assistant - [Your Field]"
+2. **Include your research context** (your expertise, current projects, typical paper types)
+3. **Embed your refined prompts** as the default approach
+4. **Add specific formatting preferences** (citation style, section headings, etc.)
+
+## Translation: Two Types of Bridge-Building
+
+LLMs excel at two types of translation that can dramatically expand your research scope:
+
+### 1. Language Translation
+
+**The Opportunity:**
+Much important research is published in languages other than English. LLMs can provide initial translations that help you identify which papers merit professional translation.
+
+**The Reality Check:**
+LLM translation quality reflects training data availability. For major languages (Spanish, French, German, Chinese, Arabic), quality is generally good. For less common languages, quality varies significantly.
+
+**Practical Prompt:**
+
+```markdown
+Please translate this [source language] paper into English, then provide:
+
+1. A 3-sentence summary of the main argument
+2. The key empirical findings
+3. Any methodology that seems novel or interesting
+4. Whether this appears relevant to [your research area]
+
+You can work with either the full paper or just the abstract - both options work well with current LLMs.
+
+[Upload paper or paste abstract]
+
+If you're uncertain about any translation, please flag those sections.
+```
+
+**Best Practices:**
+
+- Upload full papers when possible - LLMs can handle them easily
+- Start with abstracts for quick relevance assessment if you have many papers
+- For core sources, get professional translation
+- Be aware of cultural context that might be lost in translation
+- Check technical terms against discipline-specific glossaries
+
+### 2. Cross-Disciplinary Translation
+
+**The Challenge:**
+Academic jargon is efficient within disciplines but creates barriers between them. Important insights often remain trapped within narrow subdisciplines.
+
+**The Solution:**
+LLMs can translate between academic jargons, helping you access insights from related fields.
+
+**Example Prompt:**
+
+```markdown
+[Consider adding your personal context prompt here for better results]
+
+This paper is written for [source discipline] scholars using technical terminology that may not be familiar to [target discipline] researchers. 
+
+Please:
+1. Identify the key concepts and findings
+2. Explain them in plain language
+3. Suggest how these insights might apply to [target discipline]
+4. Highlight any methodological approaches that could be adapted
+
+Focus on practical applications and avoid oversimplification of complex ideas.
+```
+
+**Real-World Application:**
+As a practitioner rather than an academic, I regularly need to understand and communicate across disciplines. I'm not a software engineer, but I need to speak intelligibly to software engineers to build open-source tools. I'm not a PhD economist, but I need to understand and evaluate complex economic models. I'm not a climate scientist, but I need to understand their findings to assess practical implications for the countries I advise. 
+
+LLMs help me bridge these gaps by translating complex concepts into language I can understand, while preserving the essential insights. This enables me to:
+- Understand the intuitions from different fields
+- Identify relevant methodologies from other disciplines
+- Communicate effectively with diverse expert communities
+- Build interdisciplinary solutions to complex problems
+
+## Hands-On Activity: Your Literature Funnel
+
+Let's practice building your personal literature workflow:
+
+**Step 1: Choose Your Papers**
+Select 3 papers: one you know well, one you're curious about, and one from a related but different field.
+
+**Step 2: Apply the Funnel**
+Use the basic structured summary prompt on all three papers.
+
+**Step 3: Customize**
+Based on the results, refine your prompt to better capture what you need for your research.
+
+**Step 4: Test Translation**
+If you have access to papers in other languages or from other disciplines, try the translation approaches.
+
+**Step 5: Create Your Gem**
+Build a reusable prompt that incorporates your refinements.
+
+## Common Pitfalls and How to Avoid Them
+
+### Pitfall 1: Trusting Without Verification
+
+- **Problem:** Accepting LLM summaries without checking against the original
+- **Solution:** Always verify key claims, especially quantitative findings
+
+### Pitfall 2: Missing Subtle Arguments
+
+- **Problem:** LLMs can miss theoretical nuances or implicit arguments
+- **Solution:** Use summaries to identify promising papers, then read the key sections yourself
+
+### Pitfall 3: Translation Overconfidence
+
+- **Problem:** Assuming translations capture all important meaning
+- **Solution:** Get professional translation for sources central to your argument
+
+### Pitfall 4: Generic Prompts
+
+- **Problem:** Using one-size-fits-all prompts that miss field-specific insights
+- **Solution:** Customize prompts for your discipline and research questions
+
+## What You Can Do Now
+
+1. **Test the basic workflow** with 3 papers of different types
+2. **Create your customized prompt** based on your field's specific needs
+3. **Build your Literature Review Gem** with your refined approach
+4. **Try cross-disciplinary translation** on a paper from a related field
+5. **Start your literature database** with structured summaries
+
+## The Bigger Picture
+
+This approach transforms literature review from a bottleneck into an advantage. Instead of being limited to papers you can physically read, you can:
+
+- **Cast a wider net** across languages and disciplines
+- **Identify patterns** across large bodies of literature
+- **Focus your expertise** on the most promising sources
+- **Stay current** with rapidly evolving fields
+- **Enable ambitious projects** that require broad literature synthesis
+
+Remember: LLMs are your research assistants, not your replacements. They handle the volume so you can focus on insight, analysis, and critical judgment.
+
+The goal isn't to read less—it's to read better. By using AI to filter and organize, you can spend more time on the deep, careful reading that produces real insights.
+
+---
+
+*Up next: Advanced Tools - NotebookLM and Deep Research*
