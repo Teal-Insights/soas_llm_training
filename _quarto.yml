@@ -20,8 +20,8 @@ book:
         - apps_prompting.qmd          # Chapter 2.1
         - apps_gems.qmd               # Chapter 2.2
         - apps_lit_review.qmd         # Chapter 2.3
-    #     - apps_coding.qmd             # Chapter 2.5
         - apps_other_tools.qmd        # Chapter 2.6
+        - apps_coding.qmd             # Chapter 2.5
     # 
     # - part: "Advanced Possibilities"
     #   chapters:

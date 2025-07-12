@@ -885,5 +885,159 @@
       "Practical Applications",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Advanced Tools: NotebookLM and Deep Research</span>"
     ]
+  },
+  {
+    "objectID": "apps_coding.html",
+    "href": "apps_coding.html",
+    "title": "8  Coding Assistance: Benefits, Pitfalls, and Best Practices",
+    "section": "",
+    "text": "8.1 Learning Objectives\nTentative time: 12 minutes\nBy the end of this section, you will be able to:",
+    "crumbs": [
+      "Practical Applications",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Coding Assistance: Benefits, Pitfalls, and Best Practices</span>"
+    ]
+  },
+  {
+    "objectID": "apps_coding.html#learning-objectives",
+    "href": "apps_coding.html#learning-objectives",
+    "title": "8  Coding Assistance: Benefits, Pitfalls, and Best Practices",
+    "section": "",
+    "text": "Understand the “jagged frontier” of AI coding capabilities and recognize where LLMs excel versus where they struggle\nApply best practices for AI-assisted coding whether you’re a beginner or experienced programmer\nAvoid common pitfalls like “vibe coding” and over-reliance on AI-generated solutions\nUse LLMs strategically to enhance your data analysis workflow and research reproducibility\nRecognize when AI coding assistance can help bridge the gap to programmatic approaches for larger projects",
+    "crumbs": [
+      "Practical Applications",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Coding Assistance: Benefits, Pitfalls, and Best Practices</span>"
+    ]
+  },
+  {
+    "objectID": "apps_coding.html#why-this-matters-for-your-research",
+    "href": "apps_coding.html#why-this-matters-for-your-research",
+    "title": "8  Coding Assistance: Benefits, Pitfalls, and Best Practices",
+    "section": "8.2 Why This Matters for Your Research",
+    "text": "8.2 Why This Matters for Your Research\nMany researchers work with data analysis code—whether in R, Python, Stata, SPSS, or MATLAB. You might write code yourself, supervise research assistants who code, or wish you could move from Excel to more reproducible analytical workflows.\nLLMs have become surprisingly capable coding assistants, but they come with significant caveats. When used well, they can dramatically reduce the time spent on routine coding tasks, help you learn new approaches, and make software development best practices more accessible. When used poorly, they can create more problems than they solve.\nThis chapter will help you navigate both the promise and the pitfalls of AI-assisted coding.",
+    "crumbs": [
+      "Practical Applications",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Coding Assistance: Benefits, Pitfalls, and Best Practices</span>"
+    ]
+  },
+  {
+    "objectID": "apps_coding.html#the-jagged-frontier-where-llms-excel-and-struggle-in-coding",
+    "href": "apps_coding.html#the-jagged-frontier-where-llms-excel-and-struggle-in-coding",
+    "title": "8  Coding Assistance: Benefits, Pitfalls, and Best Practices",
+    "section": "8.3 The Jagged Frontier: Where LLMs Excel and Struggle in Coding",
+    "text": "8.3 The Jagged Frontier: Where LLMs Excel and Struggle in Coding\nLet’s apply our jagged frontier concept to coding tasks:\nInside the Frontier (LLMs excel):\n\nWriting standard data manipulation and analysis code\nTranslating between programming languages (R to Python, etc.)\nExplaining what existing code does, line by line\nGenerating unit tests and documentation\nCreating first drafts of visualization code\nDebugging common error messages\nImplementing standard statistical methods\nWriting repetitive or boilerplate code\n\nOutside the Frontier (LLMs struggle):\n\nUnderstanding your specific research context and data quirks\nMaking architectural decisions for complex projects\nOptimizing code for performance at scale\nHandling edge cases specific to your domain\nChoosing the right statistical approach for your research question\nUnderstanding implicit assumptions in your analytical workflow\n\nThe Jagged Edge (Be Extra Careful):\n\nComplex, multi-step analyses where small errors compound\nDomain-specific packages with limited training data\nCode that handles sensitive or proprietary data\nStatistical methods that require deep contextual understanding",
+    "crumbs": [
+      "Practical Applications",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Coding Assistance: Benefits, Pitfalls, and Best Practices</span>"
+    ]
+  },
+  {
+    "objectID": "apps_coding.html#the-promise-what-llms-can-do-for-research-coding",
+    "href": "apps_coding.html#the-promise-what-llms-can-do-for-research-coding",
+    "title": "8  Coding Assistance: Benefits, Pitfalls, and Best Practices",
+    "section": "8.4 The Promise: What LLMs Can Do for Research Coding",
+    "text": "8.4 The Promise: What LLMs Can Do for Research Coding\n\n8.4.1 Dramatic Speed Improvements for Routine Tasks\nLLMs can handle many coding tasks in seconds that might take hours to research and implement manually:\n\nData cleaning and transformation: “Convert this wide survey data to long format and handle missing values”\nStatistical analysis: “Run a fixed-effects regression with clustered standard errors”\nVisualization: “Create a publication-ready plot showing trends by region and year”\nCode translation: “Convert this Stata code to R using tidyverse approaches”\n\n\n\n8.4.2 Learning Acceleration\nLLMs can serve as patient, knowledgeable tutors:\n\nExplain unfamiliar code: Understand what a colleague’s analysis script actually does\nLearn new languages: Bridge from Stata to R, or R to Python, with guided examples\nDiscover best practices: Learn about code style, testing, and documentation approaches\nUnderstand error messages: Get help diagnosing and fixing coding problems\n\n\n\n8.4.3 Enhanced Research Reproducibility\nLLMs can help implement software development best practices that make research more robust:\n\nUnit testing: Automatically generate tests to verify your code works as expected\nDocumentation: Create clear explanations of what your analysis code does\nCode organization: Structure projects following established conventions\nVersion control: Learn to use Git for tracking changes in your analysis",
+    "crumbs": [
+      "Practical Applications",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Coding Assistance: Benefits, Pitfalls, and Best Practices</span>"
+    ]
+  },
+  {
+    "objectID": "apps_coding.html#the-perils-vibe-coding-and-common-pitfalls",
+    "href": "apps_coding.html#the-perils-vibe-coding-and-common-pitfalls",
+    "title": "8  Coding Assistance: Benefits, Pitfalls, and Best Practices",
+    "section": "8.5 The Perils: “Vibe Coding” and Common Pitfalls",
+    "text": "8.5 The Perils: “Vibe Coding” and Common Pitfalls\n\n8.5.1 The “Vibe Coding” Problem\n\n\n\n\n\n\nWhat is “Vibe Coding”?\n\n\n\n“Vibe coding” refers to the phenomenon where AI confidently generates code that looks correct and professional, giving users a false sense that everything is working properly. The code might run without errors but produce incorrect results, or contain subtle bugs that only become apparent later.\nThe code often appears sophisticated and well-structured, making it difficult to spot errors, especially for less experienced programmers.\n\n\nCommon manifestations:\n\nCode that runs but produces incorrect statistical results\nFunctions that don’t exist (AI “hallucinations”)\nMixing syntax from different programming languages\nSolutions that work for simple cases but fail with real data complexity\n\n\n\n8.5.2 The 0-to-90% Problem\nOne of the most frustrating aspects of AI coding assistance is what I call the “0-to-90% problem.” LLMs can quickly generate code that appears to solve 90% of your problem, but then you spend hours debugging the remaining 10%.\nWhy this happens:\n\nAI lacks context about your specific data quirks\nComplex analyses have interdependencies AI doesn’t understand\nEdge cases and real-world data messiness aren’t captured in training data\nAI can’t validate its own outputs against your research objectives\n\n\n\n8.5.3 Language-Specific Limitations\nAI coding performance varies significantly by programming language, reflecting the training data available:\nStrong Performance:\n\nPython (extensive open-source examples)\nR (large community, well-documented packages)\nJavaScript (massive web presence)\n\nWeaker Performance:\n\nStata (limited online documentation compared to open-source alternatives)\nSPSS (proprietary, fewer public examples)\nMATLAB (specialized, less public code)\n\nFor languages with limited training data, AI is more likely to hallucinate syntax or suggest outdated approaches.\nHowever, there’s an important caveat: while LLMs excel at open-source languages, these languages also evolve rapidly. LLMs may have outdated code in their training data and might not know about recent changes in package functionality. Fortunately, many newer models now include internet search capabilities, allowing them to learn about recent updates that occurred after their training cutoff.",
+    "crumbs": [
+      "Practical Applications",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Coding Assistance: Benefits, Pitfalls, and Best Practices</span>"
+    ]
+  },
+  {
+    "objectID": "apps_coding.html#best-practices-for-ai-assisted-coding",
+    "href": "apps_coding.html#best-practices-for-ai-assisted-coding",
+    "title": "8  Coding Assistance: Benefits, Pitfalls, and Best Practices",
+    "section": "8.6 Best Practices for AI-Assisted Coding",
+    "text": "8.6 Best Practices for AI-Assisted Coding\n\n8.6.1 Use the Most Advanced Models Available\nModel capabilities are improving rapidly, and using the most advanced models makes a significant difference in code quality and reliability. This typically requires paid subscriptions ($20/month), but it’s a worthwhile investment. As one researcher put it: “Twenty dollars a month is peanuts for freeing you to walk your dog instead of being stuck in debugging hell.”\nThe free versions of AI models are often significantly less capable than their paid counterparts, leading to more errors and frustration.\n\n\n8.6.2 For Beginners: From Excel to Code\nIf you’re new to coding or primarily use Excel for data analysis:\nStart Small:\n\nUse AI to help transition simple Excel tasks to code\nAsk for heavily commented code that explains each step\nFocus on reproducible analyses rather than one-off calculations\n\nExample Prompt:\nI currently analyze survey data in Excel but want to learn R. I have a dataset with household income by region and year. Can you show me how to:\n1. Load the data from a CSV file\n2. Calculate mean income by region\n3. Create a simple bar chart\n4. Export the results\n\nPlease include comments explaining what each line does, and use tidyverse style.\n\n\n8.6.3 For Intermediate Users: Enhance Your Skills\nIf you already code but want to improve:\nIterative Development:\n\nBreak complex tasks into smaller steps\nTest each component before combining\nUse AI to explain unfamiliar code patterns\n\nQuality Improvements:\n\nAsk AI to review your code for potential improvements\nRequest help with testing and documentation\nLearn about style guides and best practices\n\n\n\n8.6.4 For Advanced Users: Accelerate Development\nIf you’re already comfortable coding:\nRapid Prototyping:\n\nUse AI for boilerplate code and standard patterns\nGet help with unfamiliar packages or methods\nExplore alternative approaches to complex problems\n\nCross-Language Translation:\n\nConvert analyses between R, Python, and Stata\nLearn new programming paradigms\nAdapt code from different domains\n\n\n\n8.6.5 Effective Debugging with AI\nWhen you encounter errors, AI can be incredibly helpful if you provide complete information:\nWhat to include in your debugging request:\n\nFull error message: Copy the entire error output, not just the summary\nComplete code: Share the code that’s causing the problem\nSystem information: In R, include sessionInfo() output; in Python, include package versions\nExpected vs. actual behavior: Explain what you thought should happen\nScreenshots: Sometimes visual context helps, especially with data display issues\n\nExample debugging prompt:\nI'm getting an error in R when trying to merge two datasets. Here's the error message:\n\n[paste full error message]\n\nHere's my code:\n[paste complete code block]\n\nHere's my sessionInfo():\n[paste sessionInfo() output]\n\nI expected this to create a merged dataset with 1000 rows, but instead I'm getting this error. What's going wrong?\nThis comprehensive approach helps AI understand your specific context and provide more accurate solutions.",
+    "crumbs": [
+      "Practical Applications",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Coding Assistance: Benefits, Pitfalls, and Best Practices</span>"
+    ]
+  },
+  {
+    "objectID": "apps_coding.html#creating-your-coding-assistant",
+    "href": "apps_coding.html#creating-your-coding-assistant",
+    "title": "8  Coding Assistance: Benefits, Pitfalls, and Best Practices",
+    "section": "8.7 Creating Your Coding Assistant",
+    "text": "8.7 Creating Your Coding Assistant\nHere’s a refined version of a coding assistant prompt that works well for research:\n# [Your Name] - Research Coding Assistant\n\n## About Me\nI'm a [your role] working on [your research area]. I primarily use [your main language] for data analysis and have [your experience level] programming experience.\n\n## My Coding Context\n- **Primary language**: [R/Python/Stata/etc.]\n- **Typical tasks**: [Survey data analysis, econometric models, etc.]\n- **Style preferences**: [Tidyverse, PEP 8, etc.]\n- **Current project**: [Brief description]\n\n## How to Help Me Code\n1. **Follow style guides**: Use [tidyverse style guide/PEP 8/etc.]\n2. **Break down complex tasks**: Divide large projects into manageable steps\n3. **Explain your logic**: Help me understand the approach, not just the syntax\n4. **Ask clarifying questions**: Don't assume what I want - ask for specifics\n5. **Use best practices**: Include error handling, comments, and testing where appropriate\n6. **Prefer functional approaches**: Use purrr/map functions over loops when possible\n\n## What I Need Most Help With\n- [Specific coding challenges you face]\n- [Areas where you want to improve]\n- [Types of analyses you do frequently]\n\nWhen providing code, please:\n- Include comments explaining key steps\n- Use clear variable names\n- Suggest alternative approaches when relevant\n- Point out potential pitfalls or limitations",
+    "crumbs": [
+      "Practical Applications",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Coding Assistance: Benefits, Pitfalls, and Best Practices</span>"
+    ]
+  },
+  {
+    "objectID": "apps_coding.html#hands-on-activity-ai-assisted-data-analysis",
+    "href": "apps_coding.html#hands-on-activity-ai-assisted-data-analysis",
+    "title": "8  Coding Assistance: Benefits, Pitfalls, and Best Practices",
+    "section": "8.8 Hands-On Activity: AI-Assisted Data Analysis",
+    "text": "8.8 Hands-On Activity: AI-Assisted Data Analysis\nLet’s practice using AI for a common research task:\nScenario: You have survey data with household income, education levels, and geographic regions. You want to analyze income inequality patterns.\nStep 1: Plan Your Analysis Before asking AI for code, outline what you want to do: - Load and examine the data - Calculate summary statistics by region - Create visualizations - Run statistical tests\nStep 2: Iterative Development Instead of asking for everything at once, try:\nI have survey data with columns: household_id, income, education, region. \nFirst, help me write R code to:\n1. Load the data and examine its structure\n2. Check for missing values and outliers\n3. Calculate basic summary statistics\n\nPlease use tidyverse style and include comments.\nStep 3: Build Complexity Once the basic code works, add layers:\nNow help me create a visualization showing income distribution by region, \nusing ggplot2. I want to compare medians and show the spread of the data.\nStep 4: Validation Always test AI-generated code: - Run it on a subset of your data first - Check that outputs make sense - Verify calculations manually for simple cases",
+    "crumbs": [
+      "Practical Applications",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Coding Assistance: Benefits, Pitfalls, and Best Practices</span>"
+    ]
+  },
+  {
+    "objectID": "apps_coding.html#moving-from-chat-to-ide-advanced-coding-tools",
+    "href": "apps_coding.html#moving-from-chat-to-ide-advanced-coding-tools",
+    "title": "8  Coding Assistance: Benefits, Pitfalls, and Best Practices",
+    "section": "8.9 Moving from Chat to IDE: Advanced Coding Tools",
+    "text": "8.9 Moving from Chat to IDE: Advanced Coding Tools\n\n8.9.1 Specialized AI Coding Environments\nWhile chatbots are great for learning and quick questions, specialized coding environments offer more sophisticated assistance:\nCursor - An AI-native code editor that can:\n\nEdit code in place rather than generating separate blocks\nUnderstand your entire project context\nRun code and iterate based on results\nProvide inline suggestions as you type\n\nOther Tools:\n\nGitHub Copilot - Autocomplete suggestions within your existing IDE\nClaude Code - Anthropic’s command-line coding assistant\nWindsurf - Another AI-powered development environment\n\n\n\n8.9.2 Benefits of IDE-Based Assistance\nContext Awareness:\n\nSees your entire project, not just individual prompts\nMaintains consistency across files\nUnderstands project structure and dependencies\n\nIterative Development:\n\nCan run code and learn from errors\nMakes targeted edits rather than rewriting everything\nPreserves your existing code while making improvements\n\nProfessional Workflow:\n\nIntegrates with version control (Git)\nSupports debugging and testing\nEnables collaborative development",
+    "crumbs": [
+      "Practical Applications",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Coding Assistance: Benefits, Pitfalls, and Best Practices</span>"
+    ]
+  },
+  {
+    "objectID": "apps_coding.html#bridge-to-programmatic-approaches",
+    "href": "apps_coding.html#bridge-to-programmatic-approaches",
+    "title": "8  Coding Assistance: Benefits, Pitfalls, and Best Practices",
+    "section": "8.10 Bridge to Programmatic Approaches",
+    "text": "8.10 Bridge to Programmatic Approaches\nUnderstanding AI coding assistance helps prepare you for the programmatic approaches we’ll discuss in our advanced section. When you’re ready to process thousands of documents or run large-scale analyses, you’ll use APIs rather than web interfaces.\nThe Connection:\n\nWeb coding practice → API development skills\nSmall-scale analysis → Large-scale automation\nInteractive debugging → Robust, reproducible pipelines\n\nIf you become comfortable with AI-assisted coding through chat interfaces, you’ll be better prepared to work with research assistants or collaborators who can help you scale up to API-based approaches.",
+    "crumbs": [
+      "Practical Applications",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Coding Assistance: Benefits, Pitfalls, and Best Practices</span>"
+    ]
+  },
+  {
+    "objectID": "apps_coding.html#what-can-go-wrong-and-how-to-fix-it",
+    "href": "apps_coding.html#what-can-go-wrong-and-how-to-fix-it",
+    "title": "8  Coding Assistance: Benefits, Pitfalls, and Best Practices",
+    "section": "8.11 What Can Go Wrong (and How to Fix It)",
+    "text": "8.11 What Can Go Wrong (and How to Fix It)\n\n8.11.1 Common Issues:\nOver-reliance on AI output\n\nProblem: Accepting code without understanding how it works\nSolution: Always ask AI to explain the code and test it yourself\n\n“Vibe coding” pitfalls\n\nProblem: Code that looks professional but contains subtle errors\nSolution: Validate outputs, especially statistical results\n\nGetting stuck in debugging loops\n\nProblem: AI fixes create new problems, leading to endless iterations\nSolution: Start over with a simpler approach, or ask for human help\n\nLanguage-specific limitations\n\nProblem: Poor performance with specialized tools like Stata\nSolution: Be extra careful with verification, consider alternative approaches\n\n\n\n8.11.2 Validation Strategies:\n\nTest with known data: Use datasets where you know the expected results\nManual verification: Check AI calculations against hand calculations\nCross-platform validation: Compare results across different tools\nPeer review: Have colleagues examine AI-generated code\nDocumentation: Keep detailed notes about what the code is supposed to do",
+    "crumbs": [
+      "Practical Applications",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Coding Assistance: Benefits, Pitfalls, and Best Practices</span>"
+    ]
+  },
+  {
+    "objectID": "apps_coding.html#what-you-can-do-now",
+    "href": "apps_coding.html#what-you-can-do-now",
+    "title": "8  Coding Assistance: Benefits, Pitfalls, and Best Practices",
+    "section": "8.12 What You Can Do Now",
+    "text": "8.12 What You Can Do Now\nFor Beginners:\n\nTry a simple data task - Use AI to help convert an Excel analysis to code\nFocus on understanding - Ask AI to explain every line of code it generates\nStart with small datasets - Practice with manageable examples before tackling large projects\n\nFor Intermediate Users:\n\nCreate your coding assistant using the template above\nExperiment with code review - Ask AI to critique and improve your existing code\nLearn new approaches - Use AI to explore unfamiliar packages or methods\n\nFor Advanced Users:\n\nTry specialized tools - Experiment with Cursor or GitHub Copilot\nFocus on best practices - Use AI to improve code documentation and testing\nExplore cross-language translation - Convert analyses between R, Python, and Stata",
+    "crumbs": [
+      "Practical Applications",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Coding Assistance: Benefits, Pitfalls, and Best Practices</span>"
+    ]
+  },
+  {
+    "objectID": "apps_coding.html#the-bigger-picture",
+    "href": "apps_coding.html#the-bigger-picture",
+    "title": "8  Coding Assistance: Benefits, Pitfalls, and Best Practices",
+    "section": "8.13 The Bigger Picture",
+    "text": "8.13 The Bigger Picture\nAI coding assistance is most valuable when it amplifies your existing skills rather than replacing your judgment. The goal isn’t to become an AI expert, but to use these tools strategically to:\n\nReduce time on routine tasks so you can focus on analysis and interpretation\nLearn new approaches that enhance your research capabilities\nImprove code quality through better documentation and testing\nEnable more ambitious projects by making complex analyses more accessible\n\nRemember: AI is a coding co-pilot, not an autopilot. It can help you fly faster and explore new territories, but you remain the pilot responsible for navigation and safe landing.\nAs you become more comfortable with AI-assisted coding, you’ll be better prepared to consider programmatic approaches for larger-scale research projects—the topic of our advanced section.\n\nUp next: Case Study - Large-Scale Text Classification with APIs",
+    "crumbs": [
+      "Practical Applications",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Coding Assistance: Benefits, Pitfalls, and Best Practices</span>"
+    ]
   }
 ]
