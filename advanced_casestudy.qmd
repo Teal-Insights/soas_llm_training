@@ -1,0 +1,216 @@
+# Case Study: Large-Scale Text Classification with LLMs
+
+*Tentative time: 10 minutes*
+
+## Learning Objectives
+
+By the end of this section, you will be able to:
+
+- **Understand how LLMs enable ambitious policy research** with limited resources
+- **Apply practical validation strategies** to ensure research integrity when using LLMs at scale
+- **Recognize common challenges** in LLM classification projects (including unexpected censorship issues)
+- **Appreciate the importance of transparency** in documenting methods for others to build upon
+- **Implement an iterative approach** to developing and testing classification systems
+
+## The Policy Challenge: Understanding China's Role in the Energy Transition
+
+Last year, Yunnan Chen (Research Fellow at ODI) and I set out to answer critical questions about China's evolving role in global development finance. China has been a key source of lending to developing countries, but recent policy pronouncements suggested major shifts:
+
+- Movement toward a "Green Belt and Road Initiative"
+- Emphasis on "small and beautiful" projects
+- Transition from policy bank lending to co-financing with state-owned commercial banks (SOCBs)
+
+We needed empirical evidence: Was China actually supporting the green transition in developing countries? As lending shifted toward co-financing models, who exactly was participating in green projects? What types of projects were being funded, and at what scale?
+
+These weren't academic questions. Understanding China's actual role—not just the rhetoric—was essential for policymakers working on climate finance and energy transition in developing countries.
+
+## The Classification Challenge
+
+We needed to classify 18,000 Chinese overseas lending projects from AidData's GCDF 3.0 dataset into environmental categories:
+
+- **🟢 Green**: Solar, wind, hydro, nuclear, and other renewable energy
+- **🟫 Brown**: Coal, oil, and fossil fuel infrastructure
+- **🔘 Grey**: Projects with indirect impacts (transmission lines, natural gas)
+- **⚪ Neutral**: Non-energy projects
+
+Traditional approaches would have required:
+
+- 1,500 hours of work (5 minutes per project × 18,000 projects)
+- $22,500 in research assistant costs
+- Large grant funding to support such an effort
+
+We completed it in 15 hours for $1.58.
+
+## The Reality of Human vs. LLM Classification
+
+Let's be honest about manual classification at scale. I've done this work myself. After a few hours of coding projects, your eyes glaze over. You start questioning whether you're applying criteria consistently. Are you coding things the same way you did yesterday? Last week? 
+
+Research assistants face the same challenges—and who can blame them if attention wanders during hour six of classifying infrastructure projects? This isn't about capability; it's about the mind-numbing nature of repetitive classification tasks.
+
+LLMs bring something humans can't sustain: endless patience and perfect consistency. They apply the same criteria to project 17,000 as they did to project 1. No fatigue, no drift in standards, no bad days.
+
+The question isn't whether LLMs are perfect—they're not. It's whether they can achieve good-enough accuracy with perfect consistency at a scale that makes ambitious research possible.
+
+## From Keywords to Context: Why LLMs Were Essential
+
+### The Keyword Approach Failed
+
+I started where most researchers would: keyword searches. I wrote regular expressions to find "solar," "wind," "coal," and other energy terms.
+
+It quickly became clear this wouldn't work:
+
+**Example 1**: "Development of 500MW solar power plant with backup diesel generator"
+
+- Keyword search sees: "diesel" → classifies as brown
+- Reality: This is a green project with minimal fossil fuel backup
+
+Keywords couldn't understand context. They couldn't distinguish between a solar plant with diesel backup (green) and a diesel plant with solar panels on the roof (brown).
+
+### LLMs Understand Context
+
+Large Language Models can read an entire project description and understand the primary purpose. This contextual understanding was exactly what we needed for accurate classification at scale.
+
+## Building a Validation Framework
+
+Finding no established best practices for validating LLM classifications in policy research, we developed our own multi-stage approach that attempted to balance pragmatism and rigor.
+
+### Stage 1: Inter-Model Agreement
+
+First, we tested how well different LLMs agreed with each other on classifications. This revealed important patterns:
+
+![LLM Agreement Analysis](images/llm_agreement_analysis.png)
+
+**Key insights from inter-model agreement:**
+
+- High agreement on NEUTRAL (94.4%) and GREEN (94.8%) projects
+- Lower agreement on GREY (84.1%) and BROWN (85.5%) categories
+- Agreement correlated with LLM confidence levels
+- Llama 3.3 was an outlier
+
+### Stage 2: Human Validation
+
+After establishing inter-model agreement patterns, my co-author and I manually classified 300 projects to test against human judgment:
+
+| Model | Overall Agreement | Green Projects Agreement | Cost (Full Dataset) | Time |
+|-------|-------------------|-------------------------|-------------------|------|
+| **Deepseek v3** | 91.8% | 95.5% | $1.58 | 15 hours |
+| Claude Sonnet 3.5 | 85.9% | 90.9% | ~$4,700 | 16 hours |
+| GPT-4o mini | 87.3% | 88.4% | ~$54 | 11 hours |
+| Llama 3.3 (local) | 70.1% | 76.2% | $0 | 338 hours |
+
+::: callout-note
+## Open Source Models: Promise vs. Reality
+
+We tested two open source options:
+
+- **Deepseek v3**: Technically open source but too large to run locally. We used their API, which performed excellently.
+- **Llama 3.3**: Small enough to run on a Mac Mini with 64GB RAM. Performance was poor (70% accuracy) and glacially slow (2 weeks for full dataset).
+
+The gap between frontier models (whether closed like Claude or API-accessible like Deepseek) and truly local models remains substantial.
+:::
+
+## The Iterative Development Process
+
+::: callout-tip
+## Start Small, Then Scale
+
+When developing your classification system:
+
+1. **Test with 5-10 examples** to refine your prompt
+2. **Validate on 50-100 projects** to catch edge cases
+3. **Run a larger test (500-1000)** to identify infrastructure issues
+4. **Only then process your full dataset**
+
+This approach saves time, money, and frustration. We caught several bugs and prompt improvements during small-scale testing that would have been expensive mistakes at full scale.
+:::
+
+## The Unexpected Challenge: Content Moderation
+
+Everything ran smoothly until 56 projects repeatedly failed with "Content Exists Risk" errors. Investigation revealed the failing projects mentioned politically sensitive Chinese figures like Xi Jinping's wife and disgraced former officials.
+
+Since these names were incidental to project descriptions, we replaced them with "a Chinese official." The classification resumed without issues.
+
+!["Non Traditional" Debugging](images/non_traditional_debugging.png)
+
+::: callout-note
+## Content Moderation Reality
+
+All LLM providers implement content moderation—not just Chinese companies. I once asked Gemini about a Trump administration policy's constitutionality, and it refused to answer because it said it didn't want to provide a potentially incorrect answer to a politically sensitive question.
+
+For researchers using public datasets like AidData's GCDF 3.0, these issues are manageable. Those working with sensitive data should carefully evaluate provider policies.
+:::
+
+## Policy-Relevant Findings
+
+The classification revealed surprising insights:
+
+### Finding 1: Limited Green Investment
+
+- Only $86.5 billion in green investments (5.8% of total Chinese lending)
+- Dominated by large hydropower (71.6%) and nuclear (12.0%)
+- Minimal solar (3.2%) and wind (3.7%) despite rhetoric
+
+### Finding 2: No Green Surge Over Time
+Despite talk of a "Green BRI," our data through 2021 showed no significant increase in renewable energy financing.
+
+### Finding 3: Bifurcated Co-financing Networks
+Green projects rely on public development banks while commercial co-financing focuses on traditional infrastructure—with little overlap between these networks.
+
+## Transparency and Reproducibility
+
+We published everything:
+
+- **[27-page methodological appendix](https://odi.org/en/publications/greener-on-the-other-side-mapping-chinas-overseas-co-financing-and-financial-innovation/)** 
+- **[Complete code on GitHub](https://github.com/Teal-Insights/odi_china_lending_llm_classification)**
+- **All prompts and validation data**
+
+This transparency serves multiple purposes:
+
+1. **Exposes assumptions to scrutiny**: Our definition of "green" is contentious. By sharing our classification criteria, others can challenge or adapt it.
+
+2. **Enables others to build on our work**: The name standardization alone took enormous effort. Why should others reinvent that wheel?
+
+3. **Raises the bar on reproducibility**: While we didn't achieve full reproducibility (that would require packaging an open source model in a Docker container), we took significant steps toward transparency.
+
+As two authors with limited budget, LLM coding assistance was crucial in achieving this level of documentation and code quality.
+
+## The Transformation of Research Possibilities
+
+This project doesn't represent doing the impossible—someone with large grant funding could have hired teams to classify these projects manually. Instead, it shows how LLMs dramatically expand what's possible for researchers with limited resources.
+
+We face difficult policy challenges with constrained budgets. Tools that allow us to do more ambitious research with less funding are exciting and important. That's why we're working to push this conversation forward through transparent documentation and workshops like this one.
+
+## Key Takeaways
+
+1. **LLMs offer consistency at scale** that humans can't sustain for repetitive tasks
+2. **Multi-stage validation builds confidence**—test models against each other, then against human judgment
+3. **Iterative development saves time and money**—start small, catch bugs early
+4. **Transparency enables progress**—share your methods so others can build on them
+5. **Perfect is the enemy of good**—focus on enabling research that wouldn't happen otherwise
+
+## What You Can Do Now
+
+**For your own research:**
+
+1. Identify classification bottlenecks in your work
+2. Start with 10-20 examples to test feasibility
+3. Build validation into your process from the beginning
+4. Share your methods and code openly
+5. Focus on research questions that matter, not perfect methods
+
+**For the field:**
+
+- Contribute to emerging best practices
+- Build on others' work rather than starting from scratch
+- Be transparent about both successes and limitations
+- Remember: we're all figuring this out together
+
+## The Bigger Picture
+
+This project demonstrates how LLMs can transform resource-constrained research. We moved from assumptions about China's role in the energy transition to evidence-based analysis that informs real policy decisions—all with two researchers and minimal budget.
+
+The technology doesn't replace human judgment. It amplifies human expertise, allowing us to tackle questions at a scale that reveals patterns invisible to traditional methods. That's the promise worth pursuing.
+
+---
+
+*This concludes our workshop on AI for the Skeptical Scholar. Thank you for joining us on this journey toward more ambitious, transparent, and impactful research.*

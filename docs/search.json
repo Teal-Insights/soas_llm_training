@@ -1039,5 +1039,170 @@
       "Practical Applications",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Coding Assistance: Benefits, Pitfalls, and Best Practices</span>"
     ]
+  },
+  {
+    "objectID": "advanced_casestudy.html",
+    "href": "advanced_casestudy.html",
+    "title": "9  Case Study: Large-Scale Text Classification with LLMs",
+    "section": "",
+    "text": "9.1 Learning Objectives\nTentative time: 10 minutes\nBy the end of this section, you will be able to:",
+    "crumbs": [
+      "Advanced Possibilities",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Case Study: Large-Scale Text Classification with LLMs</span>"
+    ]
+  },
+  {
+    "objectID": "advanced_casestudy.html#learning-objectives",
+    "href": "advanced_casestudy.html#learning-objectives",
+    "title": "9  Case Study: Large-Scale Text Classification with LLMs",
+    "section": "",
+    "text": "Understand how LLMs enable ambitious policy research with limited resources\nApply practical validation strategies to ensure research integrity when using LLMs at scale\nRecognize common challenges in LLM classification projects (including unexpected censorship issues)\nAppreciate the importance of transparency in documenting methods for others to build upon\nImplement an iterative approach to developing and testing classification systems",
+    "crumbs": [
+      "Advanced Possibilities",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Case Study: Large-Scale Text Classification with LLMs</span>"
+    ]
+  },
+  {
+    "objectID": "advanced_casestudy.html#the-policy-challenge-understanding-chinas-role-in-the-energy-transition",
+    "href": "advanced_casestudy.html#the-policy-challenge-understanding-chinas-role-in-the-energy-transition",
+    "title": "9  Case Study: Large-Scale Text Classification with LLMs",
+    "section": "9.2 The Policy Challenge: Understanding China’s Role in the Energy Transition",
+    "text": "9.2 The Policy Challenge: Understanding China’s Role in the Energy Transition\nLast year, Yunnan Chen (Research Fellow at ODI) and I set out to answer critical questions about China’s evolving role in global development finance. China has been a key source of lending to developing countries, but recent policy pronouncements suggested major shifts:\n\nMovement toward a “Green Belt and Road Initiative”\nEmphasis on “small and beautiful” projects\nTransition from policy bank lending to co-financing with state-owned commercial banks (SOCBs)\n\nWe needed empirical evidence: Was China actually supporting the green transition in developing countries? As lending shifted toward co-financing models, who exactly was participating in green projects? What types of projects were being funded, and at what scale?\nThese weren’t academic questions. Understanding China’s actual role—not just the rhetoric—was essential for policymakers working on climate finance and energy transition in developing countries.",
+    "crumbs": [
+      "Advanced Possibilities",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Case Study: Large-Scale Text Classification with LLMs</span>"
+    ]
+  },
+  {
+    "objectID": "advanced_casestudy.html#the-classification-challenge",
+    "href": "advanced_casestudy.html#the-classification-challenge",
+    "title": "9  Case Study: Large-Scale Text Classification with LLMs",
+    "section": "9.3 The Classification Challenge",
+    "text": "9.3 The Classification Challenge\nWe needed to classify 18,000 Chinese overseas lending projects from AidData’s GCDF 3.0 dataset into environmental categories:\n\n🟢 Green: Solar, wind, hydro, nuclear, and other renewable energy\n🟫 Brown: Coal, oil, and fossil fuel infrastructure\n🔘 Grey: Projects with indirect impacts (transmission lines, natural gas)\n⚪ Neutral: Non-energy projects\n\nTraditional approaches would have required:\n\n1,500 hours of work (5 minutes per project × 18,000 projects)\n$22,500 in research assistant costs\nLarge grant funding to support such an effort\n\nWe completed it in 15 hours for $1.58.",
+    "crumbs": [
+      "Advanced Possibilities",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Case Study: Large-Scale Text Classification with LLMs</span>"
+    ]
+  },
+  {
+    "objectID": "advanced_casestudy.html#the-reality-of-human-vs.-llm-classification",
+    "href": "advanced_casestudy.html#the-reality-of-human-vs.-llm-classification",
+    "title": "9  Case Study: Large-Scale Text Classification with LLMs",
+    "section": "9.4 The Reality of Human vs. LLM Classification",
+    "text": "9.4 The Reality of Human vs. LLM Classification\nLet’s be honest about manual classification at scale. I’ve done this work myself. After a few hours of coding projects, your eyes glaze over. You start questioning whether you’re applying criteria consistently. Are you coding things the same way you did yesterday? Last week?\nResearch assistants face the same challenges—and who can blame them if attention wanders during hour six of classifying infrastructure projects? This isn’t about capability; it’s about the mind-numbing nature of repetitive classification tasks.\nLLMs bring something humans can’t sustain: endless patience and perfect consistency. They apply the same criteria to project 17,000 as they did to project 1. No fatigue, no drift in standards, no bad days.\nThe question isn’t whether LLMs are perfect—they’re not. It’s whether they can achieve good-enough accuracy with perfect consistency at a scale that makes ambitious research possible.",
+    "crumbs": [
+      "Advanced Possibilities",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Case Study: Large-Scale Text Classification with LLMs</span>"
+    ]
+  },
+  {
+    "objectID": "advanced_casestudy.html#from-keywords-to-context-why-llms-were-essential",
+    "href": "advanced_casestudy.html#from-keywords-to-context-why-llms-were-essential",
+    "title": "9  Case Study: Large-Scale Text Classification with LLMs",
+    "section": "9.5 From Keywords to Context: Why LLMs Were Essential",
+    "text": "9.5 From Keywords to Context: Why LLMs Were Essential\n\n9.5.1 The Keyword Approach Failed\nI started where most researchers would: keyword searches. I wrote regular expressions to find “solar,” “wind,” “coal,” and other energy terms.\nIt quickly became clear this wouldn’t work:\nExample 1: “Development of 500MW solar power plant with backup diesel generator”\n\nKeyword search sees: “diesel” → classifies as brown\nReality: This is a green project with minimal fossil fuel backup\n\nKeywords couldn’t understand context. They couldn’t distinguish between a solar plant with diesel backup (green) and a diesel plant with solar panels on the roof (brown).\n\n\n9.5.2 LLMs Understand Context\nLarge Language Models can read an entire project description and understand the primary purpose. This contextual understanding was exactly what we needed for accurate classification at scale.",
+    "crumbs": [
+      "Advanced Possibilities",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Case Study: Large-Scale Text Classification with LLMs</span>"
+    ]
+  },
+  {
+    "objectID": "advanced_casestudy.html#building-a-validation-framework",
+    "href": "advanced_casestudy.html#building-a-validation-framework",
+    "title": "9  Case Study: Large-Scale Text Classification with LLMs",
+    "section": "9.6 Building a Validation Framework",
+    "text": "9.6 Building a Validation Framework\nFinding no established best practices for validating LLM classifications in policy research, we developed our own multi-stage approach that attempted to balance pragmatism and rigor.\n\n9.6.1 Stage 1: Inter-Model Agreement\nFirst, we tested how well different LLMs agreed with each other on classifications. This revealed important patterns:\n\n\n\nLLM Agreement Analysis\n\n\nKey insights from inter-model agreement:\n\nHigh agreement on NEUTRAL (94.4%) and GREEN (94.8%) projects\nLower agreement on GREY (84.1%) and BROWN (85.5%) categories\nAgreement correlated with LLM confidence levels\nLlama 3.3 was an outlier\n\n\n\n9.6.2 Stage 2: Human Validation\nAfter establishing inter-model agreement patterns, my co-author and I manually classified 300 projects to test against human judgment:\n\n\n\n\n\n\n\n\n\n\nModel\nOverall Agreement\nGreen Projects Agreement\nCost (Full Dataset)\nTime\n\n\n\n\nDeepseek v3\n91.8%\n95.5%\n$1.58\n15 hours\n\n\nClaude Sonnet 3.5\n85.9%\n90.9%\n~$4,700\n16 hours\n\n\nGPT-4o mini\n87.3%\n88.4%\n~$54\n11 hours\n\n\nLlama 3.3 (local)\n70.1%\n76.2%\n$0\n338 hours\n\n\n\n\n\n\n\n\n\nOpen Source Models: Promise vs. Reality\n\n\n\nWe tested two open source options:\n\nDeepseek v3: Technically open source but too large to run locally. We used their API, which performed excellently.\nLlama 3.3: Small enough to run on a Mac Mini with 64GB RAM. Performance was poor (70% accuracy) and glacially slow (2 weeks for full dataset).\n\nThe gap between frontier models (whether closed like Claude or API-accessible like Deepseek) and truly local models remains substantial.",
+    "crumbs": [
+      "Advanced Possibilities",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Case Study: Large-Scale Text Classification with LLMs</span>"
+    ]
+  },
+  {
+    "objectID": "advanced_casestudy.html#the-iterative-development-process",
+    "href": "advanced_casestudy.html#the-iterative-development-process",
+    "title": "9  Case Study: Large-Scale Text Classification with LLMs",
+    "section": "9.7 The Iterative Development Process",
+    "text": "9.7 The Iterative Development Process\n\n\n\n\n\n\nStart Small, Then Scale\n\n\n\nWhen developing your classification system:\n\nTest with 5-10 examples to refine your prompt\nValidate on 50-100 projects to catch edge cases\nRun a larger test (500-1000) to identify infrastructure issues\nOnly then process your full dataset\n\nThis approach saves time, money, and frustration. We caught several bugs and prompt improvements during small-scale testing that would have been expensive mistakes at full scale.",
+    "crumbs": [
+      "Advanced Possibilities",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Case Study: Large-Scale Text Classification with LLMs</span>"
+    ]
+  },
+  {
+    "objectID": "advanced_casestudy.html#the-unexpected-challenge-content-moderation",
+    "href": "advanced_casestudy.html#the-unexpected-challenge-content-moderation",
+    "title": "9  Case Study: Large-Scale Text Classification with LLMs",
+    "section": "9.8 The Unexpected Challenge: Content Moderation",
+    "text": "9.8 The Unexpected Challenge: Content Moderation\nEverything ran smoothly until 56 projects repeatedly failed with “Content Exists Risk” errors. Investigation revealed the failing projects mentioned politically sensitive Chinese figures like Xi Jinping’s wife and disgraced former officials.\nSince these names were incidental to project descriptions, we replaced them with “a Chinese official.” The classification resumed without issues.\n\n\n\n“Non Traditional” Debugging\n\n\n\n\n\n\n\n\nContent Moderation Reality\n\n\n\nAll LLM providers implement content moderation—not just Chinese companies. I once asked Gemini about a Trump administration policy’s constitutionality, and it refused to answer because it said it didn’t want to provide a potentially incorrect answer to a politically sensitive question.\nFor researchers using public datasets like AidData’s GCDF 3.0, these issues are manageable. Those working with sensitive data should carefully evaluate provider policies.",
+    "crumbs": [
+      "Advanced Possibilities",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Case Study: Large-Scale Text Classification with LLMs</span>"
+    ]
+  },
+  {
+    "objectID": "advanced_casestudy.html#policy-relevant-findings",
+    "href": "advanced_casestudy.html#policy-relevant-findings",
+    "title": "9  Case Study: Large-Scale Text Classification with LLMs",
+    "section": "9.9 Policy-Relevant Findings",
+    "text": "9.9 Policy-Relevant Findings\nThe classification revealed surprising insights:\n\n9.9.1 Finding 1: Limited Green Investment\n\nOnly $86.5 billion in green investments (5.8% of total Chinese lending)\nDominated by large hydropower (71.6%) and nuclear (12.0%)\nMinimal solar (3.2%) and wind (3.7%) despite rhetoric\n\n\n\n9.9.2 Finding 2: No Green Surge Over Time\nDespite talk of a “Green BRI,” our data through 2021 showed no significant increase in renewable energy financing.\n\n\n9.9.3 Finding 3: Bifurcated Co-financing Networks\nGreen projects rely on public development banks while commercial co-financing focuses on traditional infrastructure—with little overlap between these networks.",
+    "crumbs": [
+      "Advanced Possibilities",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Case Study: Large-Scale Text Classification with LLMs</span>"
+    ]
+  },
+  {
+    "objectID": "advanced_casestudy.html#transparency-and-reproducibility",
+    "href": "advanced_casestudy.html#transparency-and-reproducibility",
+    "title": "9  Case Study: Large-Scale Text Classification with LLMs",
+    "section": "9.10 Transparency and Reproducibility",
+    "text": "9.10 Transparency and Reproducibility\nWe published everything:\n\n27-page methodological appendix\nComplete code on GitHub\nAll prompts and validation data\n\nThis transparency serves multiple purposes:\n\nExposes assumptions to scrutiny: Our definition of “green” is contentious. By sharing our classification criteria, others can challenge or adapt it.\nEnables others to build on our work: The name standardization alone took enormous effort. Why should others reinvent that wheel?\nRaises the bar on reproducibility: While we didn’t achieve full reproducibility (that would require packaging an open source model in a Docker container), we took significant steps toward transparency.\n\nAs two authors with limited budget, LLM coding assistance was crucial in achieving this level of documentation and code quality.",
+    "crumbs": [
+      "Advanced Possibilities",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Case Study: Large-Scale Text Classification with LLMs</span>"
+    ]
+  },
+  {
+    "objectID": "advanced_casestudy.html#the-transformation-of-research-possibilities",
+    "href": "advanced_casestudy.html#the-transformation-of-research-possibilities",
+    "title": "9  Case Study: Large-Scale Text Classification with LLMs",
+    "section": "9.11 The Transformation of Research Possibilities",
+    "text": "9.11 The Transformation of Research Possibilities\nThis project doesn’t represent doing the impossible—someone with large grant funding could have hired teams to classify these projects manually. Instead, it shows how LLMs dramatically expand what’s possible for researchers with limited resources.\nWe face difficult policy challenges with constrained budgets. Tools that allow us to do more ambitious research with less funding are exciting and important. That’s why we’re working to push this conversation forward through transparent documentation and workshops like this one.",
+    "crumbs": [
+      "Advanced Possibilities",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Case Study: Large-Scale Text Classification with LLMs</span>"
+    ]
+  },
+  {
+    "objectID": "advanced_casestudy.html#key-takeaways",
+    "href": "advanced_casestudy.html#key-takeaways",
+    "title": "9  Case Study: Large-Scale Text Classification with LLMs",
+    "section": "9.12 Key Takeaways",
+    "text": "9.12 Key Takeaways\n\nLLMs offer consistency at scale that humans can’t sustain for repetitive tasks\nMulti-stage validation builds confidence—test models against each other, then against human judgment\nIterative development saves time and money—start small, catch bugs early\nTransparency enables progress—share your methods so others can build on them\nPerfect is the enemy of good—focus on enabling research that wouldn’t happen otherwise",
+    "crumbs": [
+      "Advanced Possibilities",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Case Study: Large-Scale Text Classification with LLMs</span>"
+    ]
+  },
+  {
+    "objectID": "advanced_casestudy.html#what-you-can-do-now",
+    "href": "advanced_casestudy.html#what-you-can-do-now",
+    "title": "9  Case Study: Large-Scale Text Classification with LLMs",
+    "section": "9.13 What You Can Do Now",
+    "text": "9.13 What You Can Do Now\nFor your own research:\n\nIdentify classification bottlenecks in your work\nStart with 10-20 examples to test feasibility\nBuild validation into your process from the beginning\nShare your methods and code openly\nFocus on research questions that matter, not perfect methods\n\nFor the field:\n\nContribute to emerging best practices\nBuild on others’ work rather than starting from scratch\nBe transparent about both successes and limitations\nRemember: we’re all figuring this out together",
+    "crumbs": [
+      "Advanced Possibilities",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Case Study: Large-Scale Text Classification with LLMs</span>"
+    ]
+  },
+  {
+    "objectID": "advanced_casestudy.html#the-bigger-picture",
+    "href": "advanced_casestudy.html#the-bigger-picture",
+    "title": "9  Case Study: Large-Scale Text Classification with LLMs",
+    "section": "9.14 The Bigger Picture",
+    "text": "9.14 The Bigger Picture\nThis project demonstrates how LLMs can transform resource-constrained research. We moved from assumptions about China’s role in the energy transition to evidence-based analysis that informs real policy decisions—all with two researchers and minimal budget.\nThe technology doesn’t replace human judgment. It amplifies human expertise, allowing us to tackle questions at a scale that reveals patterns invisible to traditional methods. That’s the promise worth pursuing.\n\nThis concludes our workshop on AI for the Skeptical Scholar. Thank you for joining us on this journey toward more ambitious, transparent, and impactful research.",
+    "crumbs": [
+      "Advanced Possibilities",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Case Study: Large-Scale Text Classification with LLMs</span>"
+    ]
   }
 ]

@@ -22,12 +22,10 @@ book:
         - apps_lit_review.qmd         # Chapter 2.3
         - apps_other_tools.qmd        # Chapter 2.6
         - apps_coding.qmd             # Chapter 2.5
-    # 
-    # - part: "Advanced Possibilities"
-    #   chapters:
-    #     - advanced_casestudy.qmd      # Chapter 3.1
-    #     - advanced_programmatic.qmd   # Chapter 3.2
-    #     - advanced_validation.qmd     # Chapter 3.3
+
+    - part: "Advanced Possibilities"
+      chapters:
+        - advanced_casestudy.qmd      # Chapter 3.1
     # 
     # - part: "Q&A and Discussion"
     #   chapters:
