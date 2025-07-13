@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -217,24 +251,46 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#the-keyword-approach-failed" id="toc-the-keyword-approach-failed" class="nav-link" data-scroll-target="#the-keyword-approach-failed"><span class="header-section-number">9.5.1</span> The Keyword Approach Failed</a></li>
   <li><a href="#llms-understand-context" id="toc-llms-understand-context" class="nav-link" data-scroll-target="#llms-understand-context"><span class="header-section-number">9.5.2</span> LLMs Understand Context</a></li>
   </ul></li>
-  <li><a href="#building-a-validation-framework" id="toc-building-a-validation-framework" class="nav-link" data-scroll-target="#building-a-validation-framework"><span class="header-section-number">9.6</span> Building a Validation Framework</a>
+  <li><a href="#our-development-journey-from-prototype-to-production" id="toc-our-development-journey-from-prototype-to-production" class="nav-link" data-scroll-target="#our-development-journey-from-prototype-to-production"><span class="header-section-number">9.6</span> Our Development Journey: From Prototype to Production</a></li>
+  <li><a href="#the-technical-foundation-what-made-our-approach-work" id="toc-the-technical-foundation-what-made-our-approach-work" class="nav-link" data-scroll-target="#the-technical-foundation-what-made-our-approach-work"><span class="header-section-number">9.7</span> The Technical Foundation: What Made Our Approach Work</a>
   <ul class="collapse">
-  <li><a href="#stage-1-inter-model-agreement" id="toc-stage-1-inter-model-agreement" class="nav-link" data-scroll-target="#stage-1-inter-model-agreement"><span class="header-section-number">9.6.1</span> Stage 1: Inter-Model Agreement</a></li>
-  <li><a href="#stage-2-human-validation" id="toc-stage-2-human-validation" class="nav-link" data-scroll-target="#stage-2-human-validation"><span class="header-section-number">9.6.2</span> Stage 2: Human Validation</a></li>
+  <li><a href="#teaching-ai-through-examples-multi-shot-prompting" id="toc-teaching-ai-through-examples-multi-shot-prompting" class="nav-link" data-scroll-target="#teaching-ai-through-examples-multi-shot-prompting"><span class="header-section-number">9.7.1</span> Teaching AI Through Examples: Multi-Shot Prompting</a></li>
+  <li><a href="#structured-output-making-ai-responses-reliable" id="toc-structured-output-making-ai-responses-reliable" class="nav-link" data-scroll-target="#structured-output-making-ai-responses-reliable"><span class="header-section-number">9.7.2</span> Structured Output: Making AI Responses Reliable</a></li>
+  <li><a href="#teaching-ai-self-awareness-confidence-calibration" id="toc-teaching-ai-self-awareness-confidence-calibration" class="nav-link" data-scroll-target="#teaching-ai-self-awareness-confidence-calibration"><span class="header-section-number">9.7.3</span> Teaching AI Self-Awareness: Confidence Calibration</a></li>
   </ul></li>
-  <li><a href="#the-iterative-development-process" id="toc-the-iterative-development-process" class="nav-link" data-scroll-target="#the-iterative-development-process"><span class="header-section-number">9.7</span> The Iterative Development Process</a></li>
-  <li><a href="#the-unexpected-challenge-content-moderation" id="toc-the-unexpected-challenge-content-moderation" class="nav-link" data-scroll-target="#the-unexpected-challenge-content-moderation"><span class="header-section-number">9.8</span> The Unexpected Challenge: Content Moderation</a></li>
-  <li><a href="#policy-relevant-findings" id="toc-policy-relevant-findings" class="nav-link" data-scroll-target="#policy-relevant-findings"><span class="header-section-number">9.9</span> Policy-Relevant Findings</a>
+  <li><a href="#building-a-validation-framework" id="toc-building-a-validation-framework" class="nav-link" data-scroll-target="#building-a-validation-framework"><span class="header-section-number">9.8</span> Building a Validation Framework</a>
   <ul class="collapse">
-  <li><a href="#finding-1-limited-green-investment" id="toc-finding-1-limited-green-investment" class="nav-link" data-scroll-target="#finding-1-limited-green-investment"><span class="header-section-number">9.9.1</span> Finding 1: Limited Green Investment</a></li>
-  <li><a href="#finding-2-no-green-surge-over-time" id="toc-finding-2-no-green-surge-over-time" class="nav-link" data-scroll-target="#finding-2-no-green-surge-over-time"><span class="header-section-number">9.9.2</span> Finding 2: No Green Surge Over Time</a></li>
-  <li><a href="#finding-3-bifurcated-co-financing-networks" id="toc-finding-3-bifurcated-co-financing-networks" class="nav-link" data-scroll-target="#finding-3-bifurcated-co-financing-networks"><span class="header-section-number">9.9.3</span> Finding 3: Bifurcated Co-financing Networks</a></li>
+  <li><a href="#stage-1-inter-model-agreement-testing" id="toc-stage-1-inter-model-agreement-testing" class="nav-link" data-scroll-target="#stage-1-inter-model-agreement-testing"><span class="header-section-number">9.8.1</span> Stage 1: Inter-Model Agreement Testing</a></li>
+  <li><a href="#stage-2-human-validation-benchmark" id="toc-stage-2-human-validation-benchmark" class="nav-link" data-scroll-target="#stage-2-human-validation-benchmark"><span class="header-section-number">9.8.2</span> Stage 2: Human Validation Benchmark</a></li>
+  <li><a href="#validation-strategy-lessons" id="toc-validation-strategy-lessons" class="nav-link" data-scroll-target="#validation-strategy-lessons"><span class="header-section-number">9.8.3</span> Validation Strategy Lessons</a></li>
   </ul></li>
-  <li><a href="#transparency-and-reproducibility" id="toc-transparency-and-reproducibility" class="nav-link" data-scroll-target="#transparency-and-reproducibility"><span class="header-section-number">9.10</span> Transparency and Reproducibility</a></li>
-  <li><a href="#the-transformation-of-research-possibilities" id="toc-the-transformation-of-research-possibilities" class="nav-link" data-scroll-target="#the-transformation-of-research-possibilities"><span class="header-section-number">9.11</span> The Transformation of Research Possibilities</a></li>
-  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways"><span class="header-section-number">9.12</span> Key Takeaways</a></li>
-  <li><a href="#what-you-can-do-now" id="toc-what-you-can-do-now" class="nav-link" data-scroll-target="#what-you-can-do-now"><span class="header-section-number">9.13</span> What You Can Do Now</a></li>
-  <li><a href="#the-bigger-picture" id="toc-the-bigger-picture" class="nav-link" data-scroll-target="#the-bigger-picture"><span class="header-section-number">9.14</span> The Bigger Picture</a></li>
+  <li><a href="#the-unexpected-challenge-content-moderation" id="toc-the-unexpected-challenge-content-moderation" class="nav-link" data-scroll-target="#the-unexpected-challenge-content-moderation"><span class="header-section-number">9.9</span> The Unexpected Challenge: Content Moderation</a></li>
+  <li><a href="#essential-lessons-for-other-researchers" id="toc-essential-lessons-for-other-researchers" class="nav-link" data-scroll-target="#essential-lessons-for-other-researchers"><span class="header-section-number">9.10</span> Essential Lessons for Other Researchers</a>
+  <ul class="collapse">
+  <li><a href="#start-simple-build-complexity-gradually" id="toc-start-simple-build-complexity-gradually" class="nav-link" data-scroll-target="#start-simple-build-complexity-gradually"><span class="header-section-number">9.10.1</span> Start Simple, Build Complexity Gradually</a></li>
+  <li><a href="#validation-is-everything" id="toc-validation-is-everything" class="nav-link" data-scroll-target="#validation-is-everything"><span class="header-section-number">9.10.2</span> Validation Is Everything</a></li>
+  <li><a href="#documentation-enables-progress" id="toc-documentation-enables-progress" class="nav-link" data-scroll-target="#documentation-enables-progress"><span class="header-section-number">9.10.3</span> Documentation Enables Progress</a></li>
+  </ul></li>
+  <li><a href="#policy-relevant-findings-what-we-discovered" id="toc-policy-relevant-findings-what-we-discovered" class="nav-link" data-scroll-target="#policy-relevant-findings-what-we-discovered"><span class="header-section-number">9.11</span> Policy-Relevant Findings: What We Discovered</a>
+  <ul class="collapse">
+  <li><a href="#finding-1-limited-green-investment-scale" id="toc-finding-1-limited-green-investment-scale" class="nav-link" data-scroll-target="#finding-1-limited-green-investment-scale"><span class="header-section-number">9.11.1</span> Finding 1: Limited Green Investment Scale</a></li>
+  <li><a href="#finding-2-no-green-surge-over-time" id="toc-finding-2-no-green-surge-over-time" class="nav-link" data-scroll-target="#finding-2-no-green-surge-over-time"><span class="header-section-number">9.11.2</span> Finding 2: No Green Surge Over Time</a></li>
+  <li><a href="#finding-3-bifurcated-co-financing-networks" id="toc-finding-3-bifurcated-co-financing-networks" class="nav-link" data-scroll-target="#finding-3-bifurcated-co-financing-networks"><span class="header-section-number">9.11.3</span> Finding 3: Bifurcated Co-financing Networks</a></li>
+  </ul></li>
+  <li><a href="#the-transformation-of-research-possibilities" id="toc-the-transformation-of-research-possibilities" class="nav-link" data-scroll-target="#the-transformation-of-research-possibilities"><span class="header-section-number">9.12</span> The Transformation of Research Possibilities</a>
+  <ul class="collapse">
+  <li><a href="#before-llms-resource-constrained-research" id="toc-before-llms-resource-constrained-research" class="nav-link" data-scroll-target="#before-llms-resource-constrained-research"><span class="header-section-number">9.12.1</span> Before LLMs: Resource-Constrained Research</a></li>
+  <li><a href="#after-llms-amplified-capabilities" id="toc-after-llms-amplified-capabilities" class="nav-link" data-scroll-target="#after-llms-amplified-capabilities"><span class="header-section-number">9.12.2</span> After LLMs: Amplified Capabilities</a></li>
+  </ul></li>
+  <li><a href="#transparency-and-reproducibility-raising-the-bar" id="toc-transparency-and-reproducibility-raising-the-bar" class="nav-link" data-scroll-target="#transparency-and-reproducibility-raising-the-bar"><span class="header-section-number">9.13</span> Transparency and Reproducibility: Raising the Bar</a></li>
+  <li><a href="#key-takeaways-for-researchers" id="toc-key-takeaways-for-researchers" class="nav-link" data-scroll-target="#key-takeaways-for-researchers"><span class="header-section-number">9.14</span> Key Takeaways for Researchers</a></li>
+  <li><a href="#what-you-can-do-now" id="toc-what-you-can-do-now" class="nav-link" data-scroll-target="#what-you-can-do-now"><span class="header-section-number">9.15</span> What You Can Do Now</a>
+  <ul class="collapse">
+  <li><a href="#for-your-own-research" id="toc-for-your-own-research" class="nav-link" data-scroll-target="#for-your-own-research"><span class="header-section-number">9.15.1</span> For Your Own Research</a></li>
+  <li><a href="#for-the-field" id="toc-for-the-field" class="nav-link" data-scroll-target="#for-the-field"><span class="header-section-number">9.15.2</span> For the Field</a></li>
+  </ul></li>
+  <li><a href="#the-bigger-picture-democratizing-ambitious-research" id="toc-the-bigger-picture-democratizing-ambitious-research" class="nav-link" data-scroll-target="#the-bigger-picture-democratizing-ambitious-research"><span class="header-section-number">9.16</span> The Bigger Picture: Democratizing Ambitious Research</a></li>
+  <li><a href="#looking-forward" id="toc-looking-forward" class="nav-link" data-scroll-target="#looking-forward"><span class="header-section-number">9.17</span> Looking Forward</a></li>
   </ul>
 </nav>
     </div>
@@ -292,19 +348,19 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>🔘 Grey</strong>: Projects with indirect impacts (transmission lines, natural gas)</li>
 <li><strong>⚪ Neutral</strong>: Non-energy projects</li>
 </ul>
-<p>Traditional approaches would have required:</p>
+<p><strong>The traditional approach would have required:</strong></p>
 <ul>
 <li>1,500 hours of work (5 minutes per project × 18,000 projects)</li>
-<li>$22,500 in research assistant costs</li>
+<li>$22,500 in research assistant costs (assuming $15 per hour)</li>
 <li>Large grant funding to support such an effort</li>
 </ul>
-<p>We completed it in 15 hours for $1.58.</p>
+<p><strong>We completed it in 15 hours for $1.58.</strong></p>
 </section>
 <section id="the-reality-of-human-vs.-llm-classification" class="level2" data-number="9.4">
 <h2 data-number="9.4" class="anchored" data-anchor-id="the-reality-of-human-vs.-llm-classification"><span class="header-section-number">9.4</span> The Reality of Human vs.&nbsp;LLM Classification</h2>
 <p>Let’s be honest about manual classification at scale. I’ve done this work myself. After a few hours of coding projects, your eyes glaze over. You start questioning whether you’re applying criteria consistently. Are you coding things the same way you did yesterday? Last week?</p>
 <p>Research assistants face the same challenges—and who can blame them if attention wanders during hour six of classifying infrastructure projects? This isn’t about capability; it’s about the mind-numbing nature of repetitive classification tasks.</p>
-<p>LLMs bring something humans can’t sustain: endless patience and perfect consistency. They apply the same criteria to project 17,000 as they did to project 1. No fatigue, no drift in standards, no bad days.</p>
+<p>LLMs bring something humans can’t sustain: <strong>endless patience and consistency</strong>. They apply the same criteria to project 17,000 as they did to project 1. No fatigue, no drift in standards, no bad days. Your LLM did not stay out partying until 4 am.</p>
 <p>The question isn’t whether LLMs are perfect—they’re not. It’s whether they can achieve good-enough accuracy with perfect consistency at a scale that makes ambitious research possible.</p>
 </section>
 <section id="from-keywords-to-context-why-llms-were-essential" class="level2" data-number="9.5">
@@ -313,10 +369,10 @@ ul.task-list li input[type="checkbox"] {
 <h3 data-number="9.5.1" class="anchored" data-anchor-id="the-keyword-approach-failed"><span class="header-section-number">9.5.1</span> The Keyword Approach Failed</h3>
 <p>I started where most researchers would: keyword searches. I wrote regular expressions to find “solar,” “wind,” “coal,” and other energy terms.</p>
 <p>It quickly became clear this wouldn’t work:</p>
-<p><strong>Example 1</strong>: “Development of 500MW solar power plant with backup diesel generator”</p>
+<p><strong>Example</strong>: “Development of 500MW solar power plant with backup diesel generator”</p>
 <ul>
-<li>Keyword search sees: “diesel” → classifies as brown</li>
-<li>Reality: This is a green project with minimal fossil fuel backup</li>
+<li><strong>Keyword search sees</strong>: “diesel” → classifies as brown</li>
+<li><strong>Reality</strong>: This is a green project with minimal fossil fuel backup</li>
 </ul>
 <p>Keywords couldn’t understand context. They couldn’t distinguish between a solar plant with diesel backup (green) and a diesel plant with solar panels on the roof (brown).</p>
 </section>
@@ -325,42 +381,145 @@ ul.task-list li input[type="checkbox"] {
 <p>Large Language Models can read an entire project description and understand the primary purpose. This contextual understanding was exactly what we needed for accurate classification at scale.</p>
 </section>
 </section>
-<section id="building-a-validation-framework" class="level2" data-number="9.6">
-<h2 data-number="9.6" class="anchored" data-anchor-id="building-a-validation-framework"><span class="header-section-number">9.6</span> Building a Validation Framework</h2>
-<p>Finding no established best practices for validating LLM classifications in policy research, we developed our own multi-stage approach that attempted to balance pragmatism and rigor.</p>
-<section id="stage-1-inter-model-agreement" class="level3" data-number="9.6.1">
-<h3 data-number="9.6.1" class="anchored" data-anchor-id="stage-1-inter-model-agreement"><span class="header-section-number">9.6.1</span> Stage 1: Inter-Model Agreement</h3>
-<p>First, we tested how well different LLMs agreed with each other on classifications. This revealed important patterns:</p>
+<section id="our-development-journey-from-prototype-to-production" class="level2" data-number="9.6">
+<h2 data-number="9.6" class="anchored" data-anchor-id="our-development-journey-from-prototype-to-production"><span class="header-section-number">9.6</span> Our Development Journey: From Prototype to Production</h2>
+<p>Here’s what we actually did (which worked, but wasn’t perfect):</p>
+<p><strong>Phase 1: Getting Started (5-10 examples)</strong></p>
+<p>We began with a handful of examples to test basic concepts. Could the AI distinguish between solar and coal projects? Did our categories make sense? This phase revealed fundamental issues with our initial approach and helped us refine our classification framework.</p>
+<p><strong>Phase 2: Working Out the Kinks (~30 examples)</strong></p>
+<p>With basic concepts working, we tackled edge cases. What about mixed projects? How should we handle transmission infrastructure? Multi-component developments? This phase was crucial for developing the nuanced reasoning we’d need at scale.</p>
+<p><strong>Phase 3: Infrastructure Testing (100 projects)</strong></p>
+<p>Before committing to thousands of projects, we tested our technical infrastructure: API calls, error handling, data processing pipelines. This unglamorous but critical step saved us from expensive disasters later.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Why This Iterative Approach Matters
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Cost efficiency</strong>: Problems we caught at the 30-example stage would have been expensive disasters at 18,000-project scale.</p>
+<p><strong>Methodological rigor</strong>: Each phase taught us something that improved our approach.</p>
+<p><strong>Resource management</strong>: With limited time and budget, we couldn’t afford to waste resources on a flawed methodology.</p>
+<p><strong>Confidence building</strong>: By the time we reached full scale, we understood our system’s strengths and limitations.</p>
+</div>
+</div>
+<p><strong>Phase 4: Validation Strategy (300 projects)</strong></p>
+<p>We developed a comprehensive validation approach testing multiple models against human judgment. Honestly, our choice of 300 was somewhat arbitrary—it felt like enough to get a real sense of model performance while being manageable given our constraints. For 18,000 projects, this 1.7% sample probably made sense, but best practices are still evolving.</p>
+<p><strong>Phase 5: Full-Scale Implementation (18,000 projects)</strong></p>
+<p>Only after thorough testing did we process the complete dataset. By this point, we had confidence in our methodology and infrastructure.</p>
+</section>
+<section id="the-technical-foundation-what-made-our-approach-work" class="level2" data-number="9.7">
+<h2 data-number="9.7" class="anchored" data-anchor-id="the-technical-foundation-what-made-our-approach-work"><span class="header-section-number">9.7</span> The Technical Foundation: What Made Our Approach Work</h2>
+<p>The key to our success wasn’t just using AI—it was applying sophisticated prompt engineering techniques that ensured consistency and reliability at scale. Here’s what we learned about making LLMs work for serious research.</p>
+<section id="teaching-ai-through-examples-multi-shot-prompting" class="level3" data-number="9.7.1">
+<h3 data-number="9.7.1" class="anchored" data-anchor-id="teaching-ai-through-examples-multi-shot-prompting"><span class="header-section-number">9.7.1</span> Teaching AI Through Examples: Multi-Shot Prompting</h3>
+<p>One of our most powerful techniques was showing the AI exactly how to handle different scenarios rather than relying on abstract instructions.</p>
+<p><strong>Instead of</strong>: “Classify projects based on energy transition impact”<br>
+<strong>We provided</strong>: Multiple concrete examples showing our reasoning process</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Multi-Shot Prompting in Action
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Example 1: Clear Solar Project</strong></p>
+<p><em>Input</em>: “Development of 500MW solar power plant with backup diesel generator”<br>
+<em>Output</em>: GREEN - Primary purpose is solar; backup generator is auxiliary</p>
+<p><strong>Example 2: Mixed Infrastructure</strong></p>
+<p><em>Input</em>: “Transmission lines connecting thermal plant and wind farms to grid”<br>
+<em>Output</em>: GREY - Infrastructure enabling both renewable and non-renewable power</p>
+<p><strong>Example 3: Nuanced Hydropower</strong></p>
+<p><em>Input</em>: “Construction of 1,200MW hydropower dam with environmental mitigation”<br>
+<em>Output</em>: GREEN - Renewable energy source despite environmental considerations</p>
+<p><strong>Why this works</strong>: The AI learns patterns of reasoning, not just categories. It understands <em>how</em> to think through complex cases, not just <em>what</em> to classify.</p>
+</div>
+</div>
+<p>This approach taught the AI to focus on primary purpose rather than getting distracted by secondary components—exactly the kind of nuanced judgment that keyword searches couldn’t handle.</p>
+</section>
+<section id="structured-output-making-ai-responses-reliable" class="level3" data-number="9.7.2">
+<h3 data-number="9.7.2" class="anchored" data-anchor-id="structured-output-making-ai-responses-reliable"><span class="header-section-number">9.7.2</span> Structured Output: Making AI Responses Reliable</h3>
+<p>Instead of accepting free-form text that we’d have to parse manually, we required every response to follow a strict JSON format:</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Our JSON Schema Design
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="sourceCode" id="cb1"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"classification"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"primary"</span><span class="fu">:</span> <span class="st">"GREEN"</span><span class="fu">,</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"confidence"</span><span class="fu">:</span> <span class="st">"HIGH"</span><span class="fu">,</span> </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"project_type"</span><span class="fu">:</span> <span class="st">"Solar Power"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"justification"</span><span class="fu">:</span> <span class="st">"Primary purpose is renewable energy generation"</span><span class="fu">,</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"evidence"</span><span class="fu">:</span> <span class="st">"500MW solar power plant mentioned explicitly"</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Why structured output matters</strong>: - <strong>Consistency</strong>: Every response follows identical format - <strong>Machine-readable</strong>: Can process thousands automatically<br>
+- <strong>Quality control</strong>: Missing fields indicate processing errors - <strong>Transparency</strong>: Forces AI to show its reasoning</p>
+</div>
+</div>
+</section>
+<section id="teaching-ai-self-awareness-confidence-calibration" class="level3" data-number="9.7.3">
+<h3 data-number="9.7.3" class="anchored" data-anchor-id="teaching-ai-self-awareness-confidence-calibration"><span class="header-section-number">9.7.3</span> Teaching AI Self-Awareness: Confidence Calibration</h3>
+<p>We required the AI to assess its own certainty, which proved surprisingly effective:</p>
+<ul>
+<li><strong>HIGH</strong>: Clear project description with obvious category alignment</li>
+<li><strong>MEDIUM</strong>: Some ambiguity but reasonable certainty<br>
+</li>
+<li><strong>LOW</strong>: Significant uncertainty or lack of detail</li>
+</ul>
+<p>In our validation, AI confidence levels correlated well with human-AI agreement rates. When the AI said it was uncertain, it usually was—giving us a reliable way to flag cases needing human review.</p>
+</section>
+</section>
+<section id="building-a-validation-framework" class="level2" data-number="9.8">
+<h2 data-number="9.8" class="anchored" data-anchor-id="building-a-validation-framework"><span class="header-section-number">9.8</span> Building a Validation Framework</h2>
+<p>With no established best practices for validating LLM classifications in policy research, we developed a multi-stage approach balancing pragmatism with rigor.</p>
+<section id="stage-1-inter-model-agreement-testing" class="level3" data-number="9.8.1">
+<h3 data-number="9.8.1" class="anchored" data-anchor-id="stage-1-inter-model-agreement-testing"><span class="header-section-number">9.8.1</span> Stage 1: Inter-Model Agreement Testing</h3>
+<p>First, we tested how well different LLMs agreed with each other on the same classifications:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/llm_agreement_analysis.png" class="img-fluid figure-img"></p>
 <figcaption>LLM Agreement Analysis</figcaption>
 </figure>
 </div>
-<p><strong>Key insights from inter-model agreement:</strong></p>
+<p><strong>Key insights</strong>:</p>
 <ul>
 <li>High agreement on NEUTRAL (94.4%) and GREEN (94.8%) projects</li>
-<li>Lower agreement on GREY (84.1%) and BROWN (85.5%) categories</li>
-<li>Agreement correlated with LLM confidence levels</li>
-<li>Llama 3.3 was an outlier</li>
+<li>Lower agreement on GREY (84.1%) and BROWN (85.5%) categories<br>
+</li>
+<li>Frontier models (Claude, Deepseek, GPT-4o-mini) showed 85-89% agreement</li>
+<li>Llama 3.3 was a clear outlier with much lower performance</li>
 </ul>
+<p>This gave us confidence that our task was well-defined—multiple independent models were reaching similar conclusions.</p>
 </section>
-<section id="stage-2-human-validation" class="level3" data-number="9.6.2">
-<h3 data-number="9.6.2" class="anchored" data-anchor-id="stage-2-human-validation"><span class="header-section-number">9.6.2</span> Stage 2: Human Validation</h3>
-<p>After establishing inter-model agreement patterns, my co-author and I manually classified 300 projects to test against human judgment:</p>
+<section id="stage-2-human-validation-benchmark" class="level3" data-number="9.8.2">
+<h3 data-number="9.8.2" class="anchored" data-anchor-id="stage-2-human-validation-benchmark"><span class="header-section-number">9.8.2</span> Stage 2: Human Validation Benchmark</h3>
+<p>My co-author and I manually classified 300 projects to establish ground truth:</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 9%">
-<col style="width: 25%">
-<col style="width: 32%">
-<col style="width: 25%">
-<col style="width: 7%">
+<col style="width: 10%">
+<col style="width: 28%">
+<col style="width: 23%">
+<col style="width: 28%">
+<col style="width: 8%">
 </colgroup>
 <thead>
 <tr class="header">
 <th>Model</th>
 <th>Overall Agreement</th>
-<th>Green Projects Agreement</th>
+<th>Green Projects</th>
 <th>Cost (Full Dataset)</th>
 <th>Time</th>
 </tr>
@@ -368,10 +527,10 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td><strong>Deepseek v3</strong></td>
-<td>91.8%</td>
-<td>95.5%</td>
-<td>$1.58</td>
-<td>15 hours</td>
+<td><strong>91.8%</strong></td>
+<td><strong>95.5%</strong></td>
+<td><strong>$1.58</strong></td>
+<td><strong>15 hours</strong></td>
 </tr>
 <tr class="even">
 <td>Claude Sonnet 3.5</td>
@@ -396,52 +555,74 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
+<p>Deepseek v3 emerged as our clear winner—best performance at dramatically lower cost.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Open Source Models: Promise vs.&nbsp;Reality
+Open Source Reality Check
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <p>We tested two open source options:</p>
-<ul>
-<li><strong>Deepseek v3</strong>: Technically open source but too large to run locally. We used their API, which performed excellently.</li>
-<li><strong>Llama 3.3</strong>: Small enough to run on a Mac Mini with 64GB RAM. Performance was poor (70% accuracy) and glacially slow (2 weeks for full dataset).</li>
-</ul>
-<p>The gap between frontier models (whether closed like Claude or API-accessible like Deepseek) and truly local models remains substantial.</p>
+<p><strong>Deepseek v3</strong>: Technically open source but too large to run locally. We used their API, which performed excellently.</p>
+<p><strong>Llama 3.3</strong>: Small enough to run on a Mac Mini with 64GB RAM. Performance was poor (70% accuracy) and glacially slow (2 weeks for full dataset).</p>
+<p><strong>The gap</strong>: Between frontier models (whether closed like Claude or API-accessible like Deepseek) and truly local models remains substantial.</p>
 </div>
 </div>
 </section>
-</section>
-<section id="the-iterative-development-process" class="level2" data-number="9.7">
-<h2 data-number="9.7" class="anchored" data-anchor-id="the-iterative-development-process"><span class="header-section-number">9.7</span> The Iterative Development Process</h2>
+<section id="validation-strategy-lessons" class="level3" data-number="9.8.3">
+<h3 data-number="9.8.3" class="anchored" data-anchor-id="validation-strategy-lessons"><span class="header-section-number">9.8.3</span> Validation Strategy Lessons</h3>
+<p><strong>Sample size considerations</strong>: Our 300-project validation sample was somewhat arbitrary but felt adequate for 18,000 total projects. Best practices are still evolving—larger samples provide more confidence but require more resources.</p>
+<p><strong>Multiple validation approaches</strong>: Testing both inter-model agreement and human agreement gave us confidence from different angles.</p>
+<p><strong>Focus on your use case</strong>: We paid special attention to GREEN classification accuracy since that was our primary research interest.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Start Small, Then Scale
+Technical Implementation Essentials
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>When developing your classification system:</p>
-<ol type="1">
-<li><strong>Test with 5-10 examples</strong> to refine your prompt</li>
-<li><strong>Validate on 50-100 projects</strong> to catch edge cases</li>
-<li><strong>Run a larger test (500-1000)</strong> to identify infrastructure issues</li>
-<li><strong>Only then process your full dataset</strong></li>
-</ol>
-<p>This approach saves time, money, and frustration. We caught several bugs and prompt improvements during small-scale testing that would have been expensive mistakes at full scale.</p>
+<p><strong>API Management</strong>:</p>
+<ul>
+<li>Process in batches (we used 10) with rate limiting</li>
+<li>Build retry logic for failed requests<br>
+</li>
+<li>Implement schema validation for JSON outputs</li>
+</ul>
+<p><strong>Reproducibility Challenges</strong>:</p>
+<ul>
+<li>Document exact model versions and settings</li>
+<li>Use temperature=0 for maximum consistency</li>
+<li>Preserve validation datasets for future comparison</li>
+<li>Be aware that API models change over time</li>
+</ul>
+<p><strong>Quality Control</strong>:</p>
+<ul>
+<li>Never trust AI output without verification</li>
+<li>Preserve original data alongside classifications</li>
+<li>Flag low-confidence cases for human review</li>
+</ul>
 </div>
 </div>
 </section>
-<section id="the-unexpected-challenge-content-moderation" class="level2" data-number="9.8">
-<h2 data-number="9.8" class="anchored" data-anchor-id="the-unexpected-challenge-content-moderation"><span class="header-section-number">9.8</span> The Unexpected Challenge: Content Moderation</h2>
-<p>Everything ran smoothly until 56 projects repeatedly failed with “Content Exists Risk” errors. Investigation revealed the failing projects mentioned politically sensitive Chinese figures like Xi Jinping’s wife and disgraced former officials.</p>
+</section>
+<section id="the-unexpected-challenge-content-moderation" class="level2" data-number="9.9">
+<h2 data-number="9.9" class="anchored" data-anchor-id="the-unexpected-challenge-content-moderation"><span class="header-section-number">9.9</span> The Unexpected Challenge: Content Moderation</h2>
+<p>Based upon our validation exercise, we used Deepseek v3, an LLM from that had recently been released Chinese AI Lab. Everything ran smoothly processing most of the 18,000 observations until 56 projects repeatedly failed with “Content Exists Risk” errors. Traditional debugging found nothing—no encoding issues, no special characters, no formatting problems.</p>
+<p>In desperation, I pasted the errors into ChatGPT and Claude. Their suggestion: “Check for politically sensitive Chinese names.”</p>
+<p>Investigation revealed the failing projects mentioned:</p>
+<ul>
+<li>Peng Liyuan (Xi Jinping’s wife)<br>
+</li>
+<li>Bo Xilai (former Politburo member imprisoned for corruption)</li>
+<li>Zhang Gaoli (former Vice Premier)</li>
+</ul>
 <p>Since these names were incidental to project descriptions, we replaced them with “a Chinese official.” The classification resumed without issues.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -460,83 +641,164 @@ Content Moderation Reality
 </div>
 <div class="callout-body-container callout-body">
 <p>All LLM providers implement content moderation—not just Chinese companies. I once asked Gemini about a Trump administration policy’s constitutionality, and it refused to answer because it said it didn’t want to provide a potentially incorrect answer to a politically sensitive question.</p>
-<p>For researchers using public datasets like AidData’s GCDF 3.0, these issues are manageable. Those working with sensitive data should carefully evaluate provider policies.</p>
+<p><strong>For researchers</strong>: If you’re using public datasets like AidData’s GCDF 3.0, these issues are manageable with simple text replacement. Those working with sensitive data should carefully evaluate provider policies.</p>
+<p><strong>The lesson</strong>: Build debugging and error handling into your workflow. Sometimes the problems aren’t technical—they’re political.</p>
 </div>
 </div>
+<p>This experience taught us that LLM research involves challenges traditional quantitative methods don’t face. Content moderation policies, model updates, provider-specific quirks—these are new considerations for academic research that we’re all still learning to navigate.</p>
 </section>
-<section id="policy-relevant-findings" class="level2" data-number="9.9">
-<h2 data-number="9.9" class="anchored" data-anchor-id="policy-relevant-findings"><span class="header-section-number">9.9</span> Policy-Relevant Findings</h2>
-<p>The classification revealed surprising insights:</p>
-<section id="finding-1-limited-green-investment" class="level3" data-number="9.9.1">
-<h3 data-number="9.9.1" class="anchored" data-anchor-id="finding-1-limited-green-investment"><span class="header-section-number">9.9.1</span> Finding 1: Limited Green Investment</h3>
+<section id="essential-lessons-for-other-researchers" class="level2" data-number="9.10">
+<h2 data-number="9.10" class="anchored" data-anchor-id="essential-lessons-for-other-researchers"><span class="header-section-number">9.10</span> Essential Lessons for Other Researchers</h2>
+<section id="start-simple-build-complexity-gradually" class="level3" data-number="9.10.1">
+<h3 data-number="9.10.1" class="anchored" data-anchor-id="start-simple-build-complexity-gradually"><span class="header-section-number">9.10.1</span> Start Simple, Build Complexity Gradually</h3>
+<ol type="1">
+<li><strong>Get basic cases working first</strong> - Don’t try to solve edge cases until fundamentals are solid</li>
+<li><strong>Add examples iteratively</strong> - Each round of testing reveals new scenarios to address<br>
+</li>
+<li><strong>Test infrastructure early</strong> - Technical bugs are cheaper to fix with small samples</li>
+<li><strong>Plan validation upfront</strong> - How will you verify AI outputs? Random sampling? Expert review?</li>
+</ol>
+</section>
+<section id="validation-is-everything" class="level3" data-number="9.10.2">
+<h3 data-number="9.10.2" class="anchored" data-anchor-id="validation-is-everything"><span class="header-section-number">9.10.2</span> Validation Is Everything</h3>
+<p>The difference between research and automation is validation. Without robust verification:</p>
 <ul>
-<li>Only $86.5 billion in green investments (5.8% of total Chinese lending)</li>
-<li>Dominated by large hydropower (71.6%) and nuclear (12.0%)</li>
-<li>Minimal solar (3.2%) and wind (3.7%) despite rhetoric</li>
+<li>You can’t trust your results</li>
+<li>You can’t convince skeptical colleagues<br>
+</li>
+<li>You can’t contribute to methodological progress</li>
+<li>You risk undermining AI’s potential for serious research</li>
 </ul>
 </section>
-<section id="finding-2-no-green-surge-over-time" class="level3" data-number="9.9.2">
-<h3 data-number="9.9.2" class="anchored" data-anchor-id="finding-2-no-green-surge-over-time"><span class="header-section-number">9.9.2</span> Finding 2: No Green Surge Over Time</h3>
-<p>Despite talk of a “Green BRI,” our data through 2021 showed no significant increase in renewable energy financing.</p>
+<section id="documentation-enables-progress" class="level3" data-number="9.10.3">
+<h3 data-number="9.10.3" class="anchored" data-anchor-id="documentation-enables-progress"><span class="header-section-number">9.10.3</span> Documentation Enables Progress</h3>
+<p>Our <a href="https://odi.org/en/publications/greener-on-the-other-side-mapping-chinas-overseas-co-financing-and-financial-innovation/">methodological appendix</a> and <a href="https://github.com/Teal-Insights/odi_china_lending_llm_classification">GitHub repository</a> serve multiple purposes:</p>
+<p><strong>Transparency</strong>: Others can critique our assumptions and methods<br>
+<strong>Reproducibility</strong>: Others can adapt our approach to new contexts<br>
+<strong>Learning</strong>: Others can build on our successes and failures<br>
+<strong>Standards</strong>: Contributing to emerging best practices in LLM research</p>
+<p>The goal isn’t perfect methodology—it’s progress toward better, more transparent use of these powerful tools.</p>
 </section>
-<section id="finding-3-bifurcated-co-financing-networks" class="level3" data-number="9.9.3">
-<h3 data-number="9.9.3" class="anchored" data-anchor-id="finding-3-bifurcated-co-financing-networks"><span class="header-section-number">9.9.3</span> Finding 3: Bifurcated Co-financing Networks</h3>
-<p>Green projects rely on public development banks while commercial co-financing focuses on traditional infrastructure—with little overlap between these networks.</p>
 </section>
-</section>
-<section id="transparency-and-reproducibility" class="level2" data-number="9.10">
-<h2 data-number="9.10" class="anchored" data-anchor-id="transparency-and-reproducibility"><span class="header-section-number">9.10</span> Transparency and Reproducibility</h2>
-<p>We published everything:</p>
+<section id="policy-relevant-findings-what-we-discovered" class="level2" data-number="9.11">
+<h2 data-number="9.11" class="anchored" data-anchor-id="policy-relevant-findings-what-we-discovered"><span class="header-section-number">9.11</span> Policy-Relevant Findings: What We Discovered</h2>
+<p>Our classification revealed surprising insights that challenged conventional wisdom about China’s green lending:</p>
+<section id="finding-1-limited-green-investment-scale" class="level3" data-number="9.11.1">
+<h3 data-number="9.11.1" class="anchored" data-anchor-id="finding-1-limited-green-investment-scale"><span class="header-section-number">9.11.1</span> Finding 1: Limited Green Investment Scale</h3>
 <ul>
-<li><strong><a href="https://odi.org/en/publications/greener-on-the-other-side-mapping-chinas-overseas-co-financing-and-financial-innovation/">27-page methodological appendix</a></strong></li>
-<li><strong><a href="https://github.com/Teal-Insights/odi_china_lending_llm_classification">Complete code on GitHub</a></strong></li>
-<li><strong>All prompts and validation data</strong></li>
+<li>Only <strong>$86.5 billion in green investments</strong> (5.8% of total Chinese lending)</li>
+<li>Dominated by large hydropower (71.6%) and nuclear (12.0%)<br>
+</li>
+<li>Minimal solar (3.2%) and wind (3.7%) despite policy rhetoric</li>
+</ul>
+</section>
+<section id="finding-2-no-green-surge-over-time" class="level3" data-number="9.11.2">
+<h3 data-number="9.11.2" class="anchored" data-anchor-id="finding-2-no-green-surge-over-time"><span class="header-section-number">9.11.2</span> Finding 2: No Green Surge Over Time</h3>
+<p>Despite talk of a “Green Belt and Road Initiative,” our data through 2021 showed no significant increase in renewable energy financing. The pivot to green lending appeared more rhetorical than real.</p>
+</section>
+<section id="finding-3-bifurcated-co-financing-networks" class="level3" data-number="9.11.3">
+<h3 data-number="9.11.3" class="anchored" data-anchor-id="finding-3-bifurcated-co-financing-networks"><span class="header-section-number">9.11.3</span> Finding 3: Bifurcated Co-financing Networks</h3>
+<p>Green projects rely on public development banks while commercial co-financing focuses on traditional infrastructure—with little overlap between these networks. This suggests structural barriers to scaling green finance.</p>
+<p>These findings were only possible because we could analyze the entire universe of Chinese overseas lending systematically. Traditional sampling approaches would have missed these patterns.</p>
+</section>
+</section>
+<section id="the-transformation-of-research-possibilities" class="level2" data-number="9.12">
+<h2 data-number="9.12" class="anchored" data-anchor-id="the-transformation-of-research-possibilities"><span class="header-section-number">9.12</span> The Transformation of Research Possibilities</h2>
+<p>This project doesn’t represent doing the impossible—someone with large grant funding could have hired teams to classify these projects manually. Instead, it shows how LLMs dramatically expand what’s possible for researchers with limited resources.</p>
+<section id="before-llms-resource-constrained-research" class="level3" data-number="9.12.1">
+<h3 data-number="9.12.1" class="anchored" data-anchor-id="before-llms-resource-constrained-research"><span class="header-section-number">9.12.1</span> Before LLMs: Resource-Constrained Research</h3>
+<ul>
+<li>Choose between comprehensive coverage and analytical depth</li>
+<li>Rely on small samples that might miss important patterns<br>
+</li>
+<li>Spend months on classification that could be weeks on analysis</li>
+<li>Limited ability to explore “what if” questions with different frameworks</li>
+</ul>
+</section>
+<section id="after-llms-amplified-capabilities" class="level3" data-number="9.12.2">
+<h3 data-number="9.12.2" class="anchored" data-anchor-id="after-llms-amplified-capabilities"><span class="header-section-number">9.12.2</span> After LLMs: Amplified Capabilities</h3>
+<ul>
+<li>Comprehensive analysis of entire datasets</li>
+<li>Multiple classification approaches to test robustness</li>
+<li>More time for interpretation and policy implications</li>
+<li>Ability to tackle questions previously beyond individual researcher capacity</li>
+</ul>
+<p><strong>The key insight</strong>: We’re not replacing human expertise—we’re amplifying it. The AI handled the mechanical classification while we focused on research design, validation, interpretation, and policy implications.</p>
+</section>
+</section>
+<section id="transparency-and-reproducibility-raising-the-bar" class="level2" data-number="9.13">
+<h2 data-number="9.13" class="anchored" data-anchor-id="transparency-and-reproducibility-raising-the-bar"><span class="header-section-number">9.13</span> Transparency and Reproducibility: Raising the Bar</h2>
+<p>While our project does not reach the high standard of complete reproducibility, we tried to take the steps that would could in that direction, within the constraints of our limited time and resources. We published:</p>
+<ul>
+<li><strong><a href="https://odi.org/en/publications/greener-on-the-other-side-mapping-chinas-overseas-co-financing-and-financial-innovation/">27-page methodological appendix</a></strong> with detailed validation results</li>
+<li><strong><a href="https://github.com/Teal-Insights/odi_china_lending_llm_classification">Complete code on GitHub</a></strong> including all prompts and processing scripts</li>
 </ul>
 <p>This transparency serves multiple purposes:</p>
-<ol type="1">
-<li><p><strong>Exposes assumptions to scrutiny</strong>: Our definition of “green” is contentious. By sharing our classification criteria, others can challenge or adapt it.</p></li>
-<li><p><strong>Enables others to build on our work</strong>: The name standardization alone took enormous effort. Why should others reinvent that wheel?</p></li>
-<li><p><strong>Raises the bar on reproducibility</strong>: While we didn’t achieve full reproducibility (that would require packaging an open source model in a Docker container), we took significant steps toward transparency.</p></li>
-</ol>
-<p>As two authors with limited budget, LLM coding assistance was crucial in achieving this level of documentation and code quality.</p>
+<p><strong>Exposing assumptions to scrutiny</strong>: Our definition of “green” is contentious. By sharing our classification criteria, others can challenge or adapt it rather than just criticizing our conclusions.</p>
+<p><strong>Enabling others to build on our work</strong>: The name standardization alone took enormous effort. Why should others reinvent that wheel?</p>
+<p><strong>Contributing to methodological progress</strong>: We’re all figuring out best practices for LLM research. Sharing both successes and failures accelerates collective learning.</p>
 </section>
-<section id="the-transformation-of-research-possibilities" class="level2" data-number="9.11">
-<h2 data-number="9.11" class="anchored" data-anchor-id="the-transformation-of-research-possibilities"><span class="header-section-number">9.11</span> The Transformation of Research Possibilities</h2>
-<p>This project doesn’t represent doing the impossible—someone with large grant funding could have hired teams to classify these projects manually. Instead, it shows how LLMs dramatically expand what’s possible for researchers with limited resources.</p>
-<p>We face difficult policy challenges with constrained budgets. Tools that allow us to do more ambitious research with less funding are exciting and important. That’s why we’re working to push this conversation forward through transparent documentation and workshops like this one.</p>
+<section id="key-takeaways-for-researchers" class="level2" data-number="9.14">
+<h2 data-number="9.14" class="anchored" data-anchor-id="key-takeaways-for-researchers"><span class="header-section-number">9.14</span> Key Takeaways for Researchers</h2>
+<p><strong>1. LLMs Offer Consistency at Scale</strong></p>
+<p>Humans can’t sustain attention and consistent criteria across thousands of repetitive classification tasks. LLMs can—and this consistency is often more valuable than perfect accuracy on any individual case.</p>
+<p><strong>2. Multi-Stage Validation Builds Confidence</strong></p>
+<p>Test models against each other, then against human judgment. Each validation approach reveals different strengths and weaknesses, building a more complete picture of reliability.</p>
+<p><strong>3. Iterative Development Saves Time and Money</strong></p>
+<p>Start small, catch bugs early, refine your approach gradually. Problems discovered at the 30-example stage are much cheaper to fix than problems discovered after processing 18,000 projects.</p>
+<p><strong>4. Transparency Enables Progress</strong></p>
+<p>Share your methods, code, and validation data. Others can build on your work rather than starting from scratch, accelerating methodological progress across the field.</p>
+<p><strong>5. Perfect Is the Enemy of Good</strong></p>
+<p>Focus on enabling research that wouldn’t happen otherwise rather than achieving perfect methodology. A 91.8% accurate classification of 18,000 projects is more valuable than 100% accurate classification of 100 projects for many research questions.</p>
 </section>
-<section id="key-takeaways" class="level2" data-number="9.12">
-<h2 data-number="9.12" class="anchored" data-anchor-id="key-takeaways"><span class="header-section-number">9.12</span> Key Takeaways</h2>
+<section id="what-you-can-do-now" class="level2" data-number="9.15">
+<h2 data-number="9.15" class="anchored" data-anchor-id="what-you-can-do-now"><span class="header-section-number">9.15</span> What You Can Do Now</h2>
+<section id="for-your-own-research" class="level3" data-number="9.15.1">
+<h3 data-number="9.15.1" class="anchored" data-anchor-id="for-your-own-research"><span class="header-section-number">9.15.1</span> For Your Own Research</h3>
 <ol type="1">
-<li><strong>LLMs offer consistency at scale</strong> that humans can’t sustain for repetitive tasks</li>
-<li><strong>Multi-stage validation builds confidence</strong>—test models against each other, then against human judgment</li>
-<li><strong>Iterative development saves time and money</strong>—start small, catch bugs early</li>
-<li><strong>Transparency enables progress</strong>—share your methods so others can build on them</li>
-<li><strong>Perfect is the enemy of good</strong>—focus on enabling research that wouldn’t happen otherwise</li>
+<li><strong>Identify classification bottlenecks</strong> in your current or planned research</li>
+<li><strong>Start with 10-20 examples</strong> to test whether LLM classification is feasible for your domain</li>
+<li><strong>Build validation into your process</strong> from the beginning—don’t treat it as an afterthought</li>
+<li><strong>Plan for transparency</strong> by documenting your methods as you develop them</li>
+<li><strong>Focus on important questions</strong> where scale enables insights impossible with traditional methods</li>
 </ol>
 </section>
-<section id="what-you-can-do-now" class="level2" data-number="9.13">
-<h2 data-number="9.13" class="anchored" data-anchor-id="what-you-can-do-now"><span class="header-section-number">9.13</span> What You Can Do Now</h2>
-<p><strong>For your own research:</strong></p>
-<ol type="1">
-<li>Identify classification bottlenecks in your work</li>
-<li>Start with 10-20 examples to test feasibility</li>
-<li>Build validation into your process from the beginning</li>
-<li>Share your methods and code openly</li>
-<li>Focus on research questions that matter, not perfect methods</li>
-</ol>
-<p><strong>For the field:</strong></p>
+<section id="for-the-field" class="level3" data-number="9.15.2">
+<h3 data-number="9.15.2" class="anchored" data-anchor-id="for-the-field"><span class="header-section-number">9.15.2</span> For the Field</h3>
 <ul>
-<li>Contribute to emerging best practices</li>
-<li>Build on others’ work rather than starting from scratch</li>
-<li>Be transparent about both successes and limitations</li>
-<li>Remember: we’re all figuring this out together</li>
+<li><strong>Contribute to emerging best practices</strong> by sharing both successes and failures</li>
+<li><strong>Build on others’ work</strong> rather than starting from scratch—methodological progress is cumulative</li>
+<li><strong>Stay critical but constructive</strong> about AI’s limitations while exploring its potential</li>
+<li><strong>Remember we’re all learning</strong> how to use these tools responsibly and effectively</li>
 </ul>
 </section>
-<section id="the-bigger-picture" class="level2" data-number="9.14">
-<h2 data-number="9.14" class="anchored" data-anchor-id="the-bigger-picture"><span class="header-section-number">9.14</span> The Bigger Picture</h2>
-<p>This project demonstrates how LLMs can transform resource-constrained research. We moved from assumptions about China’s role in the energy transition to evidence-based analysis that informs real policy decisions—all with two researchers and minimal budget.</p>
-<p>The technology doesn’t replace human judgment. It amplifies human expertise, allowing us to tackle questions at a scale that reveals patterns invisible to traditional methods. That’s the promise worth pursuing.</p>
+</section>
+<section id="the-bigger-picture-democratizing-ambitious-research" class="level2" data-number="9.16">
+<h2 data-number="9.16" class="anchored" data-anchor-id="the-bigger-picture-democratizing-ambitious-research"><span class="header-section-number">9.16</span> The Bigger Picture: Democratizing Ambitious Research</h2>
+<p>This project demonstrates how LLMs can democratize access to large-scale analytical capabilities previously available only to well-funded research teams. Two policy researchers with minimal budget accomplished analysis that traditionally required:</p>
+<ul>
+<li>Large research grants</li>
+<li>Teams of research assistants<br>
+</li>
+<li>Months of classification work</li>
+<li>Significant institutional support</li>
+</ul>
+<p><strong>We face urgent policy challenges</strong> around climate finance, development effectiveness, and global economic transitions. Tools that enable more researchers to tackle these questions at scale—while maintaining academic rigor—are worth the effort to understand and improve.</p>
+<p><strong>The technology doesn’t replace human judgment.</strong> It amplifies human expertise, allowing us to tackle questions at a scale that reveals patterns invisible to traditional methods. It frees us from the drudgery of repetitive tasks to focus on what humans do best: critical analysis, contextual interpretation, and theoretical insight.</p>
+<p>That’s the promise worth pursuing: not replacing researchers, but enabling more ambitious, transparent, and impactful research that can inform the urgent policy challenges of our time.</p>
+</section>
+<section id="looking-forward" class="level2" data-number="9.17">
+<h2 data-number="9.17" class="anchored" data-anchor-id="looking-forward"><span class="header-section-number">9.17</span> Looking Forward</h2>
+<p>The methodological challenges we faced—validation strategies, reproducibility concerns, content moderation policies—are new for academic research. As more scholars explore these tools, we need:</p>
+<ul>
+<li><strong>Shared standards</strong> for validating LLM-generated analysis</li>
+<li><strong>Transparency requirements</strong> for AI-assisted research<br>
+</li>
+<li><strong>Best practices</strong> for handling provider-specific constraints</li>
+<li><strong>Training programs</strong> to help researchers use these tools effectively</li>
+</ul>
+<p>This case study represents one approach to these challenges. It’s not perfect, but it’s a contribution toward developing responsible, effective use of AI in policy research.</p>
+<p>The conversation is just beginning. Your research, your validation approaches, and your methodological innovations will help shape how these tools evolve to serve serious scholarship.</p>
 <hr>
 <p><em>This concludes our workshop on AI for the Skeptical Scholar. Thank you for joining us on this journey toward more ambitious, transparent, and impactful research.</em></p>
 
